@@ -1,0 +1,645 @@
+@charset "utf-8";
+
+/* section 공통 */
+.section{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+/* 타이틀 영역 */
+.section .title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section .title h2{
+    margin-bottom: 24px;
+}
+.section .title h2 strong{
+    color: #ffb926;
+}
+
+/***************************************/
+
+/* section1 */
+
+/* 메인타이틀 */
+.sec1 .mainTitle{
+    width: 100%;
+    height: 224px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+.sec1 .mainTitle h2{
+    font: 700 86px/1.3 "Pretendard Variable";
+    color: #494949;
+}
+.sec1 .mainTitle h2 strong{
+    color: #ffb926;
+}
+.sec1 .mainTitle .titleFirst{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 애니메이션 */
+    animation-name: titleFirstMotion;
+    animation-duration: 0.5s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+.sec1 .mainTitle .titleSecond{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 애니메이션 */
+    animation-name: titleSecondMotion;
+    animation-duration: 0.5s;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+/* 서브타이틀 */
+.sec1 .sub_title{
+    text-align: center;
+}
+.sec1 .sub_title .top{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(500%);
+    opacity: 0;
+    margin-bottom: 12px;
+    /* 애니메이션 */
+    animation-name: titleTopMotion;
+    animation-duration: 0.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.9,0,.58,1);
+}
+.sec1 .sub_title .top .creative{
+    font: 600 28px/1.6 "Pretendard Variable";
+    color: #ffb926;
+}
+.sec1 .sub_title .top .top_txt{
+    font: 600 28px/1.6 "Pretendard Variable";
+    color: #282828;
+}
+.sec1 .sub_title .bottom{
+    transform: translateY(250%);
+    opacity: 0;
+    /* 애니메이션 */
+    animation-name: titleBottomMotion;
+    animation-duration: 0.5s;
+    animation-delay: 2.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.9,0,.58,1);
+}
+
+/***************************************/
+
+/* 키프레임에니메이션 */
+@keyframes titleFirstMotion {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes titleSecondMotion {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes titleTopMotion {
+    0%{
+        opacity: 0;
+        transform: translateY(500%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes titleBottomMotion {
+    0%{
+        opacity: 0;
+        transform: translateY(250%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/***************************************/
+
+/* section2 */
+
+.sec2{
+    background-color: #F8F8F8;
+}
+/* 이미지 박스 영역 */
+.boxWrap{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 24px;
+}
+.boxWrap .box{
+    width: 400px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    border-radius: 30px;
+    display: flex;
+    gap: 40px;
+    justify-content: left;
+    padding: 25px 20px;
+    align-items: center;
+}
+.boxWrap .boxCenter.box{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: left;
+    padding: 25px 20px;
+    align-items: center;
+    text-align: center;
+    padding: 51px 20px;
+}
+.boxWrap .boxCenter.box .line{
+    width: 80%;
+    height: 1px;
+    background-color: #F0F0F0;
+    margin-top: -14px;
+}
+.boxWrap .large{
+    font: 600 24px/1.6 "pretendard Variable";
+    color: #282828;
+    margin-bottom: 10px;
+}
+.boxWrap .small{
+    font: 400 16px/1.6 "pretendard Variable";
+    color: #888;
+}
+
+.boxWrap .boxColumn{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+/* 하단 인스타 팀 스토리 버튼 영역 */
+.sec2 .storyWrap{
+    width: 100%;
+    position: relative;
+}
+.sec2 .storyWrap .storyArea{
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 606px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 100px;
+}
+.sec2 .storyWrap .storyArea .txt{
+    font: 400 20px/1.6 "Pretendard Variable";
+    color: #888;
+    padding-left: 55px;
+    white-space: nowrap;
+}
+.sec2 .storyWrap .storyArea .story{
+    box-sizing: border-box;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 14px 24px 14px 16px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.sec2 .storyWrap .storyArea .story .buttonTxt{
+    font: 600 16px/1.6 "Pretendard Variable";
+    color: #fff;
+}
+.sec2 .storyWrap .storyArea .story::after{
+    content: '';
+    display: block;
+    background-color: #ffb926;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.1s linear;
+    transform: translateX(-101%);
+    z-index: -1;
+}
+.sec2 .storyWrap .storyArea .story::before{
+    content: '';
+    display: block;
+    background-color: #E1E1E1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.sec2 .storyWrap .storyArea .story:hover::after{
+    transform: translateX(0%);
+}
+
+/***************************************/
+
+/* section3 */
+
+/* 콘텐츠 공통 속성 */
+.sec3 .conWrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sec3 .conWrap .con{
+    height: 220px;
+    padding: 0 4.167vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 110px;
+    margin-right: -30px;
+
+}
+.sec3 .conWrap .con .conTitle{
+    font: 600 28px/1.6 "Pretendard Variable";
+    color: #282828;
+}
+.sec3 .conWrap .con .conTxtWrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sec3 .conWrap .con .conTxtWrap .conTxt{
+    font: 400 16px/1.6 "Pretendard Variable";
+    color: #282828;
+}
+.sec3 .conWrap .con .conTxtWrap .conLine{
+    width: 2.083vw;
+    height: 1px;
+    background-color: #282828;
+    position: relative;
+}
+.sec3 .conWrap .con .conTxtWrap .conLine::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #282828;
+    border-radius: 2.5px;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+.sec3 .conWrap .con .conTxtWrap .conLine::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #282828;
+    border-radius: 2.5px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+/* 콘텐츠1 속성 */
+.sec3 .conWrap .con1{
+    background-color: #F8F8F8;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 콘텐츠2 속성 */
+.sec3 .conWrap .con2{
+    background-color: rgba(255, 185, 38, 0.5);
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* 콘텐츠3 속성 */
+.sec3 .conWrap .con3{
+    background-color: rgba(255, 185, 38, 0.9);
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* 콘텐츠4 속성 */
+.sec3 .conWrap .con4{
+    background-color: #282828;
+    margin-right: 0;
+    padding: 0;
+    width: 220px;
+    justify-content: center;
+    align-items: center;
+}
+.sec3 .conWrap .con4 .conTitle{
+    color: #fff;
+}
+
+/***************************************/
+
+/* section4 */
+
+.sec4{
+    background-color: #F8F8F8;
+}
+.sec4 .sec4ConWrap{
+    max-width: 1232px;
+    margin: 0 auto;
+    padding-top: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.sec4 .sec4ConWrap .left .title{
+    text-align: left;
+    margin: 70px 0;
+}
+
+/* 섹션4 좌측 하단 스와이퍼 */
+.sec4 .swiper {
+    width: 608px;
+    height: 322px;
+    /* background-color: lavenderblush; */
+}
+.sec4 .swiper .swiper-slide{
+    margin-top: 54px;
+    height: 268px;
+    background-color: #888;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.sec4 .swiper .swiper-slide:nth-child(1){
+    background: url(../img/1-1노형수퍼마켓.jpg) no-repeat center/cover;
+}
+.sec4 .swiper .swiper-slide:nth-child(2){
+    background: url(../img/1-1퍼시픽마리나.jpg) no-repeat center/cover;
+}
+.sec4 .swiper .swiper-slide:nth-child(3){
+    background: url(../img/1-0서귀포잠수함.jpg) no-repeat center/cover;
+}
+.sec4 .swiper .swiper-slide:nth-child(4){
+    background: url(../img/1-1폴더.jpg) no-repeat center/cover;
+}
+.sec4 .swiper .swiper-slide:nth-child(5){
+    background: url(../img/1-1새별ATV.jpg) no-repeat center/cover;
+}
+.sec4 .swiper .swiper-slide:nth-child(6){
+    background: url(../img/1-1윈드카트서바이벌.jpg) no-repeat center/cover;
+}
+.sec4 .swiper .swiper-slide .swiperCon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.1s linear;
+}
+.sec4 .swiper .swiper-slide:hover .swiperCon{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.sec4 .swiper .swiper-slide .swiperCon p{
+    font: 600 20px/1.6 "Pretendard Variable";
+    color: #fff;
+    white-space: nowrap;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.sec4 .swiper .swiper-slide .swiperCon .magnify{
+    background: url("../img/magnify.svg") no-repeat center/cover;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.sec4 .swiper .swiper-pagination{
+    height: 16px;
+    top: 16px;
+    left: 0;
+}
+.sec4 .swiper .swiper-pagination-bullet{
+    background-color: #E1E1E1;
+    opacity: 1;
+}
+.sec4 .swiper .swiper-pagination-bullet-active{
+    background-color: #ffb926;
+}
+
+/* 딜페이지 썸네일 클릭시 딜페이지 오버레이 */
+.slideOverlayWrap{
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    cursor: pointer;
+}
+.slideOverlayWrap .slideOverlay{
+    padding-top: 84px;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 40px;
+}
+.slideOverlayWrap .slideOverlay .dealpage{
+    height: 700px;
+    border-radius: 40px;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+.slideOverlayWrap .slideOverlay .dealpage::-webkit-scrollbar {
+    display: none;
+}
+.slideOverlayWrap .slideOverlay .dealpage img{
+    width: 600px;
+    object-fit: cover;
+}
+.slideOverlayWrap .slideOverlay .sec4CloseIcon{
+    width: 72px;
+    height: 72px;
+    background: url("../../common/img/close_icon.svg") no-repeat center;
+}
+.slideOverlayWrap.on{
+    display: block;
+}
+
+/* 섹션4 우측 */
+.sec4 .sec4ConWrap .right{
+    width: 400px;
+    height: 712px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 8px 8px 13px rgba(0, 0, 0, 0.07);
+}
+.sec4 .sec4ConWrap .right video{
+    width: 400.5px;
+}
+
+
+/***************************************/
+
+/* section5 */
+
+.sec5{
+    background-color: #ffb926;
+}
+.sec5 .sec5ConWrap{
+    padding-top: 84px;
+}
+.sec5 .sec5ConWrap .title h2{
+    color: #fff;
+}
+.sec5 .sec5ConWrap .title p{
+    color: #fff;
+}
+.sec5 .sec5Con{
+    text-align: center;
+}
+.sec5 .sec5Con img{
+    transform: scale(1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.sec5 .sec5Con img:hover{
+    transform: scale(1.1);
+}
+
+/* 캐릭터 클릭시 설명 나오기(여우) */
+.sec5OverlayWrap{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    cursor: pointer;
+}
+.sec5OverlayWrap .sec5CloseIcon{
+    width: 72px;
+    height: 72px;
+    background: url("../../common/img/close_icon.svg") no-repeat center;
+}
+.sec5OverlayWrap.on{
+    display: block;
+}
+
+/* 캐릭터 클릭시 설명 공통 속성 */
+.sec5Overlay{
+    padding-top: 84px;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 40px;
+}
+.sec5Overlay .box{
+    display: flex;
+    align-items: stretch;
+}
+.sec5Overlay .box .left{
+    padding: 55px 60px;
+    text-align: center;
+    background-color: #ffb926;
+    border-radius: 40px 0 0 40px;
+}
+.sec5Overlay .box .left .ko{
+    padding-top: 20px;
+    font: 700 44px/1.6 "Pretendard Variable";
+    color: #fff;
+}
+.sec5Overlay .box .left .en{
+    font: 600 28px/1.6 "Pretendard Variable";
+    color: #fff;
+}
+.sec5Overlay .box .right{
+    padding: 55px 60px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 6px solid #FFb926;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 0 40px 40px 0;
+}
+.sec5Overlay .box .right .large{
+    font: 700 36px/1.6 "Pretendard Variable";
+    color: #FFb926;
+}
+.sec5Overlay .box .right .small{
+    font: 400 24px/1.6 "Pretendard Variable";
+    color: #888;
+    white-space: nowrap;
+}
+.sec5Overlay .box .right button a{
+    box-sizing: border-box;
+    display: block;
+    color: #FFb926;
+    border: 1px solid #FFb926;
+    border-radius: 22px;
+    padding: 9px 20px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.sec5Overlay .box .right button a::after{
+    content: '';
+    display: block;
+    background-color: #FFb926;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.1s linear;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+.sec5Overlay .box .right button a:hover{
+    color: #fff;
+    z-index: 1;
+}
+.sec5Overlay .box .right button a:hover::after{
+    transform: translateX(0%);
+}

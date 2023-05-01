@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keyword" content="">
+	<meta name="description" content="">
+	<meta name="author" content="LScompany - WonJunHee">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:type" content="">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="600">
+	<meta property="og:image:height" content="315">
+	<meta property="og:image:type" content="image/jpg">
+	<meta property="twitter:card" content="summary">
+	<meta property="twitter:title" content="">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:image" content="">
+	<title>entered your project title</title>
+<!-- 
+	<link rel="icon" href="img/favicon/favicon_32.png" sizes="32x32">
+	<link rel="icon" href="img/favicon/favicon_48.png" sizes="48x48">
+	<link rel="icon" href="img/favicon/favicon_57.png" sizes="57x57">
+	<link rel="icon" href="img/favicon/favicon_72.png" sizes="72x72">
+	<link rel="icon" href="img/favicon/favicon_96.png" sizes="96x96">
+	<link rel="icon" href="img/favicon/favicon_120.png" sizes="120x120">
+	<link rel="icon" href="img/favicon/favicon_128.png" sizes="128x128">
+	<link rel="icon" href="img/favicon/favicon_144.png" sizes="144x144">
+	<link rel="icon" href="img/favicon/favicon_152.png" sizes="152x152">
+	<link rel="icon" href="img/favicon/favicon_195.png" sizes="195x195">
+	<link rel="icon" href="img/favicon/favicon_228.png" sizes="228x228">
+ -->
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sub.css">
+
+	<script src="js/jquery-2.2.4.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/swiper-bundle.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/ScrollMagic.min.js"></script>
+	<script src="js/animation.gsap.min.js"></script>
+	<script src="js/gsap.min.js"></script>
+	<script src="js/jquery.ScrollMagic.min.js"></script>
+	<script src="js/debug.addIndicators.min.js"></script>
+	<script src="js/jquery.fullpage.min.js"></script>
+	<script defer src="js/slick.min.js"></script>
+	<script defer src="js/script.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="innerWrap flexWrap spaceBetween alignCenter">
+			<a href="/Main.html">
+				<h1 id="logo">
+					<span class="hide">투어패스 로고</span>
+				</h1>
+			</a>
+			
+	
+			<!-- gnb 영역 -->
+			<nav class="gnb">
+				<ul>
+					<li><a href="/AboutUs.html">회사소개</a></li>
+					<li><a href="/SystemDev.html">시스템개발</a></li>
+					<li><a href="/DesignDev.html">디자인개발</a></li>
+					<li><a href="/BrandPln.html">브랜드기획</a></li>
+					<li><a href="/ProductPln.html">상품기획</a></li>
+					<li><a href="/ContentsBiz.html">콘텐츠사업</a></li>
+					<li><a href="/Mobility.html">모빌리티</a></li>
+				</ul>
+			</nav>
+			<!-- // gnb 영역 -->
+	
+			<button class="btn btn1" onclick="openPopup('NotReady')">제휴문의</button>
+		</div>
+	</header>
+
+	<main role="main" class="main">
+		<div id="fullpage">
+
+      <!------------------------------------->
+  
+          <!-- section1 -->
+          <div class="section sec1" data-anchor="1stPage">
+              <div class="mainTitle">
+                  <div class="titleFirst">
+                      <h2>원하는 무엇이든</h2>
+                      <h2><strong>상상을 현실로</strong></h2>
+                  </div>
+                  <div class="titleSecond">
+                      <h2>더욱 <strong>전문적</strong>인</h2>
+                      <h2>컨텐츠 <strong>디자인</strong></h2>
+                  </div>
+              </div>
+              <div class="sub_title">
+                  <div class="top">
+                      <div class="creative">Creative+</div>
+                      <p class="top_txt">더욱 크리에이티브하게 특별한 메세지를 전달하다</p>
+                  </div>
+                  <div class="bottom">
+                      <p>새롭고 창의적인 방식으로 트렌드를 담아 온·오프라인 플랫폼에 최적화된 콘텐츠를 만들어 냅니다.<br>
+                          우리와 함께 머리속으로만 그려왔던 상상을 현실로 펼쳐보세요!</p>
+                  </div>
+              </div>
+          </div>
+      
+          <!------------------------------------->
+  
+          <!-- section2 -->
+          <div class="section sec2" data-anchor="2ndPage">
+              <div class="title">
+                  <h2><strong>상상을 현실로</strong> 만들다</h2>
+                  <p>신비한 마법처럼 컨텐츠를 만들어내는 디자이너를 만나보세요!</p>
+              </div>
+              <div class="boxWrap">
+                  <div class="boxColumn">
+                      <div class="top box">
+                          <img src="img/pange.png" alt="팡이">
+                          <div class="txt">
+                              <p class="large">
+                                  Pang-e
+                              </p>
+                              <p class="small">
+                                  꿈 같은 일도 일단 해보자!<br>
+                                  편견없이 다양하게 시도
+                              </p>
+                          </div>
+                      </div>
+                      <div class="bottom box">
+                          <img src="img/dalsu.png" alt="달수">
+                          <div class="txt">
+                              <p class="large">
+                                  Dal-su
+                              </p>
+                              <p class="small">
+                                  넘치는 착의력과<br>
+                                  활활 불타는 열정
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="boxColumn">
+                      <div class="top box">
+                          <img src="img/leader.png" alt="리더">
+                          <div class="txt">
+                              <p class="large">
+                                  Leader
+                              </p>
+                              <p class="small">
+                                  모든걸 꿰뚫는 직관력<br>
+                                  모두를 이끌어가는 리더쉽
+                              </p>
+                          </div>
+                      </div>
+                      <div class="bottom box">
+                          <img src="img/dalsu.png" alt="후라후라">
+                          <div class="txt">
+                              <p class="large">
+                                  Fri-fri
+                              </p>
+                              <p class="small">
+                                  넘치는 착의력과<br>
+                                  활활 불타는 열정
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="boxColumn">
+                      <div class="top box">
+                          <img src="img/volt.png" alt="볼트">
+                          <div class="txt">
+                              <p class="large">
+                                  Volt
+                              </p>
+                              <p class="small">
+                                  뛰어난 손재주와<br>
+                                  놓치지 않는 섬세함
+                              </p>
+                          </div>
+                      </div>
+                      <div class="bottom box">
+                          <img src="img/jjangdol.png" alt="짱돌">
+                          <div class="txt">
+                              <p class="large">
+                                  JJangdol
+                              </p>
+                              <p class="small">
+                                  니즈를 민감하게 캐치하는<br>
+                                  독창적 트렌드세터
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="storyWrap">
+                  <div class="storyArea">
+                      <p class="txt">우리의 이야기를 좀 더 알고 싶다면?</p>
+                      <a href="#" class="story">
+                          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M16 0.5C7.164 0.5 0 7.664 0 16.5C0 25.336 7.164 32.5 16 32.5C24.836 32.5 32 25.336 32 16.5C32 7.664 24.836 0.5 16 0.5ZM25.336 20.448C25.336 23.424 22.924 25.84 19.944 25.84H12.048C9.072 25.84 6.656 23.428 6.656 20.448V12.552C6.656 9.576 9.068 7.16 12.048 7.16H19.944C22.92 7.16 25.336 9.572 25.336 12.552V20.448ZM20.04 8.92801H11.96C9.98402 8.92801 8.38002 10.528 8.38002 12.508V20.588C8.38002 22.564 9.98402 24.168 11.96 24.168H20.04C22.016 24.168 23.62 22.564 23.62 20.588V12.508C23.62 10.532 22.016 8.92801 20.04 8.92801ZM16 21.392C13.324 21.392 11.156 19.224 11.156 16.548C11.156 13.872 13.324 11.704 16 11.704C18.676 11.704 20.844 13.872 20.844 16.548C20.844 19.224 18.676 21.392 16 21.392ZM21.008 12.644C20.384 12.644 19.88 12.14 19.88 11.516C19.88 10.892 20.384 10.388 21.008 10.388C21.632 10.388 22.136 10.892 22.136 11.516C22.136 12.14 21.632 12.644 21.008 12.644ZM12.8599 16.544C12.8599 14.812 14.2639 13.404 15.9999 13.404C17.7319 13.404 19.1399 14.812 19.1399 16.544C19.1399 18.276 17.7319 19.684 15.9999 19.684C14.2679 19.684 12.8599 18.276 12.8599 16.544Z"
+                                  fill="white" />
+                          </svg>
+                          <p class="buttonTxt">TEAM STORY</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+              
+          <!------------------------------------->
+          
+          <!-- section3 -->
+          <div class="section sec3" data-anchor="3rdPage">
+              <div class="title">
+                  <h2>모든 시작은 <strong>한걸음</strong>부터</h2>
+                  <p>트렌드를 담은 기획부터 구현까지 한걸음씩 나아가는 우리의 여정을 알려드립니다.
+                  </p>
+              </div>
+              <div class="conWrap">
+                  <div class="con con1">
+                      <div class="conTitle">
+                          디자인 기획
+                      </div>
+                      <div class="conTxtWrap">
+                          <div class="conTxt conTxt1">레퍼런스 리서치</div>
+                          <div class="conLine conLine1"></div>
+                          <div class="conTxt conTxt2">디자인 기획</div>
+                      </div>
+                  </div>
+                  <div class="con con2">
+                      <div class="conTitle">
+                          디자인 제작
+                      </div>
+                      <div class="conTxtWrap">
+                          <div class="conTxt conTxt1">이미지 소스 리서치</div>
+                          <div class="conLine conLine1"></div>
+                          <div class="conTxt conTxt2">디자인 레이아웃 구성</div>
+                          <div class="conLine conLine2"></div>
+                          <div class="conTxt conTxt2">시안완료</div>
+                      </div>
+                  </div>
+                  <div class="con con3">
+                      <div class="conTitle">
+                          디자인 컨펌
+                      </div>
+                      <div class="conTxtWrap">
+                          <div class="conTxt conTxt1">디자인 제안</div>
+                          <div class="conLine conLine1"></div>
+                          <div class="conTxt conTxt2">컨펌</div>
+                          <div class="conLine conLine2"></div>
+                          <div class="conTxt conTxt2">수정 및 검수</div>
+                      </div>
+                  </div>
+                  <div class="con con4">
+                      <div class="conTitle">
+                          디자인 완료
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!------------------------------------->
+  
+          <!-- section4 -->
+          <div class="section sec4" data-anchor="4thPage">
+              <div class="sec4ConWrap">
+                  <div class="left">
+                      <div class="title">
+                          <h2>마음을 사로잡는<br>
+                              <strong>상세페이지 제작</strong>
+                          </h2>
+                          <p>파트너사의 상품을 한눈에 살필 수 있는 상세페이지 입니다.<br>
+                              판매 옵션에 따른 컨셉을 트렌드에 맞게 제작합니다.</p>
+                      </div>
+                      <div class="swiper">
+                          <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                  <div class="swiperCon">
+                                      <p>노형슈퍼마켙</p>
+                                      <div class="magnify magnify1"></div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="swiperCon">
+                                      <p>퍼시픽마리나<br>요트투어</p>
+                                      <div class="magnify magnify2"></div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="swiperCon">
+                                      <p>서귀포잠수함</p>
+                                      <div class="magnify magnify3"></div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="swiperCon">
+                                      <p>폴더</p>
+                                      <div class="magnify magnify4"></div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="swiperCon">
+                                      <p>새별ATV</p>
+                                      <div class="magnify magnify5"></div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="swiperCon">
+                                      <p>윈드1947<br>서바이벌</p>
+                                      <div class="magnify magnify6"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                      <div class="sec4Overlay">
+                          <div class="slideOverlayWrap slide1OverlayWrap">
+                              <div class="slideOverlay slide1Overlay">
+                                  <div class="dealpage dealpage1">
+                                      <img src="img/4-1노형수퍼마켓.jpg" alt="노형수퍼마켓">
+                                  </div>
+                                  <div class="sec4CloseIcon"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <video autoplay playsinline muted loop data-keepplaying>
+                          <source src="img/wind1947.mp4" type="video/mp4">
+                      </video>
+                  </div>
+              </div>
+          </div>
+  
+          <!------------------------------------->
+  
+          <!-- section5 -->
+          <div class="section sec5" data-anchor="5thPage">
+              <div class="sec5ConWrap">
+                  <div class="title">
+                      <h2>무한한 잠재력을 가진<br>
+                      맞춤형 캐릭터 개발</h2>
+                      <p>이모티콘은 물론 다양한 온·오프라인 영역으로도<br>
+                      쉽게 확장이 가능한 무한한 잠재력을 가진 친구들을 만들어냅니다.</p>
+                  </div>
+                  <div class="sec5Con">
+                      <img src="img/트레브.png" alt="여우캐릭터" class="fox">
+                      <img src="img/댕구.png" alt="개캐릭터" class="dog">
+                      <img src="img/베키.png" alt="새캐릭터" class="bird">
+                      <img src="img/세븐.png" alt="노란다람쥐캐릭터" class="yellow_sq">
+                      <img src="img/클로버.png" alt="파란다람쥐캐릭터" class="blue_sq">
+                  </div>
+              </div>
+              <div class="sec5OverlayWrap foxOverlayWrap">
+                  <div class="sec5Overlay foxOverlay">
+                      <div class="box">
+                          <div class="left">
+                              <img src="img/sec5_fox_overlay.png" alt="여우캐릭터썸네일">
+                              <div class="ko">트레브</div>
+                              <div class="en">Trev</div>
+                          </div>
+                          <div class="right">
+                              <ul class="character">
+                                  <li class="large">성격</li>
+                                  <li class="small">똥꼬발랄, 여행을 좋아하는 천방지축 여우</li>
+                              </ul>
+                              <ul class="story">
+                                  <li class="large">스토리</li>
+                                  <li class="small">제주 여행을 좋아하는 아기여우.<br>
+                                      호기심이 많아서 여기저기 안 가본 곳이 없어요.<br>
+                                      여우라서 똑똑하고 영리해보이지만 아직은 어려서<br>
+                                      어설픈 면도 많은 아기 여우랍니다.</li>
+                              </ul>
+                              <div class="btnWrap">
+                                  <button><a href="#">투어패스 바로가기</a></button>
+                                  <button><a href="#">계정 바로가기</a></button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="sec5CloseIcon"></div>
+                  </div>
+              </div>
+              <script src="js/sec5.js"></script>
+          </div>
+	</main>
+
+	<!-- 푸터 영역 -->
+	<footer class="footer">
+		<div class="innerWrap">
+			<div class="wrapper">
+				<h4 class="footerTitle">(주) 엘에스컴퍼니</h4>
+				<div class="companyInfo">
+					<p>대표이사 <span>강대철</span></p>
+					<p>사업자 등록번호<span>153-85-01713</span></p>
+					<p>고객센터<span>1588-1588</span></p>
+					<p>주소<span>제주특별자치도 제주시 청사로 11 제주투어패스</span></p>
+				</div>
+				<ul class="private">
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">제휴문의</a></li>
+					<li><a href="#">고객지원센터</a></li>
+				</ul>
+				<small class="copyright">&copy; 2022 LSCOMPANY Corp. All rights reserved.</small>
+			</div>
+			<div class="wrapper">
+				<ul class="snsList">
+					<li>
+						<a href="Main.html">
+							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
+								<path d="M16.0765 25.3469V20.5436H19.9192V25.3469C19.9192 25.8753 20.3515 26.3076 20.8799 26.3076H23.7619C24.2903 26.3076 24.7226 25.8753 24.7226 25.3469V18.6222H26.3557C26.7976 18.6222 27.009 18.0747 26.6727 17.7865L18.6415 10.5526C18.2765 10.226 17.7193 10.226 17.3542 10.5526L9.32299 17.7865C8.99637 18.0747 9.19811 18.6222 9.64002 18.6222H11.2732V25.3469C11.2732 25.8753 11.7055 26.3076 12.2338 26.3076H15.1158C15.6442 26.3076 16.0765 25.8753 16.0765 25.3469Z" fill="#282828"/>
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7681 22.2919C15.7681 21.039 15.7627 19.7867 15.7728 18.5339C15.7748 18.323 15.7108 18.2568 15.4844 18.265C15.0667 18.2808 14.6476 18.2631 14.2298 18.2726C14.0607 18.2764 13.998 18.2329 14 18.0648C14.0088 17.2835 14.0075 16.5015 14.0007 15.7196C13.9994 15.5691 14.0479 15.52 14.2103 15.5232C14.6381 15.5326 15.0667 15.5118 15.4932 15.532C15.7405 15.5433 15.7917 15.4615 15.7869 15.2468C15.7721 14.6518 15.7721 14.0562 15.7863 13.4613C15.8031 12.7347 16.012 12.0566 16.4749 11.4655C17.0611 10.7181 17.8946 10.3756 18.8554 10.336C19.8432 10.2951 20.833 10.3177 21.8214 10.3076C21.9595 10.3064 22.0006 10.3523 22 10.4776C21.9953 11.2684 21.9946 12.0592 22 12.8493C22.0013 12.9897 21.9521 13.0331 21.8046 13.0306C21.3289 13.0237 20.8539 13.0268 20.3788 13.0281C19.7461 13.03 19.3675 13.3341 19.3277 13.9196C19.296 14.3886 19.319 14.8608 19.3075 15.3311C19.3035 15.4986 19.4099 15.4873 19.5285 15.4873C20.2508 15.486 20.9738 15.4942 21.6961 15.4822C21.9083 15.4791 21.9784 15.5244 21.9542 15.7328C21.8632 16.5185 21.785 17.3049 21.7129 18.0925C21.6968 18.2701 21.6098 18.3041 21.4387 18.3015C20.8687 18.2934 20.298 18.2959 19.7279 18.299C19.3183 18.3015 19.358 18.243 19.358 18.6333C19.356 21.085 19.3526 23.5372 19.3641 25.9888C19.3654 26.2476 19.2947 26.3118 19.0205 26.3074C18.0414 26.2904 17.0618 26.2898 16.0827 26.3074C15.8072 26.3124 15.7613 26.2249 15.7634 25.9951C15.7741 24.7605 15.7687 23.5259 15.7687 22.2906L15.7681 22.2919Z" fill="#282828" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
+								<path d="M22.5 11.1076H13.5C10.8 11.1076 9 12.9076 9 15.6076V21.0076C9 23.7076 10.8 25.5076 13.5 25.5076H22.5C25.2 25.5076 27 23.7076 27 21.0076V15.6076C27 12.9076 25.2 11.1076 22.5 11.1076ZM19.701 19.2346L17.478 20.5666C16.578 21.1066 15.84 20.6926 15.84 19.6396V16.9666C15.84 15.9136 16.578 15.4996 17.478 16.0396L19.701 17.3716C20.556 17.8936 20.556 18.7216 19.701 19.2346Z" fill="#282828" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 9.30762H14.1949C11.3253 9.30762 8.99902 11.6339 8.99902 14.5035V22.1117C8.99902 24.9814 11.3253 27.3076 14.1949 27.3076H21.8051C24.6747 27.3076 27.001 24.9814 27.001 22.1117V14.5035C27.001 11.6339 24.6747 9.30762 21.8051 9.30762H21.8031ZM17.999 13.6825C15.4187 13.6825 13.329 15.7742 13.329 18.3526C13.329 20.931 15.4206 23.0226 17.999 23.0226C20.5774 23.0226 22.6691 20.931 22.6691 18.3526C22.6691 15.7742 20.5774 13.6825 17.999 13.6825ZM17.999 21.3806C16.3277 21.3806 14.971 20.024 14.971 18.3526C14.971 16.6812 16.3257 15.3246 17.999 15.3246C19.6724 15.3246 21.027 16.6793 21.027 18.3526C21.027 20.0259 19.6724 21.3806 17.999 21.3806ZM21.7366 13.5046C21.7366 12.9025 22.2253 12.4158 22.8255 12.4158C23.4276 12.4158 23.9143 12.9025 23.9143 13.5046C23.9143 14.1067 23.4276 14.5935 22.8255 14.5935C22.2234 14.5935 21.7366 14.1067 21.7366 13.5046Z" fill="#282828" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+
+				<div class="siteWrap">
+					<button type="button" class="familySiteBtn">Family Site</button>
+					<ul class="siteList">
+						<li><a href="#" target="_blank">Website1</a></li>
+						<li><a href="#" target="_blank">Website2</a></li>
+						<li><a href="#" target="_blank">Website3</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal Popup 영역 -->
+	<div id="popupWrap" class="popupWrap">
+		<div id="popupNotReady" class="popupFrame popup">
+			<div class="popupHeader">
+				<i class="icon"></i>
+			</div>
+			<div class="popupContent">
+				<h2 class="popupTitle">
+					현재 <strong>페이지 준비중</strong>입니다.
+				</h2>
+			</div>
+			<button type="button" class="closePopupBtn" onclick="closePopup('NotReady')">
+				<span class="hide">닫기</span>
+			</button>
+		</div>
+	</div>
+	<!-- // Modal Popup 영역 -->
+</body>
+</html>
