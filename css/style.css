@@ -509,19 +509,19 @@
 		gap: 1.2rem;
 	}
 
-	.footer .snsnList svg path{
+	.footer .snsList svg path{
 		fill: #282828;
-		transition: all 0.1s linear;
+		transition: all 0.2s;
 	}
-	.footer .snsnList svg rect{
+	.footer .snsList svg rect{
 		stroke: #282828;
 		fill: none;
-		transition: all 0.1s linear;
+		transition: all 0.2s;
 	}
-	.footer .snsnList svg:hover path{
+	.footer .snsList svg:hover path{
 		fill: #fff;
 	}
-	.footer .snsnList svg:hover rect{
+	.footer .snsList svg:hover rect{
 		stroke: none;
 		fill: #282828;
 	}
