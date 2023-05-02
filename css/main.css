@@ -16,7 +16,7 @@
 
 	#section1{
 		height: 100vh;
-		margin-top: 10vh;
+		padding-top: 80vh;
 		margin-bottom: 0;
 		display: flex;
 		justify-content: center;
@@ -24,7 +24,7 @@
   }
 
   #section1 .slideWrap .slideItem{
-	  padding: 25px 0;
+	  padding: 50px 0;
 	  text-align: center;
 	  font-size: 50px;
 	  font-weight: bold;
@@ -280,7 +280,7 @@
 		margin-top: 10rem;
 	}
 
-	
+
 
 /***************************************
 *               Section 6              *
