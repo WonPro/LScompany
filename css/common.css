@@ -12,6 +12,7 @@
 	}
 	.btn .btnNm{
 		position: relative;
+		font-size: 1.6rem;
 		z-index: 10;
 	}
 
@@ -179,6 +180,26 @@
 		margin-bottom: 0;
 	}
 
+	@media screen and (max-width: 1279px) {
+		
+		.btn .btnNm {
+			font-size: 1.4rem;
+		}
+
+		.btn.btn1 {
+			padding: 1rem 1.4rem;
+			border-radius: 1.7rem;
+		}
+
+		.main .secTitle {
+			font-size: 4rem;
+		}
+
+		.main .subTitle{
+			font-size: 2rem;
+		}
+	}
+
 
 
 /***************************************
@@ -187,6 +208,7 @@
 
 	.header{
 		width: 100%;
+		padding: 2.6rem 0;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -200,7 +222,6 @@
 	#logo{
 		width: 10.2rem;
 		height: 3.2rem;
-		margin: 2.6rem 0;
 		background: url(../img/logo.svg) no-repeat center center / cover transparent;
 	}
 
@@ -237,6 +258,33 @@
 
 	.gnb ul li a:hover::after{
 		width: calc(100% - 4rem);
+	}
+
+
+	@media screen and (max-width: 1279px) {
+		.header{
+			padding: 1.2rem 0;
+		}
+
+		#logo{
+			width: 8.2rem;
+			height: 2.6rem;
+			background: url(../img/logo.svg) no-repeat center center / cover transparent;
+		}
+
+		.gnb{
+			width: calc(100% - 82px - 77px);
+		}
+
+		.gnb ul{
+			width: 100%;
+			justify-content: space-around;
+		}
+
+		.gnb ul li a {
+			padding: 0.7rem 0.8rem;
+			font-size: 1.4rem;
+		}
 	}
 
 
