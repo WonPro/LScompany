@@ -189,8 +189,6 @@ $(function(){
     $(this).on('mousewheel DOMMousewheel', function(e){
     //mousewheel : 크롬, 오페라, 익스엣지 적용되는 이벤트(또는 이벤트 핸들러)
     //DOMMousewheel : 파이어 폭스, 익스 9+
-      console.log(e)
-      console.log(event)
       e.preventDefault();  //초기화되는 부분을 방지
       let delta = 0;  //브라우저가 로딩되면서 마우스 휠을 돌리지 않은 상태
       if(!event){  //마우스 휠을 돌리지 않아서 이벤트가 발생하지 않은 상태
@@ -238,7 +236,8 @@ $(function(){
     autoplay: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplaySpeed: 2000,
   });
 
   $('#thumbnailVideo').slick({
@@ -247,10 +246,10 @@ $(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 500,
     arrows: false,
     verticalSwiping: false,
-    speed: 2000,
+    speed: 3000,
     draggable: false,
     pauseOnFocus: false,
     pauseOnHover: false,
