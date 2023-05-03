@@ -6,7 +6,7 @@
 
 /* Wrap */
 .fulidWrap{width:100%;}
-.innerWrap{width:1200px; margin: 0 auto; padding-left: 10px; padding-right: 10px;}
+.innerWrap{width:1280px; margin: 0 auto; padding-left: 10px; padding-right: 10px;}
 
 .flexRowWrap{display: flex; flex-direction: row;}
 .flexColWrap{display: flex; flex-direction: column;}

@@ -9,6 +9,7 @@
     let modalWrap = document.getElementById('popupWrap');
     let popup = document.getElementById('popup' + popupName);
 
+    document.body.style.overflow = 'hidden';
     modalWrap.classList.add('on');
     popup.classList.add('on');
   }
@@ -19,6 +20,7 @@
     let modalWrap = document.getElementById('popupWrap');
     let popup = document.getElementById('popup' + popupName);
 
+    document.body.style.removeProperty('overflow');
     popup.classList.remove('on');
     modalWrap.classList.remove('on');
   }
@@ -139,7 +141,7 @@ $(function(){
   
   /* Section3 텍스트 스크롤효과 */
   let tween4 = gsap.to('#section3 .rollingFrame .slideContainer', {
-    x: "-390%",
+    x: "-640rem",
   });
 
   let scene4 = new ScrollMagic.Scene({
@@ -164,7 +166,8 @@ $(function(){
   /* //Section4 목업 캐러셀 */
 
 
-  $('.familySiteBtn').click(function(){
+  /* Footer 패밀리사이트 애니메이션 */
+  $('.familySiteBtn').on('click', function(){
 		let active = $(this).hasClass('active')
 		if(!active){
 			$(this).addClass('active');
@@ -174,6 +177,7 @@ $(function(){
 			$('.siteList').slideUp(200);
 		}
 	});
+  /* //Footer 패밀리사이트 애니메이션 */
 
 
 
@@ -185,6 +189,8 @@ $(function(){
     $(this).on('mousewheel DOMMousewheel', function(e){
     //mousewheel : 크롬, 오페라, 익스엣지 적용되는 이벤트(또는 이벤트 핸들러)
     //DOMMousewheel : 파이어 폭스, 익스 9+
+      console.log(e)
+      console.log(event)
       e.preventDefault();  //초기화되는 부분을 방지
       let delta = 0;  //브라우저가 로딩되면서 마우스 휠을 돌리지 않은 상태
       if(!event){  //마우스 휠을 돌리지 않아서 이벤트가 발생하지 않은 상태
@@ -226,10 +232,13 @@ $(function(){
 
    /* DesignDev.html Section4 캐러셀 */
 
-   $('#designDevSwiper').slick({
-    infinite: true,
+  $('#designDevSwiper').slick({
+    arrows: false,
+    dots: true,
     autoplay: true,
-    autoplaySpeed: 1500,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1
   });
 	
 
