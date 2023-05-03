@@ -240,6 +240,16 @@ $(function(){
     slidesToShow: 3,
     slidesToScroll: 1
   });
+
+  $('#thumbnailVideo').slick({
+    vertical: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    verticalSwiping: true
+  })
 	
 
 
