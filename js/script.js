@@ -243,12 +243,17 @@ $(function(){
 
   $('#thumbnailVideo').slick({
     vertical: true,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1000,
     arrows: false,
-    verticalSwiping: true
+    verticalSwiping: false,
+    speed: 2000,
+    draggable: false,
+    pauseOnFocus: false,
+    pauseOnHover: false,
   })
 	
 

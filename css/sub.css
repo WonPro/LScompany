@@ -442,6 +442,7 @@
 				bottom: 0;
 				right: 0;
 				border-radius: 2rem;
+				overflow: hidden;
 			}
 
 			#section4 .thumbnailVideo .slideItem{
@@ -449,6 +450,7 @@
 				background-size: cover;
 				background-position: center center;
 				background-repeat: no-repeat;
+				border: none;
 			}
 
 			#section4 .thumbnailVideo .item1{background-image: url(../img/img_subDesignDev_vertical01.jpg);}
