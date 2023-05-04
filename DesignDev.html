@@ -66,7 +66,7 @@
 			
 	
 			<!-- gnb 영역 -->
-			<nav class="gnb">
+			<nav id="gnb" class="gnb">
 				<ul>
 					<li><a href="/AboutUs.html">회사소개</a></li>
 					<li><a href="/SystemDev.html">시스템개발</a></li>
@@ -75,17 +75,23 @@
 					<li><a href="/ProductPln.html">상품기획</a></li>
 					<li><a href="/ContentsBiz.html">콘텐츠사업</a></li>
 					<li><a href="/Mobility.html">모빌리티</a></li>
+					<li class="mobileShow"><a href="">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
 	
-			<button class="btn btn1" onclick="openPopup('NotReady')">
+			<button class="btn btn1 mobileHide" onclick="openPopup('NotReady')">
 				<span class="btnNm">제휴문의</span>
+			</button>
+
+			<button id="mobileGnb" class="btn mobileGnb mobileShow">
+				<span class="hide">모바일 메뉴열기</span>
 			</button>
 		</div>
 	</header>
 
 
+	<main role="main" id="sub">
 		<!-- Section 1 영역 -->
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
@@ -340,7 +346,7 @@
 			</div>
 		</section>
 
-	<!-- 푸터 영역 -->
+		<!-- 푸터 영역 -->
 	<footer class="footer">
 		<div class="innerWrap">
 			<div class="wrapper">
@@ -406,6 +412,9 @@
 			</div>
 		</div>
 	</footer>
+	</main>
+
+	
 
 	<!-- Modal Popup 영역 -->
 	<div id="popupWrap" class="popupWrap">
@@ -445,8 +454,12 @@
 						어설픈 면도 많은 아기 여우랍니다.</p>
 
 					<div class="btnWrap">
-						<button type="button" class="btn btn5">투어패스 바로가기</button>
-						<button type="button" class="btn btn5">계정 바로가기</button>
+						<button type="button" class="btn btn5">
+							<span class="btnNm">투어패스 바로가기</span>
+						</button>
+						<button type="button" class="btn btn5">
+							<span class="btnNm">계정 바로가기</span>
+						</button>
 					</div>
 				</div>
 			</div>

@@ -124,7 +124,7 @@
 		padding: 1.4rem 2.3rem;
 		position: relative;		
 		background-color: #fff;
-		border: none;
+		border: 1px solid #ffb926;
 		border-radius: 10rem;
 		color: #ffb926;
 		overflow: hidden;
@@ -139,9 +139,13 @@
 		background-color: #ffb926;
 		transition: left .3s;
 	}
-	.btn5:hover,
-	.btn5.active{
+	.btn5:hover .btnNm,
+	.btn5.active .btnNm{
 		color: #fff;
+	}
+	.btn5:hover:before,
+	.btn5.active:before{
+		left: 0;
 	}
 	
 
@@ -260,10 +264,14 @@
 		width: calc(100% - 4rem);
 	}
 
+	.mobileShow{
+		display: none;
+	}
+
 
 	@media screen and (max-width: 1279px) {
 		.header{
-			padding: 1.2rem 0;
+			padding: 2.2rem 0;
 		}
 
 		#logo{
@@ -285,6 +293,73 @@
 			padding: 0.7rem 0.8rem;
 			font-size: 1.4rem;
 		}
+	}
+
+	@media screen and (max-width: 767px) {
+
+		.header{
+			padding: 2.2rem 0;
+		}
+
+		.mobileHide{
+			display: none;
+		}
+
+		.mobileShow{
+			display: block;
+		}
+
+		.mobileGnb{
+			width: 2.4rem;
+			height: 2.4rem;
+			background: url(../img/icon_mobileGnbBtn.svg) center center no-repeat;
+			background-size: contain;
+			border: none;
+			border-radius: 0;
+		}
+
+		.mobileGnb.active{
+			background: url(../img/icon_mobileGnbCloseBtn.svg) center center no-repeat;
+			background-size: contain;
+		}
+
+		.gnb{
+			width: 100vw;
+			height: calc(100vh - 7rem);
+			position: fixed;
+			top: 7rem;
+			left: 100%;
+			background-color: #fff;
+			z-index: 1000;
+			transition: left .3s;
+		}
+		.gnb.active{
+			left: 0;
+		}
+
+		.gnb ul{
+			height: 100%;
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.gnb ul li{
+			width: 20rem;
+			border-bottom: 1px solid #f0f0f0;
+			text-align: center;
+		}
+
+		.gnb ul li:last-child{
+			border: none;
+		}
+
+		.gnb ul li a{
+			font-size: 2rem;
+			padding: 1.5rem;
+		}
+
 	}
 
 
@@ -459,6 +534,56 @@
 
 	footer .siteWrap .siteList li:last-child{
 		border-radius: 0 0 0.5rem 0.5rem;
+	}
+
+	@media screen and (max-width: 767px) {
+		.footer .innerWrap .wrapper:first-child{
+			width: 70%;
+		}
+
+		.footer .innerWrap .wrapper:last-child{
+			width: 30%;
+		}
+
+		.footer .companyInfo span{
+			display: block;
+			margin: 0.2rem 0 1rem 0;
+		}
+
+		.footer .snsList{
+			flex-direction: column;
+		}
+
+		.footer .private{
+			margin-top: 2rem;
+			flex-wrap: wrap;
+		}
+
+		.footer .private li{
+			width: 9rem;
+			margin: 1rem 0;
+		}
+
+		.footer .private li a{
+			font-size: 1.2rem;
+		}
+
+		.footer .siteWrap{
+			bottom: 4.6rem;
+		}
+
+		.footer .siteWrap .familySiteBtn{
+			width: 14rem;
+			font-size: 1.2rem;
+		}
+		
+		footer .siteWrap .siteList li a{
+			font-size: 1.2rem;
+		}
+
+		.footer .copyright{
+			font-size: 1.2rem;
+		}
 	}
 
 
