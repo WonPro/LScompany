@@ -20,7 +20,7 @@
 	<meta property="twitter:description" content="">
 	<meta property="twitter:image" content="">
 	<title>국내 여행 끝판왕 투어패스 | (주)엘에스컴퍼니</title>
-<!-- 
+
 	<link rel="icon" href="img/favicon/favicon_32.png" sizes="32x32">
 	<link rel="icon" href="img/favicon/favicon_48.png" sizes="48x48">
 	<link rel="icon" href="img/favicon/favicon_57.png" sizes="57x57">
@@ -32,7 +32,7 @@
 	<link rel="icon" href="img/favicon/favicon_152.png" sizes="152x152">
 	<link rel="icon" href="img/favicon/favicon_195.png" sizes="195x195">
 	<link rel="icon" href="img/favicon/favicon_228.png" sizes="228x228">
- -->
+
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/aos.css">
@@ -66,7 +66,7 @@
 			
 	
 			<!-- gnb 영역 -->
-			<nav class="gnb">
+			<nav id="gnb" class="gnb">
 				<ul>
 					<li><a href="/AboutUs.html">회사소개</a></li>
 					<li><a href="/SystemDev.html">시스템개발</a></li>
@@ -75,15 +75,23 @@
 					<li><a href="/ProductPln.html">상품기획</a></li>
 					<li><a href="/ContentsBiz.html">콘텐츠사업</a></li>
 					<li><a href="/Mobility.html">모빌리티</a></li>
+					<li class="mobileShow"><a href="">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
 	
-			<button class="btn btn1" onclick="openPopup('NotReady')">제휴문의</button>
+			<button class="btn btn1 mobileHide" onclick="openPopup('NotReady')">
+				<span class="btnNm">제휴문의</span>
+			</button>
+
+			<button id="mobileGnb" class="btn mobileGnb mobileShow">
+				<span class="hide">모바일 메뉴열기</span>
+			</button>
 		</div>
 	</header>
 
 
+	<main role="main" id="designDev">
 		<!-- Section 1 영역 -->
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
@@ -98,7 +106,7 @@
 				<div class="subTitle">
 					<p class="title1"><span class="fontOrange">Creative+</span>더욱 크리에이티브하게 특별한 메세지를 전달하다</p>
 					<p class="title2">새롭고 창의적인 방식으로 트렌드를 담아 온·오프라인 플랫폼에 최적화된 콘텐츠를 만들어 냅니다.</p>
-					<p class="title3">우리와 함께 머리속으로만 그려왔던 상상을 현실로 펼쳐보세요!</p>
+					<p class="title2">우리와 함께 머리속으로만 그려왔던 상상을 현실로 펼쳐보세요!</p>
 				</div>
 			</div>
 		</section>
@@ -176,16 +184,141 @@
 				<div class="storyWrap">
 					<h3 class="contTitle">우리의 이야기를 좀 더 알고 싶다면?</h3>
 					<button type="button" class="btn btn4 btnTeamStroy">
-						<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"	d="M16 0.5C7.164 0.5 0 7.664 0 16.5C0 25.336 7.164 32.5 16 32.5C24.836 32.5 32 25.336 32 16.5C32 7.664 24.836 0.5 16 0.5ZM25.336 20.448C25.336 23.424 22.924 25.84 19.944 25.84H12.048C9.072 25.84 6.656 23.428 6.656 20.448V12.552C6.656 9.576 9.068 7.16 12.048 7.16H19.944C22.92 7.16 25.336 9.572 25.336 12.552V20.448ZM20.04 8.92801H11.96C9.98402 8.92801 8.38002 10.528 8.38002 12.508V20.588C8.38002 22.564 9.98402 24.168 11.96 24.168H20.04C22.016 24.168 23.62 22.564 23.62 20.588V12.508C23.62 10.532 22.016 8.92801 20.04 8.92801ZM16 21.392C13.324 21.392 11.156 19.224 11.156 16.548C11.156 13.872 13.324 11.704 16 11.704C18.676 11.704 20.844 13.872 20.844 16.548C20.844 19.224 18.676 21.392 16 21.392ZM21.008 12.644C20.384 12.644 19.88 12.14 19.88 11.516C19.88 10.892 20.384 10.388 21.008 10.388C21.632 10.388 22.136 10.892 22.136 11.516C22.136 12.14 21.632 12.644 21.008 12.644ZM12.8599 16.544C12.8599 14.812 14.2639 13.404 15.9999 13.404C17.7319 13.404 19.1399 14.812 19.1399 16.544C19.1399 18.276 17.7319 19.684 15.9999 19.684C14.2679 19.684 12.8599 18.276 12.8599 16.544Z" fill="white" />
-						</svg>
-						TEAM STORY
+						<span class="btnNm">
+							<svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"	d="M16 0.5C7.164 0.5 0 7.664 0 16.5C0 25.336 7.164 32.5 16 32.5C24.836 32.5 32 25.336 32 16.5C32 7.664 24.836 0.5 16 0.5ZM25.336 20.448C25.336 23.424 22.924 25.84 19.944 25.84H12.048C9.072 25.84 6.656 23.428 6.656 20.448V12.552C6.656 9.576 9.068 7.16 12.048 7.16H19.944C22.92 7.16 25.336 9.572 25.336 12.552V20.448ZM20.04 8.92801H11.96C9.98402 8.92801 8.38002 10.528 8.38002 12.508V20.588C8.38002 22.564 9.98402 24.168 11.96 24.168H20.04C22.016 24.168 23.62 22.564 23.62 20.588V12.508C23.62 10.532 22.016 8.92801 20.04 8.92801ZM16 21.392C13.324 21.392 11.156 19.224 11.156 16.548C11.156 13.872 13.324 11.704 16 11.704C18.676 11.704 20.844 13.872 20.844 16.548C20.844 19.224 18.676 21.392 16 21.392ZM21.008 12.644C20.384 12.644 19.88 12.14 19.88 11.516C19.88 10.892 20.384 10.388 21.008 10.388C21.632 10.388 22.136 10.892 22.136 11.516C22.136 12.14 21.632 12.644 21.008 12.644ZM12.8599 16.544C12.8599 14.812 14.2639 13.404 15.9999 13.404C17.7319 13.404 19.1399 14.812 19.1399 16.544C19.1399 18.276 17.7319 19.684 15.9999 19.684C14.2679 19.684 12.8599 18.276 12.8599 16.544Z" fill="white" />
+							</svg>
+							TEAM STORY
+						</span>
 					</button>
 				</div>
 			</div>
 		</section>
 	
 	<!-- section3 -->
+		<section id="section3" class="section wheelSection">
+			<div class="innerWrap">
+				<h2 class="secTitle">
+					모든 시작은 <span class="fontOrange">한걸음</span>부터
+				</h2>
+				<p class="subTitle">트렌드를 담은 기획부터 구현까지 한걸음씩 나아가는 우리의 여정을 알려드립니다.</p>
+				<div class="contWrap">
+					<div class="contentBox content1">
+						<h3 class="contTitle">디자인 기획</h3>
+						<div class="contDesc">
+							<p class="contText">레버런스 리서치</p>
+							<p class="contText">디자인 기획</p>
+						</div>
+					</div>
+
+					<div class="contentBox content2">
+						<h3 class="contTitle">디자인 제작</h3>
+						<div class="contDesc">
+							<p class="contText">이미지 소스 리서치</p>
+							<p class="contText">디자인 레이아웃 구성</p>
+							<p class="contText">시안완료</p>
+						</div>
+					</div>
+
+					<div class="contentBox content3">
+						<h3 class="contTitle">디자인 컨펌</h3>
+						<div class="contDesc">
+							<p class="contText">디자인 제안</p>
+							<p class="contText">컨펌</p>
+							<p class="contText">수정 및 검수</p>
+						</div>
+					</div>
+
+					<div class="contentBox content4">
+						<h3 class="contTitle">디자인 완료</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!------------------------------------->
+
+	<!-- section4 -->
+
+		<section id="section4" class="section wheelSection">
+			<div class="innerWrap">
+				<h2 class="secTitle">
+					<div>마음을 사로잡는</div>
+					<div class="fontOrange">상세페이지 제작</div>
+				</h2>
+				<div class="subTitle">
+					<div>파트너사의 상품을 한눈에 살필 수 있는 상세페이지 입니다.</div>
+					<div>판매 옵션에 따른 컨셉을 트렌드에 맞게 제작합니다.</div>
+				</div>
+				<ul id="designDevSwiper" class="slide">
+					<li class="slideItem item1">
+						<img src="/img/img_subDesignDev_slide01.jpg" alt="서귀포 잠수함">
+						<div class="hoverLink">
+							<h3 class="itemTitle">서귀포 잠수함</h3>
+							<button type="button" class="btn moreView">
+								<span class="hide">상품 바로가기</span>
+							</button>
+						</div>
+					</li>
+					<li class="slideItem item2">
+						<img src="/img/img_subDesignDev_slide02.jpg" alt="노형수퍼마켙">
+						<div class="hoverLink">
+							<h3 class="itemTitle">노형수퍼마켙</h3>
+							<button type="button" class="btn moreView">
+								<span class="hide">상품 바로가기</span>
+							</button>
+						</div>
+					</li>
+					<li class="slideItem item3">
+						<img src="/img/img_subDesignDev_slide03.jpg" alt="새별 ATV">
+						<div class="hoverLink">
+							<h3 class="itemTitle">새별 ATV</h3>
+							<button type="button" class="btn moreView">
+								<span class="hide">상품 바로가기</span>
+							</button>
+						</div>
+					</li>
+					<li class="slideItem item4">
+						<img src="/img/img_subDesignDev_slide04.jpg" alt="윈드카트 서바이벌">
+						<div class="hoverLink">
+							<h3 class="itemTitle">윈드카트 서바이벌</h3>
+							<button type="button" class="btn moreView">
+								<span class="hide">상품 바로가기</span>
+							</button>
+						</div>
+					</li>
+					<li class="slideItem item5">
+						<img src="/img/img_subDesignDev_slide05.jpg" alt="퍼시픽 마리나">
+						<div class="hoverLink">
+							<h3 class="itemTitle">퍼시픽 마리나</h3>
+							<button type="button" class="btn moreView">
+								<span class="hide">상품 바로가기</span>
+							</button>
+						</div>
+					</li>
+					<li class="slideItem item6">
+						<img src="/img/img_subDesignDev_slide06.jpg" alt="폴더">
+						<div class="hoverLink">
+							<h3 class="itemTitle">폴더</h3>
+							<button type="button" class="btn moreView">
+								<span class="hide">상품 바로가기</span>
+							</button>
+						</div>
+					</li>
+				</ul>
+				<ul id="thumbnailVideo" class="thumbnailVideo">
+					<li class="slideItem item1"></li>
+					<li class="slideItem item2"></li>
+					<li class="slideItem item3"></li>
+					<li class="slideItem item4"></li>
+					<li class="slideItem item5"></li>
+					<li class="slideItem item6"></li>
+					<li class="slideItem item7"></li>
+					<li class="slideItem item8"></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- section5 -->
 
 		<section id="section5" class="section wheelSection">
 			<div class="innerWrap">
@@ -213,7 +346,7 @@
 			</div>
 		</section>
 
-	<!-- 푸터 영역 -->
+		<!-- 푸터 영역 -->
 	<footer class="footer">
 		<div class="innerWrap">
 			<div class="wrapper">
@@ -279,51 +412,22 @@
 			</div>
 		</div>
 	</footer>
+	</main>
+
+	
 
 	<!-- Modal Popup 영역 -->
 	<div id="popupWrap" class="popupWrap">
-		<div id="popupNotReady" class="popupFrame popup">
-			<div class="popupHeader">
-				<i class="icon"></i>
-			</div>
-			<div class="popupContent">
-				<h2 class="popupTitle">
-					현재 <span class="fontOrange">페이지 준비중</strong>입니다.
-				</h2>
-			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('NotReady')">
+		<div id="popupExample" class="popupFrame popup ">
+			<!-- Modal Popup Contents -->
+			<button type="button" class="closePopupBtn" onclick="closePopup('popupExample')">
 				<span class="hide">닫기</span>
 			</button>
 		</div>
 
-		<div id="popupCharacterDesign1" class="popupFrame popup characterDesignModal">
-			<div class="flexWrap">
-				<div class="leftBox">
-					<figure>
-						<img src="img/img_subDesignDev_character1_profile.png" alt="">
-						<figcaption>
-							<h3 class="charNm">트레브</h3>
-							<h4 class="charEngNm">Trev</h4>
-						</figcaption>
-					</figure>
-				</div>
-
-				<div class="rightBox">
-					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">똥꼬발랄, 여행을 좋아하는 천방지축 여우</p>
-					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">제주 여행을 좋아하는 아기여우.
-						호기심이 많아서 여기저기 안 가본 곳이 없어요.
-						여우라서 똑똑하고 영리해보이지만 아직은 어려서
-						어설픈 면도 많은 아기 여우랍니다.</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn5">투어패스 바로가기</button>
-						<button type="button" class="btn btn5">계정 바로가기</button>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterDesign1')">
+		<div id="popup" class="popupFrame popup">
+			<!-- Modal Popup Contents -->
+			<button type="button" class="closePopupBtn" onclick="closePopup('현재 팝업 ID')">
 				<span class="hide">닫기</span>
 			</button>
 		</div>
