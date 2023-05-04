@@ -120,6 +120,9 @@ $(function(){
   })
   .setTween(tween1)
   .addTo(controller)
+  // .addIndicators({
+  //   name: "tween1"
+  // });
 
 
   // 끊임없이 성장하는
@@ -129,11 +132,14 @@ $(function(){
   let scene2 = new ScrollMagic.Scene({
     triggerElement: "#section2",
     triggerHook:  0 ,
-    offset: 400,
+    offset: 325,
     duration: "40%",
   })
   .setTween(tween2)
   .addTo(controller)
+  // .addIndicators({   // 트리거 인디케이터 이름지정 및 등록
+  //   name: "tween2"
+  // });
 
   // 엘에스컴퍼니
   let tween3 = gsap.to('#section2 .rollingFrame .rollingItem.item3', {
@@ -144,52 +150,34 @@ $(function(){
   let scene3 = new ScrollMagic.Scene({
     triggerElement: "#section2",
     triggerHook:  0 , //0~1 ,
-    offset: 800,
+    offset: 650,
     duration: "40%",
   })
   .setTween(tween3)
   .addTo(controller)
+  // .addIndicators({
+  //   name: "tween3"
+  // });
   /* //Section2 텍스트 스크롤효과 */
-
-  let tween4Data;
-
-  winResize();
-
-  $(window).resize(function(){
-      winResize();
-      console.log(tween4Data)
-  });
-
-  function winResize(){
-    let winWidth = $(this).width();
-
-    if(winWidth>767){ // Mobile
-      tween4Data = '-400rem'
-
-
-      if(winWidth>1279){ //PC(1280px ~)
-        tween4Data = '-640rem'
-      }
-    } else { //Tablet(768px ~ 1279px)
-      tween4Data = '-400rem'
-    }
-  }
 
   
   /* Section3 텍스트 스크롤효과 */
   let tween4 = gsap.to('#section3 .rollingFrame .slideContainer', { 
     
-    x: tween4Data,
+    x: "-650%",
   });
 
   let scene4 = new ScrollMagic.Scene({
     triggerElement: "#section3",
     triggerHook:  0,
-    offset: 100,
+    offset: 0,
     duration: "100%",
   })
   .setTween(tween4)
   .addTo(controller)
+  // .addIndicators({
+  //   name: "hrz"
+  // });
   /* //Section3 텍스트 스크롤효과 */
 
   

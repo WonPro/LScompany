@@ -31,13 +31,13 @@
 	@media screen and (max-width: 767px) {
 
 		#visual {
-			height: 100vh;
+			height: 51rem;
 			padding-top: 0;
 		}
 
 		#visual video {
 			width: unset;
-			height: 100vh;
+			height: 100%;
 			top: 60px;
 			left: 50%;
 			transform: translate(-50%, 0%);
@@ -105,6 +105,22 @@
 		}
 	}
 
+	@media screen and (max-width: 767px) {
+
+		#section1 .slideWrap .slideItem{
+			padding: 3rem 0;
+			font-size: 2.2rem;
+		}
+
+		#section1 .slideWrap .slideItem .icon{
+			width: 2.6rem;
+			height: 2.6rem;
+			margin: 0 0.2rem;
+			background-size: contain;
+		}
+
+	}
+
 
 
 /***************************************
@@ -146,6 +162,17 @@
 		-moz-transform: scale(0.1);
     transform: scale(0.1);
 		opacity: 0;
+	}
+
+	@media screen and (max-width: 767px) {
+
+		#section2{
+			height: 179rem;
+		}
+
+		#section2 .rollingItem{
+			font-size: 4rem;
+		}
 	}
 
 
@@ -242,11 +269,11 @@
 	@media screen and (max-width:1279px) {
 
 		#section3{
-			height: 165rem;
+			height: 200vh;
 		}
 
 		#section3 .slideContainer {
-			width: calc(100% - 35rem);
+			width: calc(100% - 45rem);
 			margin: 5rem auto 0;
 			display: flex;
 			gap: 10rem;
@@ -261,6 +288,39 @@
 		#section3 .slideContainer .slideItem .btn{
 			margin-top: 11rem;
 		}
+	}
+
+	@media screen and (max-width: 767px) {
+
+		#section3 .rollingFrame{
+			padding-top: 15rem;
+			padding-bottom: 15rem;
+		}
+
+		#section3 .slideContainer{
+			width: calc(100% - 4rem);
+		}
+
+		#section3 .slideContainer .slideItem {
+				width: 100%;
+				height: 28.8rem;
+				margin: 0;
+				padding: 4rem;
+		}
+
+		#section3 .slideContainer .slideItem .itemTitle{
+			font-size: 2.6rem;
+		}
+
+		#section3 .slideContainer .slideItem .itemDesc .hashtag {
+			font-size: 1.6rem;
+		}
+
+		#section3 .slideContainer .slideItem{
+			background-size: 210px 139px;
+			background-position: right 119px;
+		}
+
 	}
 
 
@@ -341,6 +401,32 @@
 
 	}
 
+	@media screen and (max-width: 767px) {
+
+		#section4 .innerWrap{
+			position: relative;
+			display: block;
+		}
+
+		#section4 .subTitle{
+			margin-top: 0;
+		}
+		
+		#section4 .innerWrap .swiperWrapper{
+			width: 8rem;
+			height: 16.2rem;
+			padding: 3px;
+			position: absolute;
+			bottom: -1rem;
+			right: 2rem;
+		}
+
+		#section4 .innerWrap .swiperWrapper .swiperItem{
+			height: 16rem;
+		}
+
+	}
+
 
 
 /***************************************
@@ -408,5 +494,20 @@
 		
 		#section6 .secTitle{
 			font-size: 2.4rem;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+
+		#section6 .innerWrap{
+			flex-wrap: nowrap;
+			gap: 1rem;
+		}
+
+		#section6 .secTitle{
+			width: calc(100% - 11.4rem);
+			font-size: 1.6rem;
+			line-height: 1.2;
+			word-break: keep-all;
 		}
 	}

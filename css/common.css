@@ -6,9 +6,6 @@
 ***************************************/
 	.btn{
 		font-size: 1.6rem;
-		-webkit-transition: background-position .3s;
-		-moz-transition: background-position .3s;
-		transition: background-position .3s;
 	}
 	.btn .btnNm{
 		position: relative;
@@ -201,6 +198,17 @@
 
 		.main .subTitle{
 			font-size: 2rem;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.main .secTitle{
+			font-size: 3rem;
+		}
+
+		.main .subTitle{
+			margin-top: 1rem;
+			font-size: 1.6rem;
 		}
 	}
 
@@ -569,7 +577,7 @@
 		}
 
 		.footer .siteWrap{
-			bottom: 4.6rem;
+			bottom: 5.8csrem;
 		}
 
 		.footer .siteWrap .familySiteBtn{

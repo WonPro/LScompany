@@ -25,7 +25,7 @@
 .top0{top: 0;} .top5{top: 5px;} .top10{top: 10px;} .top15{top: 15px;} .top20{top: 20px;}
 .bot0{bottom: 0;} .bot5{bottom: 5px;} .bot10{bottom: 10px;}
 
-@media screen and (max-width:1199px){
+@media screen and (max-width:1279px){
 	.innerWrap{width: 100%; padding: 0 20px;}
 }
 @media screen and (max-width:767px){
@@ -161,7 +161,7 @@ ul.paging li a{display: block; font-size: 18px; color: #121212; cursor: pointer;
 .flexWrap.grid{gap: 20px; justify-content: center; margin-left: -10px; margin-right: -10px;}
 
 
-@media screen and (max-width:1199px){
+@media screen and (max-width:1279px){
 	.flexWrap.grid{gap: 16px;  margin-left: -8px; margin-right: -8px;}
 }
 
@@ -181,7 +181,7 @@ ul.paging li a{display: block; font-size: 18px; color: #121212; cursor: pointer;
 .col_lg11{flex: calc(91.6666667% - 20px) 0 0;}
 .col_lg12{flex: calc(100% - 20px) 0 0;}
 
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1279px){
 	.col_md0{display: none !important;}
 	.col_md1{flex: calc(8.3333333% - 16px) 0 0;}
 	.col_md2{flex: calc(16.6666667% - 16px) 0 0;}
@@ -299,7 +299,7 @@ ul.paging li a{display: block; font-size: 18px; color: #121212; cursor: pointer;
 .ml_col10{margin-left: 83.33%;} .ml_col11{margin-left: 91.66%;} .ml_col12{margin-left: 100%;}
 
 
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 1279px){
 	.md_ml_col0{margin-left: 0;} 
 	.md_ml_col1{margin-left: 8.33%;} .md_ml_col2{margin-left: 16.66%;} .md_ml_col3{margin-left: 25%;}
 	.md_ml_col4{margin-left: 33.33%;} .md_ml_col5{margin-left: 41.66%;} .md_ml_col6{margin-left: 50%;}
