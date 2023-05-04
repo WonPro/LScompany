@@ -33,285 +33,267 @@
 
 $(function(){
 
-  /* Common */
-  $('#mobileGnb').on('click', function(){
-    let active = $(this).hasClass('active');
-    if(!active){
-      $(this).addClass('active');
-      $('#gnb').addClass('active');
-    } else {
-      $(this).removeClass('active');
-      $('#gnb').removeClass('active');
-    }
-  })
+  /********* Common *********/
 
-  /* Main.html */
-
-  /* Section1 텍스트 스크롤효과 */
-  $(window).scroll(function(){
-    // 스크롤 이벤트가 감지되었을 때,
-
-    $('#section1 .slideItem').each(function(i){
-      // 경로에 위치한 모든 아이템들에게 각각 반복작업을 실행한다.
-      // 여기서 i는 slideItem의 각 Index를 갖는다.
-
-      let offsetVal = $(this).offset().top + 100, 
-          // 각 Element별 Y좌표 값
-          windowMid = $(window).height() / 2, 
-          // 현재 보이는 화면의 절반값
-          scrollVal = $(window).scrollTop(),
-          // 현재 스크롤된 Y좌표 값
-
-          opacityTopPoint1 = scrollVal + windowMid + 100,
-          opacityTopPoint2 = scrollVal + windowMid + 150,
-          opacityTopPoint3 = scrollVal + windowMid + 200,
-
-          opacityBotPoint1 = scrollVal + windowMid - 100,
-          opacityBotPoint2 = scrollVal + windowMid - 150,
-          opacityBotPoint3 = scrollVal + windowMid - 200,
-          
-          hideTopPoint = scrollVal + windowMid + 250,
-          hideBotPoint = scrollVal + windowMid - 250;
-      
-      ++i;
-      // i값과 각 Elements의 클래스 카운팅차이 
-      // i는 0부터시작, 우리의 클래스는 1부터 시작하는 차이를 매칭시켜줌
-
-
-      if(offsetVal < opacityTopPoint1 || offsetVal > opacityBotPoint1){
-        // 각 Element가 화면 중앙에 왔을때
-        $('#section1 .item'+i).css("opacity", 1);
+    /* Header 햄버거메뉴 및 GNB 스타일 변경 */
+    $('#mobileGnb').on('click', function(){
+      let active = $(this).hasClass('active');
+      if(!active){
+        $(this).addClass('active');
+        $('#gnb').addClass('active');
+      } else {
+        $(this).removeClass('active');
+        $('#gnb').removeClass('active');
       }
-      if(offsetVal >= opacityTopPoint1 || offsetVal <= opacityBotPoint1 ){
-        // 각 Element가 화면 정중앙에 위아래로 50px 이상 멀어졌을때
-        $('#section1 .item'+i).css({'opacity':0.3})
-      }
-      if(offsetVal >= opacityTopPoint2 || offsetVal <= opacityBotPoint2 ){
-        // 각 Element가 화면 정중앙에 위아래로 100px 이상 멀어졌을때
-        $('#section1 .item'+i).css({'opacity':0.1})
-      }
-      if(offsetVal >= opacityTopPoint3 || offsetVal <= opacityBotPoint3 ){
-        // 각 Element가 화면 정중앙에 위아래로 150px 이상 멀어졌을때
-        $('#section1 .item'+i).css({'opacity':0.001})
-      }
-      if(offsetVal >= hideTopPoint || offsetVal <= hideBotPoint ){
-        // 각 Element가 화면 정중앙에 위아래로 200px 이상 멀어졌을때
-        $('#section1 .item'+i).css({'opacity':0})
-      }
-    }); 
-  });
-  /* //Section1 텍스트 스크롤효과 */
+    });
 
-
-
-  /* Section2 텍스트 스크롤효과 */
-  const controller = new ScrollMagic.Controller();
-
-  // 여행의 모든것,
-  let tween1 = gsap.to('#section2 .rollingFrame .rollingItem.item1', {
-    opacity: 1,
-  });
-
-  let scene1 = new ScrollMagic.Scene({
-    triggerElement: "#section2",
-    triggerHook:  0 ,
-    offset: 0,
-    duration: "40%",
-  })
-  .setTween(tween1)
-  .addTo(controller)
-  // .addIndicators({
-  //   name: "tween1"
-  // });
-
-
-  // 끊임없이 성장하는
-  let tween2 = gsap.to('#section2 .rollingFrame .rollingItem.item2', {
-    opacity: 1,
-  });
-  let scene2 = new ScrollMagic.Scene({
-    triggerElement: "#section2",
-    triggerHook:  0 ,
-    offset: 325,
-    duration: "40%",
-  })
-  .setTween(tween2)
-  .addTo(controller)
-  // .addIndicators({   // 트리거 인디케이터 이름지정 및 등록
-  //   name: "tween2"
-  // });
-
-  // 엘에스컴퍼니
-  let tween3 = gsap.to('#section2 .rollingFrame .rollingItem.item3', {
-    scale: "1",
-    opacity: 1,
-  });
-
-  let scene3 = new ScrollMagic.Scene({
-    triggerElement: "#section2",
-    triggerHook:  0 , //0~1 ,
-    offset: 650,
-    duration: "40%",
-  })
-  .setTween(tween3)
-  .addTo(controller)
-  // .addIndicators({
-  //   name: "tween3"
-  // });
-  /* //Section2 텍스트 스크롤효과 */
-
-  
-  /* Section3 텍스트 스크롤효과 */
-  let tween4 = gsap.to('#section3 .rollingFrame .slideContainer', { 
-    
-    x: "-650%",
-  });
-
-  let scene4 = new ScrollMagic.Scene({
-    triggerElement: "#section3",
-    triggerHook:  0,
-    offset: 0,
-    duration: "100%",
-  })
-  .setTween(tween4)
-  .addTo(controller)
-  // .addIndicators({
-  //   name: "hrz"
-  // });
-  /* //Section3 텍스트 스크롤효과 */
-
-  
-  
-
-
-  /* Section4 목업 캐러셀 */
-
-  $('#section4 #swiper').slick({
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    dots: false,
-  });
-
-  /* //Section4 목업 캐러셀 */
-
-
-  /* Footer 패밀리사이트 애니메이션 */
-  $('.familySiteBtn').on('click', function(){
-		let active = $(this).hasClass('active')
-		if(!active){
-			$(this).addClass('active');
-			$('.siteList').slideDown(200);
-		} else {
-			$(this).removeClass('active');
-			$('.siteList').slideUp(200);
-		}
-	});
-  /* //Footer 패밀리사이트 애니메이션 */
-
-  /* // Main.html */
-
-  /*************************************
-  *            Wheel Movement          *
-  *************************************/
-
-	$('.wheelSection').each(function(){
-    $(this).on('mousewheel DOMMousewheel', function(e){
-    //mousewheel : 크롬, 오페라, 익스엣지 적용되는 이벤트(또는 이벤트 핸들러)
-    //DOMMousewheel : 파이어 폭스, 익스 9+
-      e.preventDefault();  //초기화되는 부분을 방지
-      let delta = 0;  //브라우저가 로딩되면서 마우스 휠을 돌리지 않은 상태
-      if(!event){  //마우스 휠을 돌리지 않아서 이벤트가 발생하지 않은 상태
-        event=window.event;  //어떠한 이벤트도 발생하지 않았을 경우, 윈도의 브라우저 초기 로딩상태를 유지시킴			
-      }
-      //event.wheelDelta(크롬, 익스엣지)
-      //휠을 내렸을 경우 -120   /   휠을 올렸을 경우 120
-      //event.wheelDelta(오페라)
-      //휠을 내렸을 경우 120   /   휠을 올렸을 경우 -120
-      //event.detail(파이어폭스)
-      //휠을 내렸을 경우 4 / 휠을 올렸을 경우 -4
-      if(event.wheelDelta){
-        delta = event.wheelDelta;
+    /* 마우스휠 이벤트 */
+    $('.wheelSection').each(function(){
+      $(this).on('mousewheel DOMMousewheel', function(e){
+      //mousewheel : 크롬, 오페라, 익스엣지 적용되는 이벤트(또는 이벤트 핸들러)
+      //DOMMousewheel : 파이어 폭스, 익스 9+
+        e.preventDefault();  //초기화되는 부분을 방지
+        let delta = 0;  //브라우저가 로딩되면서 마우스 휠을 돌리지 않은 상태
+        if(!event){  //마우스 휠을 돌리지 않아서 이벤트가 발생하지 않은 상태
+          event=window.event;  //어떠한 이벤트도 발생하지 않았을 경우, 윈도의 브라우저 초기 로딩상태를 유지시킴			
+        }
+        //event.wheelDelta(크롬, 익스엣지)
         //휠을 내렸을 경우 -120   /   휠을 올렸을 경우 120
-        if(window.opera){
-          delta = -delta;  //오페라 브라우저의 경우 마우스 휠로부터 이벤트 적용시 반대의 값을 받아오기 때문에 역으로 반환
+        //event.wheelDelta(오페라)
+        //휠을 내렸을 경우 120   /   휠을 올렸을 경우 -120
+        //event.detail(파이어폭스)
+        //휠을 내렸을 경우 4 / 휠을 올렸을 경우 -4
+        if(event.wheelDelta){
+          delta = event.wheelDelta;
+          //휠을 내렸을 경우 -120   /   휠을 올렸을 경우 120
+          if(window.opera){
+            delta = -delta;  //오페라 브라우저의 경우 마우스 휠로부터 이벤트 적용시 반대의 값을 받아오기 때문에 역으로 반환
+          }
+        }else if(event.detail){
+          delta = -event.detail;
         }
-      }else if(event.detail){
-        delta = -event.detail;
-      }
-      
-      let moveTo = null; //휠 이벤트에 대한 값을 초기화. 값이 null값(값이 없음을 이야기함)
-      //마우스 휠을 내렸을 경우
-      if(delta<0){   //마우스 휠을 내렸을 때 [음의 정수] 값을 받아오는 경우
-        if($(this).next() != undefined){  //다음으로 이동하려는 섹션이 존재하는 경우
-          moveTo = $(this).next().offset().top;
-        }
-      }else{  //마우스 휠을 올렸을 때, [양의 정수] 값을 받아오는 경우
-        if($(this).prev() != undefined){  //이전으로 이동하려는 섹션이 존재하는 경우
-          moveTo = $(this).prev().offset().top;
-          if($(this).prev().offset().top == undefined){
-            e.preventDefault()
+        
+        let moveTo = null; //휠 이벤트에 대한 값을 초기화. 값이 null값(값이 없음을 이야기함)
+        //마우스 휠을 내렸을 경우
+        if(delta<0){   //마우스 휠을 내렸을 때 [음의 정수] 값을 받아오는 경우
+          if($(this).next() != undefined){  //다음으로 이동하려는 섹션이 존재하는 경우
+            moveTo = $(this).next().offset().top;
+          }
+        }else{  //마우스 휠을 올렸을 때, [양의 정수] 값을 받아오는 경우
+          if($(this).prev() != undefined){  //이전으로 이동하려는 섹션이 존재하는 경우
+            moveTo = $(this).prev().offset().top;
+            if($(this).prev().offset().top == undefined){
+              e.preventDefault()
+            }
           }
         }
+        /*동적 움직임을 구현*/
+        $('html, body').stop().animate({scrollTop : moveTo+'px'}, {duration:300, complete:function(){}});
+        //$("html, body").stop().animate({scrollTop : moveTo+"px"}, 시간);  => 각박스의 상단으로 이동동시키는 부분을 적용
+        //{duration:700, complete:function(){}} : 소요되는 시간 0.7초,  도달하기까지의 함수구문으로 대기하라는 의미
+      });
+    });	
+
+    /* Footer 패밀리사이트 애니메이션 */
+    $('.familySiteBtn').on('click', function(){
+      let active = $(this).hasClass('active')
+      if(!active){
+        $(this).addClass('active');
+        $('.siteList').slideDown(200);
+      } else {
+        $(this).removeClass('active');
+        $('.siteList').slideUp(200);
       }
-      /*동적 움직임을 구현*/
-      $('html, body').stop().animate({scrollTop : moveTo+'px'}, {duration:300, complete:function(){}});
-      //$("html, body").stop().animate({scrollTop : moveTo+"px"}, 시간);  => 각박스의 상단으로 이동동시키는 부분을 적용
-      //{duration:700, complete:function(){}} : 소요되는 시간 0.7초,  도달하기까지의 함수구문으로 대기하라는 의미
     });
-  });	
 
-   /* DesignDev.html Section4 캐러셀 */
+  /********* Common *********/
 
-  $('#designDevSwiper').slick({
-    arrows: false,
-    dots: true,
-    autoplay: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
+
+
+  /********* Main.html *********/
+
+    /* Section1 텍스트 스크롤효과 */
+    $(window).scroll(function(){
+      // 스크롤 이벤트가 감지되었을 때,
+
+      $('#main #section1 .slideItem').each(function(i){
+        // 선택된 모든 Elements에게 각각 반복작업을 실행한다.
+        // 여기서 i는 slideItem의 각 Index를 갖는다.
+
+        let offsetVal = $(this).offset().top + 100, 
+            // 각 Element별 Y좌표 값
+            windowMid = $(window).height() / 2, 
+            // 현재 보이는 화면의 절반값
+            scrollVal = $(window).scrollTop(),
+            // 현재 스크롤된 Y좌표 값
+
+            opacityTopPoint1 = scrollVal + windowMid + 100,
+            opacityTopPoint2 = scrollVal + windowMid + 150,
+            opacityTopPoint3 = scrollVal + windowMid + 200,
+
+            opacityBotPoint1 = scrollVal + windowMid - 100,
+            opacityBotPoint2 = scrollVal + windowMid - 150,
+            opacityBotPoint3 = scrollVal + windowMid - 200,
+            
+            hideTopPoint = scrollVal + windowMid + 250,
+            hideBotPoint = scrollVal + windowMid - 250;
+        
+        ++i;
+        // i값과 각 Elements의 클래스 카운팅차이 
+        // i는 0부터시작, 우리의 클래스는 1부터 시작하는 차이를 매칭시켜줌
+
+
+        if(offsetVal < opacityTopPoint1 || offsetVal > opacityBotPoint1){
+          // 각 Element가 화면 중앙에 왔을때
+          $('#main #section1 .item'+i).css("opacity", 1);
         }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
+        if(offsetVal >= opacityTopPoint1 || offsetVal <= opacityBotPoint1 ){
+          // 각 Element가 화면 정중앙에 위아래로 50px 이상 멀어졌을때
+          $('#main #section1 .item'+i).css({'opacity':0.3})
         }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+        if(offsetVal >= opacityTopPoint2 || offsetVal <= opacityBotPoint2 ){
+          // 각 Element가 화면 정중앙에 위아래로 100px 이상 멀어졌을때
+          $('#main #section1 .item'+i).css({'opacity':0.1})
+        }
+        if(offsetVal >= opacityTopPoint3 || offsetVal <= opacityBotPoint3 ){
+          // 각 Element가 화면 정중앙에 위아래로 150px 이상 멀어졌을때
+          $('#main #section1 .item'+i).css({'opacity':0.001})
+        }
+        if(offsetVal >= hideTopPoint || offsetVal <= hideBotPoint ){
+          // 각 Element가 화면 정중앙에 위아래로 200px 이상 멀어졌을때
+          $('#main #section1 .item'+i).css({'opacity':0})
+        }
+      }); 
+    });
 
-  $('#thumbnailVideo').slick({
-    vertical: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 500,
-    arrows: false,
-    verticalSwiping: false,
-    speed: 3000,
-    draggable: false,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-  })
-	
+    /* Section2 텍스트 스크롤효과 */
+    const controller = new ScrollMagic.Controller();
+
+    // 여행의 모든것,
+    let tween1 = gsap.to('#main #section2 .rollingFrame .rollingItem.item1', {
+      opacity: 1,
+    });
+
+    let scene1 = new ScrollMagic.Scene({
+      triggerElement: "#main #section2",
+      triggerHook:  0 ,
+      offset: 0,
+      duration: "40%",
+    })
+    .setTween(tween1)
+    .addTo(controller)
+    // .addIndicators({
+    //   name: "tween1"
+    // });
+
+    // 끊임없이 성장하는
+    let tween2 = gsap.to('#main #section2 .rollingFrame .rollingItem.item2', {
+      opacity: 1,
+    });
+    let scene2 = new ScrollMagic.Scene({
+      triggerElement: "#main #section2",
+      triggerHook:  0 ,
+      offset: 325,
+      duration: "40%",
+    })
+    .setTween(tween2)
+    .addTo(controller)
+    // .addIndicators({
+    //   name: "tween2"
+    // });
+
+    // 엘에스컴퍼니
+    let tween3 = gsap.to('#main #section2 .rollingFrame .rollingItem.item3', {
+      scale: "1",
+      opacity: 1,
+    });
+
+    let scene3 = new ScrollMagic.Scene({
+      triggerElement: "#main #section2",
+      triggerHook:  0 , //0~1 ,
+      offset: 650,
+      duration: "40%",
+    })
+    .setTween(tween3)
+    .addTo(controller)
+    // .addIndicators({
+    //   name: "tween3"
+    // });
+
+    /* Section3 텍스트 스크롤효과 */
+    let tween4 = gsap.to('#main #section3 .rollingFrame .slideContainer', {       
+      x: "-500%",
+    });
+
+    let scene4 = new ScrollMagic.Scene({
+      triggerElement: "#main #section3",
+      triggerHook:  0,
+      offset: 0,
+      duration: "100%",
+    })
+    .setTween(tween4)
+    .addTo(controller)
+    // .addIndicators({
+    //   name: "hrz"
+    // });
+
+    /* Section4 목업 캐러셀 */
+    $('#main #section4 #swiper').slick({
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 1500,
+      arrows: false,
+      dots: false,
+    });
+  /********* // Main.html *********/	
 
 
-  // AOS start
-  // AOS.init();
 
+  /********* DesignDev.html *********/
+
+    /*  Section4 캐러셀 */
+    $('#designDev #designDevSwiper').slick({
+      arrows: false,
+      dots: true,
+      autoplay: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
+    $('#designDev #thumbnailVideo').slick({
+      vertical: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 500,
+      arrows: false,
+      verticalSwiping: false,
+      speed: 3000,
+      draggable: false,
+      pauseOnFocus: false,
+      pauseOnHover: false,
+    });
 });
 

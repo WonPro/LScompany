@@ -19,8 +19,8 @@
 	<meta property="twitter:title" content="">
 	<meta property="twitter:description" content="">
 	<meta property="twitter:image" content="">
-	<title>entered your project title</title>
-<!-- 
+	<title>국내 여행 끝판왕 투어패스 | (주)엘에스컴퍼니</title>
+
 	<link rel="icon" href="img/favicon/favicon_32.png" sizes="32x32">
 	<link rel="icon" href="img/favicon/favicon_48.png" sizes="48x48">
 	<link rel="icon" href="img/favicon/favicon_57.png" sizes="57x57">
@@ -32,25 +32,22 @@
 	<link rel="icon" href="img/favicon/favicon_152.png" sizes="152x152">
 	<link rel="icon" href="img/favicon/favicon_195.png" sizes="195x195">
 	<link rel="icon" href="img/favicon/favicon_228.png" sizes="228x228">
- -->
+
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
-	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/layout.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/sub.css">
 
 	<script src="js/jquery-2.2.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/swiper-bundle.js"></script>
-	<script src="js/aos.js"></script>
 	<script src="js/ScrollMagic.min.js"></script>
 	<script src="js/animation.gsap.min.js"></script>
 	<script src="js/gsap.min.js"></script>
 	<script src="js/jquery.ScrollMagic.min.js"></script>
 	<script src="js/debug.addIndicators.min.js"></script>
-	<script src="js/jquery.fullpage.min.js"></script>
 	<script defer src="js/slick.min.js"></script>
 	<script defer src="js/script.js"></script>
 </head>
@@ -65,7 +62,7 @@
 			
 	
 			<!-- gnb 영역 -->
-			<nav class="gnb">
+			<nav id="gnb" class="gnb">
 				<ul>
 					<li><a href="/AboutUs.html">회사소개</a></li>
 					<li><a href="/SystemDev.html">시스템개발</a></li>
@@ -74,19 +71,82 @@
 					<li><a href="/ProductPln.html">상품기획</a></li>
 					<li><a href="/ContentsBiz.html">콘텐츠사업</a></li>
 					<li><a href="/Mobility.html">모빌리티</a></li>
+					<li class="mobileShow"><a href="">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
 	
-			<button class="btn btn1" onclick="openPopup('NotReady')">제휴문의</button>
+			<button class="btn btn1 mobileHide" onclick="openPopup('NotReady')">
+				<span class="btnNm">제휴문의</span>
+			</button>
+
+			<button id="mobileGnb" class="btn mobileGnb mobileShow">
+				<span class="hide">모바일 메뉴열기</span>
+			</button>
 		</div>
 	</header>
 
-	<main role="main" class="main">
+
+	<main role="main" id="contentsBiz">
+
+		<!-- Section1 영역 -->
+		<section id="section1" class="section wheelSection">
+			<div class="innerWrap">
+				<h2 class="secTitle title1">
+					<div>원하는 무엇이든</div>
+					<div><span class="fontOrange">상상을 현실로</span></div>
+				</h2>
+				<div class="subTitle">
+					<p class="title1"><span class="fontOrange">Creative+</span>더욱 크리에이티브하게 특별한 메세지를 전달하다</p>
+					<p class="title2">새롭고 창의적인 방식으로 트렌드를 담아 온·오프라인 플랫폼에 최적화된 콘텐츠를 만들어 냅니다.</p>
+					<p class="title2">우리와 함께 머리속으로만 그려왔던 상상을 현실로 펼쳐보세요!</p>
+				</div>
+			</div>
+		</section>
+		<!-- //Section1 영역 -->
+
+		<!-- section2 영역-->
+		<section id="section2" class="section wheelSection">
+			<div class="innerWrap">
+				<h2 class="secTitle">
+					<span class="fontOrange">상상을 현실로</span> 만들다
+				</h2>
+				<p class="subTitle">신비한 마법처럼 컨텐츠를 만들어내는 디자이너를 만나보세요!</p>
+			</div>
+		</section>
+		<!-- //section2 영역 -->
+
+	
+		<!-- section3 영역 -->
+		<section id="section3" class="section wheelSection">
+			<div class="innerWrap">
+				
+			</div>
+		</section>
+		<!-- //section3 영역 -->
 		
+
+		<!-- section4 영역 -->
+		<section id="section4" class="section wheelSection">
+			<div class="innerWrap">
+				
+			</div>
+		</section>
+		<!-- //section4 영역 -->
+
+
+
+		<!-- section5 영역-->
+		<section id="section5" class="section wheelSection">
+			<div class="innerWrap">
+				
+			</div>
+		</section>
+		<!-- //section5 영역-->
 	</main>
 
-	<!-- 푸터 영역 -->
+
+		<!-- 푸터 영역 -->
 	<footer class="footer">
 		<div class="innerWrap">
 			<div class="wrapper">
@@ -110,32 +170,32 @@
 					<li>
 						<a href="Main.html">
 							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
-								<path d="M16.0765 25.3469V20.5436H19.9192V25.3469C19.9192 25.8753 20.3515 26.3076 20.8799 26.3076H23.7619C24.2903 26.3076 24.7226 25.8753 24.7226 25.3469V18.6222H26.3557C26.7976 18.6222 27.009 18.0747 26.6727 17.7865L18.6415 10.5526C18.2765 10.226 17.7193 10.226 17.3542 10.5526L9.32299 17.7865C8.99637 18.0747 9.19811 18.6222 9.64002 18.6222H11.2732V25.3469C11.2732 25.8753 11.7055 26.3076 12.2338 26.3076H15.1158C15.6442 26.3076 16.0765 25.8753 16.0765 25.3469Z" fill="#282828"/>
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5"/>
+								<path d="M16.0765 25.3469V20.5436H19.9192V25.3469C19.9192 25.8753 20.3515 26.3076 20.8799 26.3076H23.7619C24.2903 26.3076 24.7226 25.8753 24.7226 25.3469V18.6222H26.3557C26.7976 18.6222 27.009 18.0747 26.6727 17.7865L18.6415 10.5526C18.2765 10.226 17.7193 10.226 17.3542 10.5526L9.32299 17.7865C8.99637 18.0747 9.19811 18.6222 9.64002 18.6222H11.2732V25.3469C11.2732 25.8753 11.7055 26.3076 12.2338 26.3076H15.1158C15.6442 26.3076 16.0765 25.8753 16.0765 25.3469Z"/>
 							</svg>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7681 22.2919C15.7681 21.039 15.7627 19.7867 15.7728 18.5339C15.7748 18.323 15.7108 18.2568 15.4844 18.265C15.0667 18.2808 14.6476 18.2631 14.2298 18.2726C14.0607 18.2764 13.998 18.2329 14 18.0648C14.0088 17.2835 14.0075 16.5015 14.0007 15.7196C13.9994 15.5691 14.0479 15.52 14.2103 15.5232C14.6381 15.5326 15.0667 15.5118 15.4932 15.532C15.7405 15.5433 15.7917 15.4615 15.7869 15.2468C15.7721 14.6518 15.7721 14.0562 15.7863 13.4613C15.8031 12.7347 16.012 12.0566 16.4749 11.4655C17.0611 10.7181 17.8946 10.3756 18.8554 10.336C19.8432 10.2951 20.833 10.3177 21.8214 10.3076C21.9595 10.3064 22.0006 10.3523 22 10.4776C21.9953 11.2684 21.9946 12.0592 22 12.8493C22.0013 12.9897 21.9521 13.0331 21.8046 13.0306C21.3289 13.0237 20.8539 13.0268 20.3788 13.0281C19.7461 13.03 19.3675 13.3341 19.3277 13.9196C19.296 14.3886 19.319 14.8608 19.3075 15.3311C19.3035 15.4986 19.4099 15.4873 19.5285 15.4873C20.2508 15.486 20.9738 15.4942 21.6961 15.4822C21.9083 15.4791 21.9784 15.5244 21.9542 15.7328C21.8632 16.5185 21.785 17.3049 21.7129 18.0925C21.6968 18.2701 21.6098 18.3041 21.4387 18.3015C20.8687 18.2934 20.298 18.2959 19.7279 18.299C19.3183 18.3015 19.358 18.243 19.358 18.6333C19.356 21.085 19.3526 23.5372 19.3641 25.9888C19.3654 26.2476 19.2947 26.3118 19.0205 26.3074C18.0414 26.2904 17.0618 26.2898 16.0827 26.3074C15.8072 26.3124 15.7613 26.2249 15.7634 25.9951C15.7741 24.7605 15.7687 23.5259 15.7687 22.2906L15.7681 22.2919Z" fill="#282828" />
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7681 22.2919C15.7681 21.039 15.7627 19.7867 15.7728 18.5339C15.7748 18.323 15.7108 18.2568 15.4844 18.265C15.0667 18.2808 14.6476 18.2631 14.2298 18.2726C14.0607 18.2764 13.998 18.2329 14 18.0648C14.0088 17.2835 14.0075 16.5015 14.0007 15.7196C13.9994 15.5691 14.0479 15.52 14.2103 15.5232C14.6381 15.5326 15.0667 15.5118 15.4932 15.532C15.7405 15.5433 15.7917 15.4615 15.7869 15.2468C15.7721 14.6518 15.7721 14.0562 15.7863 13.4613C15.8031 12.7347 16.012 12.0566 16.4749 11.4655C17.0611 10.7181 17.8946 10.3756 18.8554 10.336C19.8432 10.2951 20.833 10.3177 21.8214 10.3076C21.9595 10.3064 22.0006 10.3523 22 10.4776C21.9953 11.2684 21.9946 12.0592 22 12.8493C22.0013 12.9897 21.9521 13.0331 21.8046 13.0306C21.3289 13.0237 20.8539 13.0268 20.3788 13.0281C19.7461 13.03 19.3675 13.3341 19.3277 13.9196C19.296 14.3886 19.319 14.8608 19.3075 15.3311C19.3035 15.4986 19.4099 15.4873 19.5285 15.4873C20.2508 15.486 20.9738 15.4942 21.6961 15.4822C21.9083 15.4791 21.9784 15.5244 21.9542 15.7328C21.8632 16.5185 21.785 17.3049 21.7129 18.0925C21.6968 18.2701 21.6098 18.3041 21.4387 18.3015C20.8687 18.2934 20.298 18.2959 19.7279 18.299C19.3183 18.3015 19.358 18.243 19.358 18.6333C19.356 21.085 19.3526 23.5372 19.3641 25.9888C19.3654 26.2476 19.2947 26.3118 19.0205 26.3074C18.0414 26.2904 17.0618 26.2898 16.0827 26.3074C15.8072 26.3124 15.7613 26.2249 15.7634 25.9951C15.7741 24.7605 15.7687 23.5259 15.7687 22.2906L15.7681 22.2919Z"/>
 							</svg>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
-								<path d="M22.5 11.1076H13.5C10.8 11.1076 9 12.9076 9 15.6076V21.0076C9 23.7076 10.8 25.5076 13.5 25.5076H22.5C25.2 25.5076 27 23.7076 27 21.0076V15.6076C27 12.9076 25.2 11.1076 22.5 11.1076ZM19.701 19.2346L17.478 20.5666C16.578 21.1066 15.84 20.6926 15.84 19.6396V16.9666C15.84 15.9136 16.578 15.4996 17.478 16.0396L19.701 17.3716C20.556 17.8936 20.556 18.7216 19.701 19.2346Z" fill="#282828" />
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5"/>
+								<path d="M22.5 11.1076H13.5C10.8 11.1076 9 12.9076 9 15.6076V21.0076C9 23.7076 10.8 25.5076 13.5 25.5076H22.5C25.2 25.5076 27 23.7076 27 21.0076V15.6076C27 12.9076 25.2 11.1076 22.5 11.1076ZM19.701 19.2346L17.478 20.5666C16.578 21.1066 15.84 20.6926 15.84 19.6396V16.9666C15.84 15.9136 16.578 15.4996 17.478 16.0396L19.701 17.3716C20.556 17.8936 20.556 18.7216 19.701 19.2346Z"/>
 							</svg>
 						</a>
 					</li>
 					<li>
 						<a href="#">
 							<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5" stroke="#282828" />
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 9.30762H14.1949C11.3253 9.30762 8.99902 11.6339 8.99902 14.5035V22.1117C8.99902 24.9814 11.3253 27.3076 14.1949 27.3076H21.8051C24.6747 27.3076 27.001 24.9814 27.001 22.1117V14.5035C27.001 11.6339 24.6747 9.30762 21.8051 9.30762H21.8031ZM17.999 13.6825C15.4187 13.6825 13.329 15.7742 13.329 18.3526C13.329 20.931 15.4206 23.0226 17.999 23.0226C20.5774 23.0226 22.6691 20.931 22.6691 18.3526C22.6691 15.7742 20.5774 13.6825 17.999 13.6825ZM17.999 21.3806C16.3277 21.3806 14.971 20.024 14.971 18.3526C14.971 16.6812 16.3257 15.3246 17.999 15.3246C19.6724 15.3246 21.027 16.6793 21.027 18.3526C21.027 20.0259 19.6724 21.3806 17.999 21.3806ZM21.7366 13.5046C21.7366 12.9025 22.2253 12.4158 22.8255 12.4158C23.4276 12.4158 23.9143 12.9025 23.9143 13.5046C23.9143 14.1067 23.4276 14.5935 22.8255 14.5935C22.2234 14.5935 21.7366 14.1067 21.7366 13.5046Z" fill="#282828" />
+								<rect x="0.5" y="0.807617" width="35" height="35" rx="17.5"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M21.8031 9.30762H14.1949C11.3253 9.30762 8.99902 11.6339 8.99902 14.5035V22.1117C8.99902 24.9814 11.3253 27.3076 14.1949 27.3076H21.8051C24.6747 27.3076 27.001 24.9814 27.001 22.1117V14.5035C27.001 11.6339 24.6747 9.30762 21.8051 9.30762H21.8031ZM17.999 13.6825C15.4187 13.6825 13.329 15.7742 13.329 18.3526C13.329 20.931 15.4206 23.0226 17.999 23.0226C20.5774 23.0226 22.6691 20.931 22.6691 18.3526C22.6691 15.7742 20.5774 13.6825 17.999 13.6825ZM17.999 21.3806C16.3277 21.3806 14.971 20.024 14.971 18.3526C14.971 16.6812 16.3257 15.3246 17.999 15.3246C19.6724 15.3246 21.027 16.6793 21.027 18.3526C21.027 20.0259 19.6724 21.3806 17.999 21.3806ZM21.7366 13.5046C21.7366 12.9025 22.2253 12.4158 22.8255 12.4158C23.4276 12.4158 23.9143 12.9025 23.9143 13.5046C23.9143 14.1067 23.4276 14.5935 22.8255 14.5935C22.2234 14.5935 21.7366 14.1067 21.7366 13.5046Z"/>
 							</svg>
 						</a>
 					</li>
@@ -152,6 +212,9 @@
 			</div>
 		</div>
 	</footer>
+	</main>
+
+	
 
 	<!-- Modal Popup 영역 -->
 	<div id="popupWrap" class="popupWrap">
@@ -161,10 +224,46 @@
 			</div>
 			<div class="popupContent">
 				<h2 class="popupTitle">
-					현재 <strong>페이지 준비중</strong>입니다.
+					현재 <span class="fontOrange">페이지 준비중</strong>입니다.
 				</h2>
 			</div>
 			<button type="button" class="closePopupBtn" onclick="closePopup('NotReady')">
+				<span class="hide">닫기</span>
+			</button>
+		</div>
+
+		<div id="popupCharacterDesign1" class="popupFrame popup characterDesignModal">
+			<div class="flexWrap">
+				<div class="leftBox">
+					<figure>
+						<img src="img/img_subDesignDev_character1_profile.png" alt="">
+						<figcaption>
+							<h3 class="charNm">트레브</h3>
+							<h4 class="charEngNm">Trev</h4>
+						</figcaption>
+					</figure>
+				</div>
+
+				<div class="rightBox">
+					<h3 class="charDescTitle">성격</h3>
+					<p class="charDescription">똥꼬발랄, 여행을 좋아하는 천방지축 여우</p>
+					<h3 class="charDescTitle">스토리</h3>
+					<p class="charDescription">제주 여행을 좋아하는 아기여우.
+						호기심이 많아서 여기저기 안 가본 곳이 없어요.
+						여우라서 똑똑하고 영리해보이지만 아직은 어려서
+						어설픈 면도 많은 아기 여우랍니다.</p>
+
+					<div class="btnWrap">
+						<button type="button" class="btn btn5">
+							<span class="btnNm">투어패스 바로가기</span>
+						</button>
+						<button type="button" class="btn btn5">
+							<span class="btnNm">계정 바로가기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterDesign1')">
 				<span class="hide">닫기</span>
 			</button>
 		</div>
