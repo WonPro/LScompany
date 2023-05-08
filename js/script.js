@@ -220,22 +220,43 @@ $(function(){
     //   name: "tween3"
     // });
 
-    /* Section3 텍스트 스크롤효과 */
-    let tween4 = gsap.to('#main #section3 .rollingFrame .slideContainer', {       
-      x: "-500%",
-    });
+    
+    /* Section3 가로 스크롤효과 */
 
-    let scene4 = new ScrollMagic.Scene({
+		let wipeAnimation = new TimelineMax()
+    // animate to 2nd list
+    .to("#main #section3 .slideContainer", 0.5, {z: -150})				// move back to origin in 3D space
+    .to("#main #section3 .slideContainer", 1,   {x: "-16.666667%"})	// move in to first panel
+    .to("#main #section3 .slideContainer", 0.5, {z: -0})		// move back in 3D space
+    // animate to 3rd list
+    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
+    .to("#main #section3 .slideContainer", 1,   {x: "-33.333334%"})
+    .to("#main #section3 .slideContainer", 0.5, {z: 0})
+    // animate to 4th list
+    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
+    .to("#main #section3 .slideContainer", 1,   {x: "-50%"})
+    .to("#main #section3 .slideContainer", 0.5, {z: 0})
+    // animate to 5th list
+    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
+    .to("#main #section3 .slideContainer", 1,   {x: "-66.666667%"})
+    .to("#main #section3 .slideContainer", 0.5, {z: 0})
+    // animate to 6th list
+    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
+    .to("#main #section3 .slideContainer", 1,   {x: "-83.333334%"})
+    .to("#main #section3 .slideContainer", 0.5, {z: 0});
+
+    // create scene to pin and link animation
+		new ScrollMagic.Scene({
       triggerElement: "#main #section3",
-      triggerHook:  0,
-      offset: 0,
-      duration: "100%",
+      triggerHook: "onLeave",
+      duration: "600%"
     })
-    .setTween(tween4)
-    .addTo(controller)
-    // .addIndicators({
-    //   name: "hrz"
-    // });
+    .setPin("#main #section3")
+    .setTween(wipeAnimation)
+    //.addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+
 
     /* Section4 목업 캐러셀 */
     $('#main #section4 #swiper').slick({

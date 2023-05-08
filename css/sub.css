@@ -5,7 +5,9 @@
 ***************************************/
 
 	.section{
-		height: 100vh;
+		min-height: 100vh;
+		padding-top: 9rem;
+		padding-bottom: 9rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -297,6 +299,18 @@
 			gap: 10px;
 		}
 
+		@media screen and (max-width: 1366px) {
+			
+			#designDev #section2 .profile{
+				padding: 1.5rem 2rem;
+			}
+
+			#designDev #section2 .profile figcaption{
+				height: 12rem;
+			}
+
+		}
+
 		@media screen and (max-width: 1279px) {
 
 			#designDev #section2 .flexWrap.grid div:nth-child(1){order: 2;}
@@ -375,6 +389,9 @@
 		#designDev #section3 .contWrap .content4{
 			width: 19rem;
 			margin-left: -3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			background-color: #282828;
 			border-radius: 50%;
 		}
@@ -386,8 +403,12 @@
 		#designDev #section3 .contWrap .contentBox .contTitle{
 			font-size: 2rem;
 			font-weight: 600;
-			text-align: right;
 		}
+		#designDev #section3 .contWrap .contentBox.content1 .contTitle{text-align: right;}
+		#designDev #section3 .contWrap .contentBox.content2 .contTitle{text-align: left;}
+		#designDev #section3 .contWrap .contentBox.content3 .contTitle{text-align: left;}
+		#designDev #section3 .contWrap .contentBox.content4 .contTitle{text-align: center;}
+
 		#designDev #section3 .contWrap .contentBox .contDesc{
 			margin-top: 1.5rem;
 			display: flex;
@@ -641,6 +662,21 @@
 		#designDev #section4 .thumbnailVideo .item8{background-image: url(../img/img_subDesignDev_vertical08.jpg);}
 		#designDev #section4 .thumbnailVideo .item9{background-image: url(../img/img_subDesignDev_vertical09.jpg);}
 
+
+		@media screen and (max-width: 1366px) {
+			
+			#designDev #section4 .thumbnailVideo{
+				width: 32rem;
+			}
+
+			#designDev #section4 .thumbnailVideo .slideItem{
+				height: 58rem;
+			}
+
+		}
+
+
+
 		@media screen and (max-width: 1279px) {
 			#designDev #section4 .subTitle{
 				width: 32rem;
@@ -657,6 +693,17 @@
 
 			#designDev #section4 .slide .slideItem{
 				height: 16.8rem;
+			}
+
+			#designDev #section4 .slide .slideItem .hoverLink .itemTitle{
+				margin-top: 5rem;
+				word-break: keep-all;
+				text-align: center;
+				line-height: 1..2;
+			}
+
+			#designDev #section4 .slide .slideItem .hoverLink .moreView{
+				margin-bottom: 5rem;
 			}
 
 			#designDev #section4 .thumbnailVideo{

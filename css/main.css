@@ -182,12 +182,12 @@
 ***************************************/
 
 	#section3{
-		height: 210rem;
+		min-height: 100vh;
 		background-color: #f0f0f0;
 	}
 
 	#section3 .rollingFrame{
-		height: 100vh;
+		height: 100%;
 		padding-top: 20vh;
 		padding-bottom: 8vh;
     position: sticky;
@@ -197,21 +197,21 @@
 		flex-direction: column;
 		align-items: center;
     overflow: hidden;
+		-webkit-perspective: 1000;
+		        perspective: 1000;
 	}
 
 	/* 스크롤 콘텐츠 */
 	#section3 .slideContainer{
-		width: 128rem;
+		width: 600%;
 		margin: 5rem auto 0;
-		display: flex;
 	}
 
 	#section3 .slideContainer .slideItem{
-		width: 88rem;
+		width: calc(16.666667% - 40rem);
 		height: 46rem;
 		margin: 0 20rem;
 		padding: 6rem;
-		flex-shrink: 0;
 		border-radius: 4rem;
 		box-shadow: 0px 32px 40px rgba(129, 129, 129, 0.16);
 		background-size: 402px 265px;
@@ -221,6 +221,7 @@
 		-webkit-transition: all .3s;
 		-moz-transition: all .3s;
 		transition: all .3s;
+		float: left;
 	}
 
 	#section3 .slideContainer .slideItem:hover{
@@ -268,20 +269,10 @@
 
 	@media screen and (max-width:1279px) {
 
-		#section3{
-			height: 200vh;
-		}
-
-		#section3 .slideContainer {
-			width: 76.8rem;
-			margin: 5rem auto 0;
-			display: flex;
-		}
-
 		#section3 .slideContainer .slideItem{
-			width: 62rem;
+			width: calc(16.666667% - 20rem);
 			height: 40rem;
-			margin: 0 7rem;
+			margin: 0 10rem;
 			background-position: right 120px;
 		}
 
@@ -297,12 +288,8 @@
 			padding-bottom: 15rem;
 		}
 
-		#section3 .slideContainer{
-			width: 32rem;
-		}
-
 		#section3 .slideContainer .slideItem {
-			width: 28rem;
+			width: calc(16.666667% - 4rem);
 			height: 28.8rem;
 			margin: 0 2rem;
 			padding: 4rem;
@@ -368,7 +355,7 @@
 	#section4 .innerWrap .swiperWrapper::before{
 		content: '';
 		width: 100%;
-		height: 100%;
+		height: calc(100% + 1px);
 		position: absolute;
 		top: 0;
 		right: 0;

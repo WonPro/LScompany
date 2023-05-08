@@ -368,6 +368,10 @@
 			padding: 1.5rem;
 		}
 
+		.gnb ul li a::after{
+			content: none;
+		}
+
 	}
 
 
