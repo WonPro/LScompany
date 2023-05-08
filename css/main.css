@@ -208,9 +208,9 @@
 	}
 
 	#section3 .slideContainer .slideItem{
-		width: calc(16.666667% - 40rem);
+		width: calc(16.666667% - 80rem);
 		height: 46rem;
-		margin: 0 20rem;
+		margin: 0 40rem;
 		padding: 6rem;
 		border-radius: 4rem;
 		box-shadow: 0px 32px 40px rgba(129, 129, 129, 0.16);
@@ -264,6 +264,22 @@
 
 	#section3 .slideContainer .slideItem .btn{
 		margin-top: 21.2rem;
+	}
+
+	@media screen and (max-width:1600px) {
+
+		#section3 .slideContainer .slideItem{
+			width: calc(16.666667% - 60rem);
+			margin: 0 30rem;
+		}
+	}
+
+	@media screen and (max-width:1366px) {
+
+		#section3 .slideContainer .slideItem{
+			width: calc(16.666667% - 40rem);
+			margin: 0 20rem;
+		}
 	}
 
 
