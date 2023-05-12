@@ -231,6 +231,10 @@
 		z-index: 1000;
 	}
 
+	.header .innerWrap{
+		width: 170rem;
+	}
+
 	#logo{
 		width: 10.2rem;
 		height: 3.2rem;
@@ -276,6 +280,11 @@
 		display: none;
 	}
 
+	@media screen and (max-width : 1699px) {
+		.header .innerWrap{
+			width: 100%;
+		}
+	}
 
 	@media screen and (max-width: 1279px) {
 		.header{

@@ -120,7 +120,7 @@ $(function(){
         // 선택된 모든 Elements에게 각각 반복작업을 실행한다.
         // 여기서 i는 slideItem의 각 Index를 갖는다.
 
-        let offsetVal = $(this).offset().top + 100, 
+        let offsetVal = $(this).offset().top + 84, 
             // 각 Element별 Y좌표 값
             windowMid = $(window).height() / 2, 
             // 현재 보이는 화면의 절반값
@@ -128,15 +128,15 @@ $(function(){
             // 현재 스크롤된 Y좌표 값
 
             opacityTopPoint1 = scrollVal + windowMid + 100,
-            opacityTopPoint2 = scrollVal + windowMid + 150,
-            opacityTopPoint3 = scrollVal + windowMid + 200,
+            opacityTopPoint2 = scrollVal + windowMid + 200,
+            opacityTopPoint3 = scrollVal + windowMid + 250,
 
             opacityBotPoint1 = scrollVal + windowMid - 100,
-            opacityBotPoint2 = scrollVal + windowMid - 150,
-            opacityBotPoint3 = scrollVal + windowMid - 200,
+            opacityBotPoint2 = scrollVal + windowMid - 200,
+            opacityBotPoint3 = scrollVal + windowMid - 250,
             
-            hideTopPoint = scrollVal + windowMid + 250,
-            hideBotPoint = scrollVal + windowMid - 250;
+            hideTopPoint = scrollVal + windowMid + 300,
+            hideBotPoint = scrollVal + windowMid - 300;
         
         ++i;
         // i값과 각 Elements의 클래스 카운팅차이 
@@ -213,6 +213,7 @@ $(function(){
       triggerHook:  0 , //0~1 ,
       offset: 650,
       duration: "40%",
+      
     })
     .setTween(tween3)
     .addTo(controller)
@@ -249,7 +250,8 @@ $(function(){
 		new ScrollMagic.Scene({
       triggerElement: "#main #section3",
       triggerHook: "onLeave",
-      duration: "600%"
+      duration: "1200%",
+      scrub: 3,
     })
     .setPin("#main #section3")
     .setTween(wipeAnimation)
