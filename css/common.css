@@ -559,11 +559,11 @@
 
 	@media screen and (max-width: 767px) {
 		.footer .innerWrap .wrapper:first-child{
-			width: 70%;
+			width: 100%;
 		}
 
 		.footer .innerWrap .wrapper:last-child{
-			width: 30%;
+			display: none;
 		}
 
 		.footer .companyInfo span{
@@ -581,7 +581,7 @@
 		}
 
 		.footer .private li{
-			width: 9rem;
+			width: 50%;
 			margin: 1rem 0;
 		}
 

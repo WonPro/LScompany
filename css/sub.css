@@ -52,7 +52,7 @@
 	@media screen and (max-width: 767px) {
 
 		.secTitle{
-			font-size: 4rem;
+			font-size: 3rem;
 			word-break: keep-all;
 		}
 
@@ -102,15 +102,15 @@
 
 		#designDev #section1 .secTitle.title1{
 				animation-name: titleFirstMotion;
-				animation-duration: 0.5s;
-				animation-delay: 0.7s;
+				animation-duration: 1.5s;
+				animation-delay: 1s;
 				animation-fill-mode: forwards;
 		}
 		#designDev #section1 .secTitle.title2{
 			opacity: 0;
 			animation-name: titleSecondMotion;
-			animation-duration: 0.5s;
-			animation-delay: 1.3s;
+			animation-duration: 1s;
+			animation-delay: 2.5s;
 			animation-fill-mode: forwards;
 		}
 
@@ -130,8 +130,8 @@
 			opacity: 0;
 			font-size: 2.8rem;
 			animation-name: titleTopMotion;
-			animation-duration: 0.5s;
-			animation-delay: 2s;
+			animation-duration: 1s;
+			animation-delay: 3s;
 			animation-fill-mode: forwards;
 			animation-timing-function: cubic-bezier(.9,0,.58,1);
 		}
@@ -146,8 +146,8 @@
 			opacity: 0;
 			font-size: 2rem;
 			animation-name: titleBottomMotion;
-			animation-duration: 0.5s;
-			animation-delay: 2.8s;
+			animation-duration: 1s;
+			animation-delay: 3.8s;
 			animation-fill-mode: forwards;
 			animation-timing-function: cubic-bezier(.9,0,.58,1);
 		}
@@ -155,6 +155,9 @@
 		@keyframes titleFirstMotion {
 				0% {
 						opacity: 1;
+				}
+				60% {
+					opacity: 1;
 				}
 				100% {
 						opacity: 0;
@@ -281,15 +284,15 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			background-color: #fff;
-			border: 1px solid #e1e1e1;
+			background-color: #e1e1e1;
+			border: none;
 			border-radius: 10rem;
 		}
 
 		#designDev #section2 .storyWrap .contTitle{
 			padding-left: 5.5rem;
 			font-size: 2rem;
-			color: #e1e1e1;
+			color: #fff;
 		}
 
 		#designDev #section2 .storyWrap .btnTeamStroy .btnNm{
@@ -484,7 +487,7 @@
 
 		@media screen and (max-width: 767px) {
 			#designDev #section3 .secTitle{
-				width: 29rem;
+				width: 100%;
 				line-height: 1.2;
 			}
 

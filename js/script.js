@@ -111,64 +111,50 @@ $(function(){
 
 
   /********* Main.html *********/
-
-    /* Section1 텍스트 스크롤효과 */
-    $(window).scroll(function(){
-      // 스크롤 이벤트가 감지되었을 때,
-
-      $('#main #section1 .slideItem').each(function(i){
-        // 선택된 모든 Elements에게 각각 반복작업을 실행한다.
-        // 여기서 i는 slideItem의 각 Index를 갖는다.
-
-        let offsetVal = $(this).offset().top + 84, 
-            // 각 Element별 Y좌표 값
-            windowMid = $(window).height() / 2, 
-            // 현재 보이는 화면의 절반값
-            scrollVal = $(window).scrollTop(),
-            // 현재 스크롤된 Y좌표 값
-
-            opacityTopPoint1 = scrollVal + windowMid + 100,
-            opacityTopPoint2 = scrollVal + windowMid + 200,
-            opacityTopPoint3 = scrollVal + windowMid + 250,
-
-            opacityBotPoint1 = scrollVal + windowMid - 100,
-            opacityBotPoint2 = scrollVal + windowMid - 200,
-            opacityBotPoint3 = scrollVal + windowMid - 250,
-            
-            hideTopPoint = scrollVal + windowMid + 300,
-            hideBotPoint = scrollVal + windowMid - 300;
-        
-        ++i;
-        // i값과 각 Elements의 클래스 카운팅차이 
-        // i는 0부터시작, 우리의 클래스는 1부터 시작하는 차이를 매칭시켜줌
-
-
-        if(offsetVal < opacityTopPoint1 || offsetVal > opacityBotPoint1){
-          // 각 Element가 화면 중앙에 왔을때
-          $('#main #section1 .item'+i).css("opacity", 1);
-        }
-        if(offsetVal >= opacityTopPoint1 || offsetVal <= opacityBotPoint1 ){
-          // 각 Element가 화면 정중앙에 위아래로 50px 이상 멀어졌을때
-          $('#main #section1 .item'+i).css({'opacity':0.3})
-        }
-        if(offsetVal >= opacityTopPoint2 || offsetVal <= opacityBotPoint2 ){
-          // 각 Element가 화면 정중앙에 위아래로 100px 이상 멀어졌을때
-          $('#main #section1 .item'+i).css({'opacity':0.1})
-        }
-        if(offsetVal >= opacityTopPoint3 || offsetVal <= opacityBotPoint3 ){
-          // 각 Element가 화면 정중앙에 위아래로 150px 이상 멀어졌을때
-          $('#main #section1 .item'+i).css({'opacity':0.001})
-        }
-        if(offsetVal >= hideTopPoint || offsetVal <= hideBotPoint ){
-          // 각 Element가 화면 정중앙에 위아래로 200px 이상 멀어졌을때
-          $('#main #section1 .item'+i).css({'opacity':0})
-        }
-      }); 
-    });
-
-    /* Section2 텍스트 스크롤효과 */
     const controller = new ScrollMagic.Controller();
 
+    /* Section1 텍스트 스크롤효과 */
+    let textDial = new TimelineMax()
+
+    .to("#main #section1 .slideWrap .slideItem.item1", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item2", {scale: 1.05, opacity: 0.3})
+
+    .to("#main #section1 .slideWrap .slideItem.item2", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item1", {scale: 1, opacity: 0})
+    .to("#main #section1 .slideWrap .slideItem.item3", {scale: 1.05, opacity: 0.3})
+
+    .to("#main #section1 .slideWrap .slideItem.item3", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item2", {scale: 1, opacity: 0})
+    .to("#main #section1 .slideWrap .slideItem.item4", {scale: 1.05, opacity: 0.3})
+
+    .to("#main #section1 .slideWrap .slideItem.item4", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item3", {scale: 1, opacity: 0})
+    .to("#main #section1 .slideWrap .slideItem.item5", {scale: 1.05, opacity: 0.3})
+
+    .to("#main #section1 .slideWrap .slideItem.item5", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item4", {scale: 1, opacity: 0})
+    .to("#main #section1 .slideWrap .slideItem.item6", {scale: 1.05, opacity: 0.3})
+
+    .to("#main #section1 .slideWrap .slideItem.item6", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item5", {scale: 1, opacity: 0})
+
+    .to("#main #section1 .slideWrap .slideItem.item6", {scale: 1.1, opacity: 1})
+    .to("#main #section1 .slideWrap .slideItem.item6", {scale: 1.05, opacity: 0.3})
+    .to("#main #section1 .slideWrap .slideItem.item6", {scale: 1, opacity: 0})
+
+		new ScrollMagic.Scene({
+      triggerElement: "#main #section1",
+      triggerHook: "onLeave",
+      duration: "180%",
+      scrub: 3,
+    })
+    .setTween(textDial)
+    //.addIndicators() // add indicators (requires plugin)
+    .addTo(controller);
+
+    
+
+    /* Section2 텍스트 스크롤효과 */
     // 여행의 모든것,
     let tween1 = gsap.to('#main #section2 .rollingFrame .rollingItem.item1', {
       opacity: 1,
@@ -177,7 +163,7 @@ $(function(){
     let scene1 = new ScrollMagic.Scene({
       triggerElement: "#main #section2",
       triggerHook:  0 ,
-      offset: 0,
+      offset: -325,
       duration: "40%",
     })
     .setTween(tween1)
@@ -193,7 +179,7 @@ $(function(){
     let scene2 = new ScrollMagic.Scene({
       triggerElement: "#main #section2",
       triggerHook:  0 ,
-      offset: 325,
+      offset: 0,
       duration: "40%",
     })
     .setTween(tween2)
@@ -211,7 +197,7 @@ $(function(){
     let scene3 = new ScrollMagic.Scene({
       triggerElement: "#main #section2",
       triggerHook:  0 , //0~1 ,
-      offset: 650,
+      offset: 325,
       duration: "40%",
       
     })
@@ -250,7 +236,7 @@ $(function(){
 		new ScrollMagic.Scene({
       triggerElement: "#main #section3",
       triggerHook: "onLeave",
-      duration: "1200%",
+      duration: "1800%",
       scrub: 3,
     })
     .setPin("#main #section3")

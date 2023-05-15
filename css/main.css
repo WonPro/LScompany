@@ -49,7 +49,7 @@
 ***************************************/
 
 	#section1{
-		padding-top: 80vh;
+		padding-top: 40vh;
 		margin-bottom: 0;
 		display: flex;
 		justify-content: center;
@@ -57,13 +57,14 @@
   }
 
   #section1 .slideWrap .slideItem{
-	  padding: 20rem 0;
+		padding-top: calc(15vh - 2.5rem);
+		padding-bottom: calc(15vh - 2.5rem);
 	  text-align: center;
 	  font-size: 5rem;
 	  font-weight: bold;
 	  line-height: 1;
-	  opacity: 0;
 	  color: #282828;
+		opacity: 0;
   }
   #section1 .slideWrap .slideItem .icon{
 	width: 5rem;
@@ -85,12 +86,10 @@
 
 	@media screen and (max-width: 1279px) {
 
-		#section1{
-			padding-top: 40vh;
-		}
 
 		#section1 .slideWrap .slideItem {
-			padding: 4rem 0;
+			padding-top: calc(15vh - 1.8rem);
+			padding-bottom: calc(15vh - 1.8rem);
 			font-size: 3.6rem;
 		}
 
@@ -107,8 +106,9 @@
 	@media screen and (max-width: 767px) {
 
 		#section1 .slideWrap .slideItem{
-			padding: 3rem 0;
-			font-size: 2.2rem;
+			padding-top: calc(15vh - 0.9rem);
+			padding-bottom: calc(15vh - 0.9rem);
+			font-size: 1.8rem;
 		}
 
 		#section1 .slideWrap .slideItem .icon{
@@ -145,6 +145,7 @@
 	#section2 .rollingItem{
 		font-size: 6rem;
 		font-weight: 700;
+		transition: all .2s;
 	}
 
 	#section2 .rollingItem.item1,
