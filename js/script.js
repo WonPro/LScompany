@@ -85,10 +85,19 @@ $(function(){
             if($(this).prev().offset().top == undefined){
               e.preventDefault()
             }
+          }else{
+
           }
         }
         /*동적 움직임을 구현*/
-        $('html, body').stop().animate({scrollTop : moveTo+'px'}, {duration:300, complete:function(){}});
+        $('html, body').stop().animate({
+          scrollTop : moveTo+'px'
+        }, {
+          duration:300,
+          complete: function(){
+
+          }
+        });
         //$("html, body").stop().animate({scrollTop : moveTo+"px"}, 시간);  => 각박스의 상단으로 이동동시키는 부분을 적용
         //{duration:700, complete:function(){}} : 소요되는 시간 0.7초,  도달하기까지의 함수구문으로 대기하라는 의미
       });
@@ -115,6 +124,7 @@ $(function(){
 
     /* Section1 텍스트 스크롤효과 */
     let textDial = new TimelineMax()
+    .to("#main #section1 .slideWrap .slideItem.item1", {scale: 1.05, opacity: 0.3})
 
     .to("#main #section1 .slideWrap .slideItem.item1", {scale: 1.1, opacity: 1})
     .to("#main #section1 .slideWrap .slideItem.item2", {scale: 1.05, opacity: 0.3})
@@ -145,12 +155,14 @@ $(function(){
 		new ScrollMagic.Scene({
       triggerElement: "#main #section1",
       triggerHook: "onLeave",
-      duration: "180%",
+      duration: "200%",
       scrub: 3,
     })
     .setTween(textDial)
-    //.addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+    .addTo(controller)
+    // .addIndicators({
+    //   name: "텍스트 다이얼"
+    // });
 
     
 
@@ -163,13 +175,13 @@ $(function(){
     let scene1 = new ScrollMagic.Scene({
       triggerElement: "#main #section2",
       triggerHook:  0 ,
-      offset: -325,
+      offset: 0,
       duration: "40%",
     })
     .setTween(tween1)
     .addTo(controller)
     // .addIndicators({
-    //   name: "tween1"
+    //   name: "여행의 모든것"
     // });
 
     // 끊임없이 성장하는
@@ -179,13 +191,13 @@ $(function(){
     let scene2 = new ScrollMagic.Scene({
       triggerElement: "#main #section2",
       triggerHook:  0 ,
-      offset: 0,
+      offset: 325,
       duration: "40%",
     })
     .setTween(tween2)
     .addTo(controller)
     // .addIndicators({
-    //   name: "tween2"
+    //   name: "끊임없이 성장하는"
     // });
 
     // 엘에스컴퍼니
@@ -197,52 +209,38 @@ $(function(){
     let scene3 = new ScrollMagic.Scene({
       triggerElement: "#main #section2",
       triggerHook:  0 , //0~1 ,
-      offset: 325,
+      offset: 650,
       duration: "40%",
       
     })
     .setTween(tween3)
     .addTo(controller)
     // .addIndicators({
-    //   name: "tween3"
+    //   name: "엘에스컴퍼니"
     // });
 
     
     /* Section3 가로 스크롤효과 */
 
-		let wipeAnimation = new TimelineMax()
-    // animate to 2nd list
-    .to("#main #section3 .slideContainer", 0.5, {z: -150})				// move back to origin in 3D space
-    .to("#main #section3 .slideContainer", 1,   {x: "-16.666667%"})	// move in to first panel
-    .to("#main #section3 .slideContainer", 0.5, {z: -0})		// move back in 3D space
-    // animate to 3rd list
-    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
-    .to("#main #section3 .slideContainer", 1,   {x: "-33.333334%"})
-    .to("#main #section3 .slideContainer", 0.5, {z: 0})
-    // animate to 4th list
-    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
-    .to("#main #section3 .slideContainer", 1,   {x: "-50%"})
-    .to("#main #section3 .slideContainer", 0.5, {z: 0})
-    // animate to 5th list
-    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
-    .to("#main #section3 .slideContainer", 1,   {x: "-66.666667%"})
-    .to("#main #section3 .slideContainer", 0.5, {z: 0})
-    // animate to 6th list
-    .to("#main #section3 .slideContainer", 0.5, {z: -150, delay: 1})
-    .to("#main #section3 .slideContainer", 1,   {x: "-83.333334%"})
-    .to("#main #section3 .slideContainer", 0.5, {z: 0});
+    // 적용해야하는 애니메이션
+    let tween4 = gsap.to('#main #section3 .slideContainer', {
+      x: "-500%",
+    });
 
-    // create scene to pin and link animation
-		new ScrollMagic.Scene({
+    // 스크롤매직 씬 생성
+    let scene4 = new ScrollMagic.Scene({
       triggerElement: "#main #section3",
-      triggerHook: "onLeave",
-      duration: "1800%",
-      scrub: 3,
+      triggerHook:  0 , //0~1 ,
+      offset: 0,
+      duration: "300%",
     })
-    .setPin("#main #section3")
-    .setTween(wipeAnimation)
-    //.addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
+
+    .setTween(tween4) // 애니메이션 등록
+    .addTo(controller) // 컨트롤러 등록
+    // .addIndicators({   // 트리거 인디케이터 이름지정 및 등록
+    //     name: "가로스크롤"
+    // });
+    
 
 
 
@@ -264,7 +262,7 @@ $(function(){
     $('#designDev #designDevSwiper').slick({
       arrows: false,
       dots: true,
-      autoplay: true,
+      autoplay: false,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,

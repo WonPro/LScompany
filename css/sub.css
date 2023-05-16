@@ -284,15 +284,15 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			background-color: #e1e1e1;
-			border: none;
+			background-color: #fff;
+			border: 1px solid #e1e1e1;
 			border-radius: 10rem;
 		}
 
 		#designDev #section2 .storyWrap .contTitle{
 			padding-left: 5.5rem;
 			font-size: 2rem;
-			color: #fff;
+			color: #000;
 		}
 
 		#designDev #section2 .storyWrap .btnTeamStroy .btnNm{
@@ -300,6 +300,20 @@
 			justify-content: space-between;
 			align-items: center;
 			gap: 10px;
+		}
+
+		#designDev #section2 .storyWrap .btnTeamStroy .btnNm .fa-instagram{
+			width: 3rem;
+			height: 3rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2.6rem;
+			color: #ffb926;
+		}
+
+		#designDev #section2 .storyWrap .btnTeamStroy:hover .btnNm .fa-instagram{
+			color: #fff;
 		}
 
 		@media screen and (max-width: 1366px) {
@@ -476,6 +490,10 @@
 				flex-wrap: wrap;
 				justify-content: center;
 			}
+
+			#designDev #section3 .contWrap .contentBox{
+				margin-top: 1rem;
+			}
 		}
 
 		@media screen and (max-width: 794px) {
@@ -639,7 +657,7 @@
 		}
 
 		#designDev #section4 .thumbnailVideo{
-			width: 40rem;
+			width: 35rem;
 			position: absolute;
 			bottom: 0;
 			right: 0;
@@ -648,7 +666,7 @@
 		}
 
 		#designDev #section4 .thumbnailVideo .slideItem{
-			height: 70rem;
+			height: 60rem;
 			background-size: cover;
 			background-position: center center;
 			background-repeat: no-repeat;
