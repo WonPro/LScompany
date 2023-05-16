@@ -80,13 +80,15 @@ $(function(){
             moveTo = $(this).next().offset().top;
           }
         }else{  //마우스 휠을 올렸을 때, [양의 정수] 값을 받아오는 경우
-          if($(this).prev() != undefined){  //이전으로 이동하려는 섹션이 존재하는 경우
+          if($(window).scrollTop() <= $(window).height()/2){ //offset().top undefined error잡기
+            e.preventDefault()
+          }else if($(this).prev() != undefined){  //이전으로 이동하려는 섹션이 존재하는 경우
             moveTo = $(this).prev().offset().top;
             if($(this).prev().offset().top == undefined){
               e.preventDefault()
             }
-          }else{
-
+          }else {
+            e.preventDefault()
           }
         }
         /*동적 움직임을 구현*/

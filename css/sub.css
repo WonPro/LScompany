@@ -101,16 +101,17 @@
 		}
 
 		#designDev #section1 .secTitle.title1{
-				animation-name: titleFirstMotion;
-				animation-duration: 1.5s;
-				animation-delay: 1s;
-				animation-fill-mode: forwards;
+			opacity: 0;
+			animation-name: titleFirstMotion;
+			animation-duration: 2.5s;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
 		}
 		#designDev #section1 .secTitle.title2{
 			opacity: 0;
 			animation-name: titleSecondMotion;
 			animation-duration: 1s;
-			animation-delay: 2.5s;
+			animation-delay: 3.5s;
 			animation-fill-mode: forwards;
 		}
 
@@ -131,7 +132,7 @@
 			font-size: 2.8rem;
 			animation-name: titleTopMotion;
 			animation-duration: 1s;
-			animation-delay: 3s;
+			animation-delay: 4s;
 			animation-fill-mode: forwards;
 			animation-timing-function: cubic-bezier(.9,0,.58,1);
 		}
@@ -147,49 +148,39 @@
 			font-size: 2rem;
 			animation-name: titleBottomMotion;
 			animation-duration: 1s;
-			animation-delay: 3.8s;
+			animation-delay: 4.8s;
 			animation-fill-mode: forwards;
 			animation-timing-function: cubic-bezier(.9,0,.58,1);
 		}
 
 		@keyframes titleFirstMotion {
-				0% {
-						opacity: 1;
-				}
-				60% {
-					opacity: 1;
-				}
-				100% {
-						opacity: 0;
-				}
+			30% {opacity: 1;}
+			70% {opacity: 1;}
+			100% {opacity: 0;}
 		}
 		@keyframes titleSecondMotion {
-				0% {
-						opacity: 0;
-				}
-				100% {
-						opacity: 1;
-				}
+			0% {opacity: 0;}
+			100% {opacity: 1;}
 		}
 		@keyframes titleTopMotion {
-				0%{
-						opacity: 0;
-						transform: translateY(500%);
-				}
-				100%{
-						opacity: 1;
-						transform: translateY(0);
-				}
+			0%{
+				opacity: 0;
+				transform: translateY(500%);
+			}
+			100%{
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 		@keyframes titleBottomMotion {
-				0%{
-						opacity: 0;
-						transform: translateY(250%);
-				}
-				100%{
-						opacity: 1;
-						transform: translateY(0);
-				}
+			0%{
+				opacity: 0;
+				transform: translateY(250%);
+			}
+			100%{
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 
 		@media screen and (max-width: 767px) {
@@ -359,14 +350,20 @@
 				height: 12rem;
 			}
 
+			#designDev #section2 .profile figcaption .description{
+				font-size: 1.4rem;
+			}
+
 			#designDev #section2 .storyWrap{
 				width: 100%;
 			}
 
 			#designDev #section2 .storyWrap .contTitle{
+				width: 12.2rem;
 				padding-left: 2rem;
 				font-size: 1.4rem;
-				line-height: 1.2;
+				text-align: center;
+				line-height: 1.4;
 				word-break: keep-all;
 			}
 		}
@@ -737,8 +734,8 @@
 		@media screen and (max-width: 767px) {
 
 			#designDev #section4 .secTitle,
-			#designDev #section4 .subTitle div{
-				width: 31rem;					
+			#designDev #section4 .subTitle{
+				width: 100%;
 				text-align: center;
 			}
 
@@ -746,8 +743,15 @@
 				margin: 0 auto;
 			}
 
+			#designDev #section4 .subTitle div{
+				width: 20rem;
+				margin: 1rem auto;
+				line-height: 1.2;
+			}
+
 			#designDev #section4 .slide{
 				width: 100%;
+				margin-left: 0;
 			}
 
 			#designDev #section4 .slide .slideItem{
