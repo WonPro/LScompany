@@ -91,6 +91,10 @@ a{
   display: block;
   color: inherit;
 }
+strong, span, i{
+  font-size: inherit;
+  font-weight: inherit;
+}
 .hide{
   position:absolute;
   left:-10000px;

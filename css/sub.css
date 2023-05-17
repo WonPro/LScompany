@@ -376,8 +376,13 @@
 		#designDev #section3 .subTitle{
 			text-align: center;
 		}
+
+		#designDev #section3 .subTitle{
+			margin-top: 2.4rem;
+		}
+
 		#designDev #section3 .contWrap{
-			margin-top: 5rem;
+			margin-top: 6rem;
 			overflow: hidden;
 		}
 
@@ -936,6 +941,105 @@
 
 			.characterDesignModal .rightBox{
 				border-radius: 0 0 3.7rem 3.7rem;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			#popupWrap .popupFrame.on.characterDesignModal{
+				width: 70%;
+			}
+
+			#popupWrap .popupFrame.on.characterDesignModal .flexWrap{
+				gap: 0;
+			}
+
+			.characterDesignModal .leftBox{
+				padding: 1rem;
+			}
+			
+			.characterDesignModal .leftBox img{
+				width: 12rem;
+				height: 12rem;
+			}
+			
+			.characterDesignModal .leftBox figure{
+				gap: 1rem;
+			}
+
+			.characterDesignModal .leftBox .charNm{
+				margin-top: 0;
+				font-size: 2.4rem;
+			}
+
+			.characterDesignModal .leftBox .charNm{
+				font-size: 1.8rem;
+			}
+
+			.characterDesignModal .rightBox{
+				padding: 2rem;
+			}
+
+			.characterDesignModal .rightBox .charDescTitle{
+				margin-top: 1rem;
+				font-size: 2rem;	
+			}
+
+			.characterDesignModal .rightBox .charDescription{
+				max-height: 6rem;
+				margin-top: 0.5rem;
+				font-size: 1.4rem;
+				line-height: 1.2;
+			}
+
+			.characterDesignModal .rightBox .btnWrap{
+				margin-top: 1rem;
+				flex-direction: column;
+			}
+
+			#popupWrap .popupFrame .closePopupBtn{
+				width: 2rem;
+				height: 2rem;
+				right: -3rem;
+			}
+		}
+
+		#popupWrap #popupDealPageDesignModal{
+			width: 112.8rem;
+			height: 70rem;
+			padding: 0;
+			border-radius: 0;
+		}
+
+		#popupWrap #popupDealPageDesignModal .contWrap{
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			overflow-y: scroll;
+		}
+		#popupWrap #popupDealPageDesignModal .contWrap::-webkit-scrollbar{
+			width: 1rem;
+			background-color: #e1e1e1;
+		}
+		#popupWrap #popupDealPageDesignModal .contWrap::-webkit-scrollbar-thumb{
+			background-color: #282828;
+			border-radius: 1rem;
+		}
+		#popupWrap #popupDealPageDesignModal .contWrap::-webkit-scrollbar-track{
+			background-color: #f0f0f0;
+		}
+
+		.dealPageDesignModal img{
+			width: 100%;
+		}
+
+
+		@media screen and (max-width: 1279px) {
+			#popupWrap #popupDealPageDesignModal{
+				width: 80vw;
+				height: 70vh;
+				padding: 0;
+				border-radius: 0;
 			}
 		}
 

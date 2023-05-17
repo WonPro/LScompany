@@ -80,7 +80,7 @@ $(function(){
             moveTo = $(this).next().offset().top;
           }
         }else{  //마우스 휠을 올렸을 때, [양의 정수] 값을 받아오는 경우
-          if($(window).scrollTop() <= $(window).height()/2){ //offset().top undefined error잡기
+          if($(window).scrollTop() <= $(window).height()-1){ //offset().top undefined error잡기
             e.preventDefault()
           }else if($(this).prev() != undefined){  //이전으로 이동하려는 섹션이 존재하는 경우
             moveTo = $(this).prev().offset().top;
@@ -269,25 +269,10 @@ $(function(){
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 1280,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        }
+      touchMove: false,
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
-      ]
     });
 
     $('#designDev #thumbnailVideo').slick({
@@ -304,5 +289,21 @@ $(function(){
       pauseOnFocus: false,
       pauseOnHover: false,
     });
+
+    $('#designDev #designDevSwiper .slideItem').on('click', function(){
+      let btnId = $(this).attr('data-id'),
+          imgId = btnId.substring(16),
+          imgUrl = 'img_subDesignDev_dealPage' + imgId + '.jpg',
+          imgAlt = $(this).find('img').attr('alt');
+
+      console.log(btnId);
+      console.log(imgId);
+      console.log(imgUrl);
+      console.log(imgAlt);
+
+      $("#popupDealPageDesignModal .contWrap").html("<img src='img/" + imgUrl + "' alt='"+ imgAlt + "'>");
+      
+      openPopup('DealPageDesignModal');
+    })
 });
 

@@ -313,6 +313,7 @@
 		#section3 .rollingFrame{
 			padding-top: 15rem;
 			padding-bottom: 15rem;
+			justify-content: center;
 		}
 
 		#section3 .slideContainer{
@@ -320,10 +321,10 @@
 		}
 
 		#section3 .slideContainer .slideItem {
-			width: calc(100% - 4rem);
-			height: 28rem;
-			margin: 0 2rem;
-			padding: 6rem 4rem;
+			width: calc(100% - 2rem);
+			height: 24rem;
+			margin: 0 1rem;
+			padding: 4rem 3rem;
 			position: relative;
 			background-size: 19rem 13rem;
 		}
@@ -345,7 +346,7 @@
 		#section3 .slideContainer .slideItem .btn{
 			margin-top: 0;
 			position: absolute;
-			bottom: 6rem;
+			bottom: 4rem;
 			left: 4rem;
 		}
 
