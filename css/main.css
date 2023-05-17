@@ -174,6 +174,10 @@
 		#section2 .rollingItem{
 			font-size: 4rem;
 		}
+
+		#section2 .rollingItem.item3{
+			font-size: 5.6rem;
+		}
 	}
 
 
@@ -458,7 +462,7 @@
 		}
 
 		#section4 .wrapper{
-			padding-top: 28.2rem;
+			padding-top: 57.2rem;
 			text-align: center;
 		}
 
@@ -467,18 +471,18 @@
 		}
 		
 		#section4 .innerWrap .swiperWrapper{
-			width: 14rem;
-			height: 28.2rem;
+			width: 28rem;
+			height: 57.2rem;
 			padding: 3px;
 			position: absolute;
 			bottom: auto;
 			right: auto;
-			left: calc(50% - 7rem);
+			left: calc(50% - 14rem);
 			top: 0;
 		}
 
 		#section4 .innerWrap .swiperWrapper .swiperItem{
-			height: 28.2rem;
+			height: 57.2rem;
 		}
 
 		#section4 .btn{
