@@ -257,33 +257,44 @@ $(function(){
   /********* // Main.html *********/	
   
   
-  
-  /********* // Main.html *********/	
-  $('#aboutUs #section2 .data').each(function() { // .count-num에 각각 적용
-    let $this = $(this),
-        countTo = $(this).attr('data-count');
-        // $this = 1~3번째 .data
-        // countTo = 1~3번째 .data의 data-count 속성의 값(1,380,950)
-    $({
-      countNum: $this.text()
-      // countNum: $this.text() = 0
-    }).animate({
-      countNum: countTo 
-      // countNum: countTo = 1, 380, 95
-      // 0에서 countNum이 된다
-    },{
-      duration: 2500, // 애니메이션 시간
-      easing:'linear', // 애니메이션 효과
-      step: function() { // 움직임 각 스텝별로 실행될 함수
-        $this.text(Math.floor(this.countNum));
-        // Math.floor -> this.countNum의 값을 정수로 만들어준다
-      },
-      complete: function() { // 움직임이 멈춘 후 실행될 함수
-        $this.text(this.countNum);
-      }
-    });  
-  });
-  /********* // Main.html *********/	
+  /********* AboutUs.html *********/
+    $('#aboutUs #section2 .data').each(function() { // .count-num에 각각 적용
+      let $this = $(this),
+          countTo = $(this).attr('data-count');
+          // $this = 1~3번째 .data
+          // countTo = 1~3번째 .data의 data-count 속성의 값(1,380,950)
+      $({
+        countNum: $this.text()
+        // countNum: $this.text() = 0
+      }).animate({
+        countNum: countTo 
+        // countNum: countTo = 1, 380, 95
+        // 0에서 countNum이 된다
+      },{
+        duration: 2500, // 애니메이션 시간
+        easing:'linear', // 애니메이션 효과
+        step: function() { // 움직임 각 스텝별로 실행될 함수
+          $this.text(Math.floor(this.countNum));
+          // Math.floor -> this.countNum의 값을 정수로 만들어준다
+        },
+        complete: function() { // 움직임이 멈춘 후 실행될 함수
+          $this.text(this.countNum);
+        }
+      });  
+    });
+    
+
+    $('#aboutUs #section4 #aboutUsSwiper').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: false,
+      dots: false,
+      arrows: true,
+      prevArrow: $('#aboutUs #section4 .slideMoveBtn.prev'),
+      nextArrow: $('#aboutUs #section4 .slideMoveBtn.next'),
+      touchMove: false,
+    })
+  /********* //AboutUs.html *********/
 
 
 
@@ -524,18 +535,5 @@ $(function(){
   /********* //TourpassPln.html *********/
 
 
-
-  /********* AboutUs.html *********/
-    $('#aboutUs #section4 #aboutUsSwiper').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      infinite: false,
-      dots: false,
-      arrows: true,
-      prevArrow: $('#aboutUs #section4 .slideMoveBtn.prev'),
-      nextArrow: $('#aboutUs #section4 .slideMoveBtn.next'),
-      touchMove: false,
-    })
-  /********* //AboutUs.html *********/
 });
 

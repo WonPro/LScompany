@@ -2123,7 +2123,6 @@
 
 	#contentsBiz{
 		background-color: #f0f0f0;
-		padding-top: 8.4rem;
 	}
 
 	#contentsBiz #section4 .innerWrap,
@@ -2137,10 +2136,6 @@
 
 	#contentsBiz .innerWrap .wrapper{
 		width: 50%;
-	}
-
-	#contentsBiz .secTitle{
-		padding-top: 7rem;
 	}
 
 	#contentsBiz .secTitle div,
