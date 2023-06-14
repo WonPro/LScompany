@@ -521,5 +521,21 @@ $(function(){
         // instead of a settings object
       ]
     });
+  /********* //TourpassPln.html *********/
+
+
+
+  /********* AboutUs.html *********/
+    $('#aboutUs #section4 #aboutUsSwiper').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: false,
+      dots: false,
+      arrows: true,
+      prevArrow: $('#aboutUs #section4 .slideMoveBtn.prev'),
+      nextArrow: $('#aboutUs #section4 .slideMoveBtn.next'),
+      touchMove: false,
+    })
+  /********* //AboutUs.html *********/
 });
 

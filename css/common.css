@@ -5,11 +5,6 @@
 body{
 	/* 중복되는 keep-all body에 공통적용 */
 	word-break: keep-all;
-	/* 드래그 막기 */
-	-webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none
 }
 /* 색상변수선언 */
 :root{
