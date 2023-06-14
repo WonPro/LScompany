@@ -95,7 +95,7 @@ $(function(){
         $('html, body').stop().animate({
           scrollTop : moveTo+'px'
         }, {
-          duration:300,
+          duration:600,
           complete: function(){
 
           }
@@ -255,6 +255,35 @@ $(function(){
       dots: false,
     });
   /********* // Main.html *********/	
+  
+  
+  
+  /********* // Main.html *********/	
+  $('#aboutUs #section2 .data').each(function() { // .count-num에 각각 적용
+    let $this = $(this),
+        countTo = $(this).attr('data-count');
+        // $this = 1~3번째 .data
+        // countTo = 1~3번째 .data의 data-count 속성의 값(1,380,950)
+    $({
+      countNum: $this.text()
+      // countNum: $this.text() = 0
+    }).animate({
+      countNum: countTo 
+      // countNum: countTo = 1, 380, 95
+      // 0에서 countNum이 된다
+    },{
+      duration: 2500, // 애니메이션 시간
+      easing:'linear', // 애니메이션 효과
+      step: function() { // 움직임 각 스텝별로 실행될 함수
+        $this.text(Math.floor(this.countNum));
+        // Math.floor -> this.countNum의 값을 정수로 만들어준다
+      },
+      complete: function() { // 움직임이 멈춘 후 실행될 함수
+        $this.text(this.countNum);
+      }
+    });  
+  });
+  /********* // Main.html *********/	
 
 
 
@@ -270,9 +299,6 @@ $(function(){
       slidesToScroll: 1,
       autoplaySpeed: 2000,
       touchMove: false,
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
     });
 
     $('#designDev #thumbnailVideo').slick({
@@ -305,5 +331,195 @@ $(function(){
       
       openPopup('DealPageDesignModal');
     })
+  /********* //DesignDev.html *********/
+
+
+
+  /********* ContentsBiz.html *********/
+  $('#contentBizSwiper1, #contentBizSwiper2, #contentBizSwiper3').slick({
+    arrows: false,
+    dots: false,
+    autoplay: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplaySpeed: 2000,
+    touchMove: false,
+  });
+  /********* //ContentsBiz.html *********/
+
+
+  /********* SystemDev.html *********/
+  $('#systemDev #section4 #systemDevSwiper').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    dots: false,
+  });
+  /********* //SystemDev.html *********/
+
+
+
+  /********* TourpassPln.html *********/
+
+    /*  Section6 캐러셀 */
+    $('#tourpassPln #tourpassPlnSwiper').slick({
+      arrows: true,
+      dots: false,
+      autoplay: true,
+      infinite: true,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      centerMode: false,
+      touchMove: true,
+      responsive: [
+        {
+          breakpoint: 1279,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+            arrows: false,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    
+
+
+  /********* TourpassPln.html *********/
+
+        /*  Section3 캐러셀 */
+    $('#brandPln #brandPlnSwiper1').slick({
+      arrows: true,
+      dots: false,
+      autoplay: true,
+      infinite: true,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      centerMode: false,
+      touchMove: true,
+      responsive: [
+        {
+          breakpoint: 1279,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+            arrows: false,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
+    /*  Section4 캐러셀 */
+    $('#brandPln #brandPlnSwiper2').slick({
+      arrows: true,
+      dots: false,
+      autoplay: true,
+      infinite: true,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      centerMode: false,
+      touchMove: true,
+      responsive: [
+        {
+          breakpoint: 1279,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+            arrows: false,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+    
+    /*  Section6 캐러셀 */
+    $('#brandPln #brandPlnSwiper3').slick({
+      vertical: true,
+      verticalSwiping: true,
+      autoplay: true,
+      infinite: true,
+      arrows: false,
+      dots: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplaySpeed: 2000,
+      centerMode: true,
+      centerPadding: "280px 0",
+      touchMove: true,
+      responsive: [
+        {
+          breakpoint: 1279,
+          settings: {
+            vertical: false,
+            verticalSwiping: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: false,
+            centerPadding: "0 50px",
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            vertical: false,
+            verticalSwiping: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+            arrows: false,
+          }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
 });
 

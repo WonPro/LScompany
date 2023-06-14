@@ -1,4 +1,30 @@
 @charset "utf-8";
+/***************************************
+*             수정-김진영              *
+***************************************/
+body{
+	/* 중복되는 keep-all body에 공통적용 */
+	word-break: keep-all;
+	/* 드래그 막기 */
+	-webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+/* 색상변수선언 */
+:root{
+	--pink: #E50A84;
+	--mint: #00AFC3;
+	--orange: #ffb926;
+	--dark: #282828;
+	--gray1: #494949;
+	--gray2: #888;
+	--gray3: #bdbdbd;
+	--gray4: #e1e1e1;
+	--gray5: #f0f0f0;
+	--gray6: #f8f8f8;
+	--white: #fff;
+}
 
 
 /***************************************
@@ -43,7 +69,7 @@
 		background-color: #fff;
 		border: 1px solid #e50a84;
 		border-radius: 3rem;
-		color: #E50A84;
+		color: #e50a84;
 		overflow: hidden;
 	}
 	.btn.btn2:before{
@@ -142,6 +168,37 @@
 	}
 	.btn5:hover:before,
 	.btn5.active:before{
+		left: 0;
+	}
+
+	.btn.btn6{
+		padding: 1.4rem 2.3rem;
+		position: relative;		
+		background-color: #fff;
+		border: 1px solid #00AFC3
+		;
+		border-radius: 10rem;
+		color: #00AFC3
+		;
+		overflow: hidden;
+	}
+	.btn.btn6:before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		background-color: #00AFC3
+		;
+		transition: left .3s;
+	}
+	.btn6:hover .btnNm,
+	.btn6.active .btnNm{
+		color: #fff;
+	}
+	.btn6:hover:before,
+	.btn6.active:before{
 		left: 0;
 	}
 	
