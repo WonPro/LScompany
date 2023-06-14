@@ -303,6 +303,11 @@ body{
 		justify-content: center;
 		align-items: center;
 	}
+
+	.gnb ul li.active a{
+		color: #E50A84;
+	}
+
 	.gnb ul li a{
 		padding: 3.3rem 2rem;
 		position: relative;
