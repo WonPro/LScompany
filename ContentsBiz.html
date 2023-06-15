@@ -96,12 +96,12 @@
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
 				<h2 class="secTitle title1">
-					<div><span class="fontMint">새로움</span>을 찾고</div>
-					<div><span class="fontMint">신선함</span>을 말하다</div>
+					<span class="fontMint">새로움</span>을 찾고<br>
+					<span class="fontMint">신선함</span>을 말하다
 				</h2>
 				<h2 class="secTitle title2">
-					<div><span class="fontMint">남다른</span>스토리를</div>
-					<div>담는 <span class="fontMint">콘텐츠 마케팅</span></div>
+					<span class="fontMint">남다른</span>스토리를<br>
+					담는 <span class="fontMint">콘텐츠 마케팅</span>
 				</h2>
 				<div class="subTitle">
 					<p class="title1"><span class="fontMint">Another+</span>남다른 아이디어와 퀄리티 있는 콘텐츠를 만들어내다</p>
@@ -501,5 +501,21 @@
 		</div>
 	</div>
 	<!-- // Modal Popup 영역 -->
+
+	<script>
+		$(function(){
+			// Section4, Section5, Section6 슬라이드
+			$('#contentBizSwiper1, #contentBizSwiper2, #contentBizSwiper3').slick({
+				arrows: false,
+				dots: false,
+				autoplay: false,
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplaySpeed: 2000,
+				touchMove: false,
+			});
+		})
+	</script>
 </body>
 </html>

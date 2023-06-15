@@ -94,12 +94,12 @@
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
 				<h2 class="secTitle title1">
-					<div>원하는 무엇이든</div>
-					<div><span class="fontOrange">상상을 현실로</span></div>
+					원하는 무엇이든<br>
+					<span class="fontOrange">상상을 현실로</span>
 				</h2>
 				<h2 class="secTitle title2">
-					<div>더욱 <span class="fontOrange">전문적</span>인</div>
-					<div>컨텐츠 <span class="fontOrange">디자인</span></div>
+					더욱 <span class="fontOrange">전문적</span>인<br>
+					컨텐츠 <span class="fontOrange">디자인</span>
 				</h2>
 				<div class="subTitle">
 					<p class="title1"><span class="fontOrange">Creative+</span>더욱 크리에이티브하게 특별한 메세지를 전달하다</p>
@@ -479,5 +479,50 @@
 		</div>
 	</div>
 	<!-- // Modal Popup 영역 -->
+
+	<script>
+		$(function(){
+			// Section4 윈드1947 슬라이드
+			$('#designDev #designDevSwiper').slick({
+				arrows: false,
+				dots: true,
+				autoplay: false,
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplaySpeed: 2000,
+				touchMove: false,
+			});
+
+			// Section4 상세페이지 슬라이드
+			$('#designDev #thumbnailVideo').slick({
+				vertical: true,
+				infinite: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 500,
+				arrows: false,
+				verticalSwiping: false,
+				speed: 3000,
+				draggable: false,
+				pauseOnFocus: false,
+				pauseOnHover: false,
+			});
+
+			// Section4 상세페이지 클릭시 팝업
+			$('#designDev #designDevSwiper .slideItem').on('click', function(){
+				let btnId = $(this).attr('data-id'),
+						imgId = btnId.substring(16),
+						imgUrl = 'img_subDesignDev_dealPage' + imgId + '.jpg',
+						imgAlt = $(this).find('img').attr('alt');
+
+				$("#popupDealPageDesignModal .contWrap")
+				.html("<img src='img/" + imgUrl + "' alt='"+ imgAlt + "'>");
+				
+				openPopup('DealPageDesignModal');
+			});
+		});
+	</script>
 </body>
 </html>

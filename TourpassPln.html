@@ -95,16 +95,16 @@
 		<!-- Section1 영역 -->
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
-					<h2 class="secTitle">
-							<div>티켓 하나로 펼쳐지는</div>
-							<div>새로운 여행 패러다임 <span class="fontOrange">"투어패스"</span></div>
-					</h2>
-					<div class="subTitle">
-							<p class="title1"><span class="fontOrange">Enjoy+</span>다양한 핫 플레이스를 한번에 즐기는 방법</p>
-							<p class="title2">여행 카테고리 최초 구독형 관광아이템, 투어패스만 있으면 쉽게 여행을 즐길 수 있습니다.</p>
-							<p class="title2">놀라운 편의성과 사용할수록 느껴지는 가성비. 새로운 여행의 재미를 제공하는</p>
-							<p class="title2">투어패스를 경험해보세요!</p>
-					</div>
+				<h2 class="secTitle">
+					티켓 하나로 펼쳐지는<br>
+					새로운 여행 패러다임&nbsp;<span class="fontOrange">"투어패스"</span>
+				</h2>
+				<div class="subTitle">
+					<p class="title1"><span class="fontOrange">Enjoy+</span>다양한 핫 플레이스를 한번에 즐기는 방법</p>
+					<p class="title2">여행 카테고리 최초 구독형 관광아이템, 투어패스만 있으면 쉽게 여행을 즐길 수 있습니다.</p>
+					<p class="title2">놀라운 편의성과 사용할수록 느껴지는 가성비. 새로운 여행의 재미를 제공하는</p>
+					<p class="title2">투어패스를 경험해보세요!</p>
+				</div>
 			</div>
 	</section>
 	<!-- //Section1 영역 -->
@@ -418,5 +418,46 @@
 		</div>
 	</div>
 	<!-- // Modal Popup 영역 -->
+
+	<script>
+		$(function(){
+			// Section6 지역별 투어패스 슬라이드
+			$('#tourpassPln #tourpassPlnSwiper').slick({
+				arrows: true,
+				dots: false,
+				autoplay: true,
+				infinite: true,
+				arrows: true,
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				autoplaySpeed: 2000,
+				centerMode: false,
+				touchMove: true,
+				responsive: [
+					{
+						breakpoint: 1279,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							centerMode: true,
+							arrows: false,
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							centerMode: false,
+							arrows: false,
+						}
+					},
+					// You can unslick at a given breakpoint now by adding:
+					// settings: "unslick"
+					// instead of a settings object
+				]
+			});
+		});
+	</script>
 </body>
 </html>

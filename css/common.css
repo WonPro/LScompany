@@ -43,6 +43,7 @@ body{
 		color: #FFFFFF;
 		overflow: hidden;
 	}
+
 	.btn.btn1:before{
 		content: '';
 		width: 100%;
@@ -53,6 +54,7 @@ body{
 		background-color: #e50a84;
 		transition: left .3s;
 	}
+
 	.btn:hover:before,
 	.btn.active:before{
 		left: 0;
@@ -67,6 +69,7 @@ body{
 		color: #e50a84;
 		overflow: hidden;
 	}
+
 	.btn.btn2:before{
 		content: '';
 		width: 100%;
@@ -77,10 +80,12 @@ body{
 		background-color: #e50a84;
 		transition: left .3s;
 	}
+
 	.btn2:hover .btnNm,
 	.btn2.active .btnNm{
 		color: #fff;
 	}
+
 	.btn2:hover:before,
 	.btn2.active:before{
 		left: 0;
@@ -95,6 +100,7 @@ body{
 		color: #282828;
 		overflow: hidden;
 	}
+
 	.btn.btn3:before{
 		content: '';
 		width: 100%;
@@ -105,6 +111,7 @@ body{
 		background-color: #fff;
 		transition: left .3s;
 	}
+
 	.btn3:hover,
 	.btn3.active{
 		color: #e50a84;
@@ -119,6 +126,7 @@ body{
 		color: #ffb926;
 		overflow: hidden;
 	}
+
 	.btn.btn4:before{
 		content: '';
 		width: 100%;
@@ -129,10 +137,12 @@ body{
 		background-color: #ffb926;
 		transition: left .3s;
 	}
+
 	.btn4:hover .btnNm,
 	.btn4.active .btnNm{
 		color: #fff;
 	}
+
 	.btn4:hover:before,
 	.btn4.active:before{
 		left: 0;
@@ -147,6 +157,7 @@ body{
 		color: #ffb926;
 		overflow: hidden;
 	}
+
 	.btn.btn5:before{
 		content: '';
 		width: 100%;
@@ -157,10 +168,12 @@ body{
 		background-color: #ffb926;
 		transition: left .3s;
 	}
+
 	.btn5:hover .btnNm,
 	.btn5.active .btnNm{
 		color: #fff;
 	}
+
 	.btn5:hover:before,
 	.btn5.active:before{
 		left: 0;
@@ -188,16 +201,17 @@ body{
 		;
 		transition: left .3s;
 	}
+
 	.btn6:hover .btnNm,
 	.btn6.active .btnNm{
 		color: #fff;
 	}
+
 	.btn6:hover:before,
 	.btn6.active:before{
 		left: 0;
 	}
 	
-
 	.main .secTitle{
 		font-size: 5rem;
 		font-weight: 700;

@@ -47,7 +47,70 @@
 	.secTitle *,
 	.subTitle *{
 		font-size: inherit;
+		line-height: inherit;
 	}
+
+	#section1 .secTitle{
+		font-size: 8.6rem;
+		font-weight: 700;
+		color: #494949;
+		line-height: 1.2;
+	}
+
+	#section1 .secTitle.title1{
+		opacity: 0;
+		animation-name: titleFirstMotion;
+		animation-duration: 2.5s;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+	}
+	#section1 .secTitle.title2{
+		opacity: 0;
+		animation-name: titleSecondMotion;
+		animation-duration: 1s;
+		animation-delay: 3.5s;
+		animation-fill-mode: forwards;
+	}
+
+	#section1 .subTitle{
+		width: 100%;
+		margin-top: 12rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	
+	#section1 .subTitle .title1{
+		margin-bottom: 2rem;
+		transform: translateY(500%);
+		opacity: 0;
+		font-size: 2.8rem;
+		animation-name: titleTopMotion;
+		animation-duration: 1s;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(.9,0,.58,1);
+	}
+
+	#section1 .subTitle .title1 .fontOrange{
+		margin-right: 2rem;
+	}
+
+	#section1 .subTitle .title2{
+		margin-top: 1rem;
+		transform: translateY(250%);
+		opacity: 0;
+		font-size: 2rem;
+		animation-name: titleBottomMotion;
+		animation-duration: 1s;
+		animation-delay: 4.8s;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(.9,0,.58,1);
+	}
+
+	
 
 	@media screen and (max-width: 1279px) {
 
@@ -64,6 +127,14 @@
 		.subTitle{
 			font-size: 2rem;
 		}
+
+		
+	}
+
+	@media screen and (max-width: 960px) {
+		#section1 .secTitle{
+			font-size: 6.6rem;
+		}
 	}
 
 	@media screen and (max-width: 767px) {
@@ -78,7 +149,31 @@
 			line-height: 1.2;
 			word-break: keep-all;
 		}
+
+		#section1 .secTitle{
+			font-size: 2.6rem;
+			letter-spacing: -1.5px;
+		}
+
+		#section1 .subTitle{
+			padding-left: 2rem;
+			padding-right: 2rem;
+		}
+	
+		#section1 .subTitle .title1{
+			font-size: 2rem;
+			line-height: 1.2;
+			word-break: keep-all;
+		}
+	
+		#section1 .subTitle .title2{
+			font-size: 1.4rem;
+			line-height: 1.2;
+			word-break: keep-all;
+		}
 	}
+
+	
 	
 	@keyframes titleFirstMotion {
 		30% {opacity: 1;}
@@ -145,7 +240,6 @@
 
 #aboutUs #section1 .secTitle,
 #aboutUs #section1 .secTitle div{
-	font-size: 8.6rem;
 	font-weight: 700;
 	color: #494949;
 }
@@ -179,7 +273,6 @@
 	margin-bottom: 2rem;
 	transform: translateY(500%);
 	opacity: 0;
-	font-size: 2.8rem;
 	animation: titleTopMotion 1s cubic-bezier(.9,0,.58,1) 4s forwards;
 }
 
@@ -191,40 +284,14 @@
 	margin-top: 1rem;
 	transform: translateY(250%);
 	opacity: 0;
-	font-size: 2rem;
 	animation: titleBottomMotion 1s cubic-bezier(.9,0,.58,1) 4.8s forwards;
 }
 
 @media screen and (max-width: 767px) {
-	#aboutUs #section1 .secTitle,
-	#aboutUs #section1 .secTitle div{
-		font-size: 5rem;
-		line-height: 1.2;
-		color: #494949;
-	}
-
-	#aboutUs #section1 .subTitle{
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-
-	#aboutUs #section1 .subTitle .title1{
-		font-size: 2rem;
-		line-height: 1.2;
-		word-break: keep-all;
-	}
-
-	#aboutUs #section1 .subTitle .title1 .fontOrange{
+	#section1 .subTitle .title1 .fontOrange{
 		margin-right: 0.5rem;
-	}
-
-	#aboutUs #section1 .subTitle .title2{
-		font-size: 1.4rem;
-		line-height: 1.2;
-		word-break: keep-all;
-	}
+	}		
 }
-
 
 
 /********* section2 *********/
@@ -280,6 +347,27 @@
 #aboutUs #section2 .contBox.item1 .data:after{content: '위';}
 #aboutUs #section2 .contBox.item2 .data:after{content: '개';}
 #aboutUs #section2 .contBox.item3 .data:after{content: '억';}
+
+
+@media screen and (max-width: 1279px) {
+
+	#aboutUs #section2 .contBox{
+		padding: 3rem;
+	}
+
+	#aboutUs #section2 .contBox .data{
+		font-size: 7rem;
+	}
+
+	#aboutUs #section2 .contBox .contTitle{
+		font-size: 2.2rem;
+	}
+
+	#aboutUs #section2 .contBox .contTitle::before{
+		display: block;
+		margin: 0 auto;
+	}
+}
 
 
 
@@ -382,6 +470,42 @@
 	line-height: 1.6;
 }
 
+@media screen and (max-width: 1279px) {
+	#aboutUs #section3 .item .outCircle{
+		width: 20rem;
+		height: 20rem;
+		padding: 1.9rem;
+	}
+
+	#aboutUs #section3 .item .outCircle::after{
+		top: 9.75rem;
+	}
+
+	#aboutUs #section3 .item .outCircle::before{
+		top: 9.74rem;
+	}
+
+	#aboutUs #section3 .item .outCircle .inCircle:after{
+		top: 8.1rem;
+		right: -8.4rem;
+	}
+
+	#aboutUs #section3 .item .outCircle .inCircle .itemTitle{
+		font-size: 2.4rem;
+	}
+
+	#aboutUs #section3 .item .context{
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#aboutUs #section3{
+		height: auto;
+	}
+	
+}
+
 
 /********* section4 *********/
 
@@ -402,6 +526,10 @@
 	background: #ddd center center / 2.2rem no-repeat;
 	border: none;
 	border-radius: 50%;
+}
+
+#aboutUs #section4 .slideMoveBtn.slick-disabled{
+	background-color: #aaa;
 }
 
 #aboutUs #section4 .slideMoveBtn.prev{background-image: url(../img/icon_subAboutUs_arrow_prev.svg);}
@@ -731,7 +859,6 @@
 
 		#designDev #section1 .secTitle,
 		#designDev #section1 .secTitle div{
-			font-size: 8.6rem;
 			font-weight: 700;
 			color: #494949;
 		}
@@ -792,7 +919,6 @@
 		@media screen and (max-width: 767px) {
 			#designDev #section1 .secTitle,
 			#designDev #section1 .secTitle div{
-				font-size: 5rem;
 				line-height: 1.2;
 				color: #494949;
 			}
@@ -1663,6 +1789,7 @@
 	#contentsBiz #section1{
 		padding-top: 0;
 		padding-bottom: 0;
+		background-color: #fff;
 	}
 
 	#contentsBiz #section1 .innerWrap{
@@ -1680,73 +1807,9 @@
 		text-align: center;
 	}
 
-	#contentsBiz #section1 .secTitle,
-	#contentsBiz #section1 .secTitle div{
-		font-size: 8.6rem;
-		font-weight: 700;
-		color: #494949;
-	}
-
-	#contentsBiz #section1 .secTitle.title1{
-		opacity: 0;
-		animation-name: titleFirstMotion;
-		animation-duration: 2.5s;
-		animation-delay: 1s;
-		animation-fill-mode: forwards;
-	}
-	#contentsBiz #section1 .secTitle.title2{
-		opacity: 0;
-		animation-name: titleSecondMotion;
-		animation-duration: 1s;
-		animation-delay: 3.5s;
-		animation-fill-mode: forwards;
-	}
-
-	#contentsBiz #section1 .subTitle{
-		width: 100%;
-		margin-top: 12rem;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-	}
 	
-	#contentsBiz #section1 .subTitle .title1{
-		margin-bottom: 2rem;
-		transform: translateY(500%);
-		opacity: 0;
-		font-size: 2.8rem;
-		animation-name: titleTopMotion;
-		animation-duration: 1s;
-		animation-delay: 4s;
-		animation-fill-mode: forwards;
-		animation-timing-function: cubic-bezier(.9,0,.58,1);
-	}
-
-	#contentsBiz #section1 .subTitle .title1 .fontOrange{
-		margin-right: 2rem;
-	}
-
-	#contentsBiz #section1 .subTitle .title2{
-		margin-top: 1rem;
-		transform: translateY(250%);
-		opacity: 0;
-		font-size: 2rem;
-		animation-name: titleBottomMotion;
-		animation-duration: 1s;
-		animation-delay: 4.8s;
-		animation-fill-mode: forwards;
-		animation-timing-function: cubic-bezier(.9,0,.58,1);
-	}
 
 	@media screen and (max-width: 767px) {
-		#contentsBiz #section1 .secTitle,
-		#contentsBiz #section1 .secTitle div{
-			font-size: 5rem;
-			line-height: 1.2;
-			color: #494949;
-		}
 
 		#contentsBiz #section1 .subTitle{
 			padding-left: 2rem;
@@ -1772,16 +1835,10 @@
 
 
 
-/********* section *********/
+/********* section2 *********/
 
 	#contentsBiz #section2{
 		background-color: #f8f8f8;
-	}
-
-	#contentsBiz #section2 .secTitle,
-	#contentsBiz #section2 .subTitle{
-		text-align: center;
-		line-height: 0.6rem;
 	}
 
 	#contentsBiz #section2 .flexWrap.grid{
@@ -2452,13 +2509,7 @@
 		text-align: center;
 	}
 
-	#mobillity #section1 .secTitle,
-	#mobillity #section1 .secTitle div{
-		font-size: 8.6rem;
-		font-weight: 700;
-		color: #494949;
-	}
-
+	/*
 	#mobillity #section1 .secTitle.title1{
 		opacity: 0;
 		animation-name: titleFirstMotion;
@@ -2488,7 +2539,6 @@
 		margin-bottom: 2rem;
 		transform: translateY(500%);
 		opacity: 0;
-		font-size: 2.8rem;
 		animation-name: titleTopMotion;
 		animation-duration: 1s;
 		animation-delay: 4s;
@@ -2510,37 +2560,7 @@
 		animation-delay: 4.8s;
 		animation-fill-mode: forwards;
 		animation-timing-function: cubic-bezier(.9,0,.58,1);
-	}
-
-	@media screen and (max-width: 767px) {
-		#mobillity #section1 .secTitle,
-		#mobillity #section1 .secTitle div{
-			font-size: 5rem;
-			line-height: 1.2;
-			color: #494949;
-		}
-
-		#mobillity #section1 .subTitle{
-			padding-left: 2rem;
-			padding-right: 2rem;
-		}
-
-		#mobillity #section1 .subTitle .title1{
-			font-size: 2rem;
-			line-height: 1.2;
-			word-break: keep-all;
-		}
-
-		#mobillity #section1 .subTitle .title1 .fontOrange{
-			margin-right: 0.5rem;
-		}
-
-		#mobillity #section1 .subTitle .title2{
-			font-size: 1.4rem;
-			line-height: 1.2;
-			word-break: keep-all;
-		}
-	}
+	} */
 
 
 
@@ -2956,10 +2976,8 @@
 
 	#systemDev #section1 .secTitle,
 	#systemDev #section1 .secTitle div{
-		font-size: 8.6rem;
 		font-weight: 700;
 		color: var(--gray1);
-		margin-bottom: 20px; /* 행간이 좁아서 속성 추가함 @수정*/
 	}
 
 	#systemDev #section1 .secTitle.title2{
@@ -2974,14 +2992,14 @@
 		width: 100%;
 		margin-top: 12rem;
 		position: absolute;
-		top: 52%; /* 행간이 좁아서 50%에서 52%로 수정함 @수정*/
+		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}
 	
 	#systemDev #section1 .subTitle .title1{
-		margin-bottom: 3rem; /* 2rem에서 3rem으로 수정함 @수정 */
+		margin-bottom: 2rem;
 		transform: translateY(500%);
 		opacity: 0;
 		font-size: 2.8rem;
@@ -3013,9 +3031,7 @@
 	@media screen and (max-width: 767px) {
 		#systemDev #section1 .secTitle,
 		#systemDev #section1 .secTitle div{
-			font-size: 5rem;
 			line-height: 1.2;
-			margin-bottom: 6px; /* 추가함 @수정 */
 			/* color: var(--gray1);  위에 색상값 줘서 중복 삭제함 @수정 */
 		}
 
@@ -3473,13 +3489,6 @@
 		text-align: center;
 	}
 
-	#tourpassPln #section1 .secTitle,
-	#tourpassPln #section1 .secTitle div{
-		font-size: 8.6rem;
-		font-weight: 700;
-		color: #494949;
-	}
-
 	#tourpassPln #section1 .secTitle{
 		opacity: 0;
 		animation-name: titleSecondMotion;
@@ -3527,21 +3536,10 @@
 	}
 
 	@media screen and (max-width: 1279px) {
-		#tourpassPln #section1 .secTitle,
-		#tourpassPln #section1 .secTitle div{
-			font-size: 5.6rem;
-			line-height: 1.2;
-			color: #494949;
-		}
+
 	}
 	
 	@media screen and (max-width: 767px) {
-		#tourpassPln #section1 .secTitle,
-		#tourpassPln #section1 .secTitle div{
-			font-size: 3.8rem;
-			line-height: 1.2;
-			color: #494949;
-		}
 
 		#tourpassPln #section1 .subTitle{
 			padding-left: 2rem;
@@ -4193,13 +4191,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		text-align: center;
-	}
-
-	#brandPln #section1 .secTitle,
-	#brandPln #section1 .secTitle div{
-		font-size: 8.6rem;
-		font-weight: 700;
-		color: #494949;
 	}
 
 	#brandPln #section1 .secTitle.title1{
@@ -4878,43 +4869,52 @@
 		overflow: hidden;
 		padding: 0;
 	}
+
 	#brandPln #section6 .innerWrap{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
+
 	#brandPln #section6 .innerWrap .titWrap{
 		margin-bottom: 0;
 	}
+
 	#brandPln #section6 .innerWrap .titWrap .secTitle div{
 		margin-top: 1rem;
 		text-align: left;
 	}
+
 	#brandPln #section6 .innerWrap .titWrap .subTitle{
 		color: #282828;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 	}
+
 	#brandPln #section6 #brandPlnSwiper3{
 		width: 504px;
 		height: 100vh;
 	}
+
 	#brandPln #section6 #brandPlnSwiper3 li{
 		border-radius: 20px;
 		margin: 1.6rem 0;
 		overflow: hidden;
 		width: 504px;
 	}
+
 	#brandPln #section6 #brandPlnSwiper3 .slick-list{
 		overflow: hidden;
 	}
+
 	#brandPln #section6 #brandPlnSwiper3 li img{
 		width: 100%;
 		height: auto;
 		object-fit: cover;
 		object-position: center center;
 	}
+
 	@media screen and (max-width: 1279px) {
 		#brandPln #section6{
 			padding: 0;

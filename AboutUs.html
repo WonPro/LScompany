@@ -39,7 +39,7 @@
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/sub.css">
-
+	
 	<script src="js/jquery-2.2.4.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
@@ -96,12 +96,12 @@
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
 				<h2 class="secTitle title1">
-					<div>여행의&nbsp;<span class="fontPink">패러다임</span>을 바꾸는</div>
-					<div>여행·레저 시장의&nbsp;<span class="fontPink">리딩컴퍼니</span></div>
+					여행의&nbsp;<span class="fontPink">패러다임</span>을 바꾸는<br>
+					여행·레저 시장의&nbsp;<span class="fontPink">리딩컴퍼니</span>
 				</h2>
 				<h2 class="secTitle title2">
-					<div>신뢰를 기반으로 한&nbsp;<span class="fontPink">도전</span></div>
-					<div><span class="fontPink">제휴사와 함께&nbsp;</span>성장하는 회사</div>
+					신뢰를 기반으로 한&nbsp;<span class="fontPink">도전</span><br>
+					<span class="fontPink">제휴사와 함께&nbsp;</span>성장하는 회사
 				</h2>
 				<div class="subTitle">
 					<p class="title1"><span class="fontPink">Value Transmission↑</span>여행의 더 나은 가치를 고객에게 전달하다</p>
@@ -120,17 +120,17 @@
 				</h2>
 				<p class="subTitle">다년간의 다양한 경험과 기술을 바탕으로 확실한 숫자로 이야기합니다.</p>
 				<div class="flexWrap grid">
-					<div class="col_lg4 col_md6 col_sm12 contBox item1">
+					<div class="col_lg4 col_md4 col_sm12 contBox item1">
 						<h3 class="contTitle">관광지 판매 랭킹</h3>
 						<span id="dataRank" class="data" data-count="1">1</span>
 					</div>
 
-					<div class="col_lg4 col_md6 col_sm12 contBox item2">
+					<div class="col_lg4 col_md4 col_sm12 contBox item2">
 						<h3 class="contTitle">국내 협력 파트너 수</h3>
 						<span id="dataPartner" class="data" data-count="380">0</span>
 					</div>
 
-					<div class="col_lg4 col_md6 col_sm12 contBox item3">
+					<div class="col_lg4 col_md4 col_sm12 contBox item3">
 						<h3 class="contTitle">22년 온라인 매출</h3>
 						<span id="dataSales" class="data" data-count="950">0</span>
 					</div>
@@ -512,19 +512,76 @@
 		</div>
 	</div>
 	<!-- // Modal Popup 영역 -->
-	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6umalqrr7i"></script>
-	<script>
 
-		var HOME_PATH = window.HOME_PATH || '.';
-		var position = new naver.maps.LatLng(33.49009387098386, 126.5201560933121);
+	
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=6umalqrr7i"></script>
+
+
+	<script>
+		$(function(){
+			// section2 숫자 카운팅
+			function countAnimate($element, startCount, endCount) {
+				$({ countNum: startCount }).delay(100).animate({
+						countNum: endCount
+					},{
+						duration: 2000,
+						easing: 'linear',
+						step: function() {
+							$element.text(Math.floor(this.countNum));
+						},
+						complete: function() {
+							$element.text(this.countNum);
+						}
+					}
+				);
+			}
+
+			// section2에 스크롤 위치하면 애니메이션 시작
+			$(window).scroll(function() {
+				var section2Offset = $('#aboutUs #section2').offset().top;
+				var scrollTop = $(window).scrollTop() + ($(window).height() / 2);
+			
+				$('#aboutUs #section2 .data').each(function() {
+					var $this = $(this);
+					var countTo = $this.attr('data-count');
+					var currentCount = parseInt($this.text());
+			
+					if (scrollTop >= section2Offset) {
+						countAnimate($this, currentCount, countTo);
+					}
+				});
+			});
+			
+			// section4 회사 히스토리 슬라이드
+			$('#aboutUs #section4 #aboutUsSwiper').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				infinite: false,
+				dots: false,
+				arrows: true,
+				prevArrow: $('#aboutUs #section4 .slideMoveBtn.prev'),
+				nextArrow: $('#aboutUs #section4 .slideMoveBtn.next'),
+				touchMove: false,
+			});
+		})
+		
+
+    // Naver Map
+    var HOME_PATH = window.HOME_PATH || '.';
+		var position = new naver.maps.LatLng(33.4901021, 126.5201685);
 
 		var map = new naver.maps.Map('map', {
-				center: position,
-				zoom: 16,
+			center: position,
+			zoom: 16,
+			zoomControl: true,
+			zoomControlOptions: {
+				position: naver.maps.Position.TOP_RIGHT
+    	},
+			scrollWheel: false,
 		});
 
 		var markerOptions = {
-				position: position.destinationPoint(90, 15),
+				position: position.destinationPoint(0, 0),
 				map: map,
 				icon: {
 					url: HOME_PATH +'/img/favicon/favicon_32.png',
