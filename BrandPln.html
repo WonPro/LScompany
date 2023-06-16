@@ -96,11 +96,11 @@
 		<section id="section1" class="section wheelSection">
 			<div class="innerWrap">
 				<h2 class="secTitle title1">
-					경험해보지 못한
+					경험해보지 못한<br>
 					<span class="fontMint">새로움과 가능성</span>
 				</h2>
 				<h2 class="secTitle title2">
-					성공을 이끌어 내는
+					성공을 이끌어 내는<br>
 					<span class="fontMint">차별화된 브랜딩</span>
 				</h2>
 				<div class="subTitle">
@@ -607,6 +607,20 @@
 
 	<script>
 		$(function(){
+
+			// Section3, Section4 무브먼트 버튼
+			$('.btnToSec3').click(function() {
+				$('html, body').animate({
+					scrollTop: $('#section3').offset().top
+				}, 600);
+			});
+
+			$('.btnToSec4').click(function() {
+				$('html, body').animate({
+					scrollTop: $('#section4').offset().top
+				}, 600);
+			});
+			
 			// Section3 제주라프 슬라이드
 			$('#brandPln #brandPlnSwiper1').slick({
 				arrows: true,

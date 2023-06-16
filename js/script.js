@@ -1,4 +1,3 @@
-'use strict';
 
 /*********************************************************
 *                    Modal Popup Event                   *
@@ -24,7 +23,6 @@
     popup.classList.remove('on');
     modalWrap.classList.remove('on');
   }
-
 
 
 /*********************************************************

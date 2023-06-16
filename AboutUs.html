@@ -377,6 +377,7 @@
 				<p class="subTitle">엘에스컴퍼니는 각 분야의 우수한 기술 역량을 갖춘 뛰어난 전문가들로 구성되어 있습니다.</p>
 				<div class="orzChart">
 					<img src="img/img_abouUs_orzChart.jpg" alt="서울, 부산, 경북/경남, 전북/전남, 인천지사를 두고있으며 제주본사에는 경영지원팀, 고객지원팀, 개발팀, 디자인팀, 브랜드기획팀, 투어패스사업부, 콘텐츠사업부, 모빌리티사업부가 있습니다. 개발팀 산하에는 웹개발팀과 응용개발팀으로 나눠져있고 투어패스사업부 산하에는 제주상품기획팀과 내륙상품기획팀으로 구성되어있습니다. 콘텐츠사업부 산하에는 마케팅팀과 라이브커머스팀, 촬영팀이 구성되어 있으며 모빌리티사업부 산하에는 렌트카팀과 버스투어팀으로 구성되어 있습니다.">
+					<img class="mobile" src="img/img_abouUs_orzChart_mobile.jpg" alt="서울, 부산, 경북/경남, 전북/전남, 인천지사를 두고있으며 제주본사에는 경영지원팀, 고객지원팀, 개발팀, 디자인팀, 브랜드기획팀, 투어패스사업부, 콘텐츠사업부, 모빌리티사업부가 있습니다. 개발팀 산하에는 웹개발팀과 응용개발팀으로 나눠져있고 투어패스사업부 산하에는 제주상품기획팀과 내륙상품기획팀으로 구성되어있습니다. 콘텐츠사업부 산하에는 마케팅팀과 라이브커머스팀, 촬영팀이 구성되어 있으며 모빌리티사업부 산하에는 렌트카팀과 버스투어팀으로 구성되어 있습니다.">
 				</div>
 			</div>
 		</section>
@@ -385,7 +386,11 @@
 		<!-- Section6 영역 -->
 		<section id="section6" class="section wheelSection">
 			<h2 class="secTitle">오시는길</h2>
-			<div id="map" class="map"></div>
+			<div id="map" class="map">
+				<div class="btnWrap">
+					<button type="button" id="to-ls" class="btn btn3 controlBtn">LS컴퍼니로</button>
+				</div>
+			</div>
 		</section>
 		<!-- //Section6 영역 -->
 
@@ -562,16 +567,36 @@
 				prevArrow: $('#aboutUs #section4 .slideMoveBtn.prev'),
 				nextArrow: $('#aboutUs #section4 .slideMoveBtn.next'),
 				touchMove: false,
+				responsive: [
+					{
+						breakpoint: 1279,
+						settings: {
+							slidesToShow: 3,
+						}
+					},
+					{
+						breakpoint: 960,
+						settings: {
+							slidesToShow: 2,
+						}
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 1,
+						}
+					},
+				]
 			});
 		})
 		
 
     // Naver Map
     var HOME_PATH = window.HOME_PATH || '.';
-		var position = new naver.maps.LatLng(33.4901021, 126.5201685);
+		var lsCompany = new naver.maps.LatLng(33.4901021, 126.5201685);
 
 		var map = new naver.maps.Map('map', {
-			center: position,
+			center: lsCompany,
 			zoom: 16,
 			zoomControl: true,
 			zoomControlOptions: {
@@ -581,7 +606,7 @@
 		});
 
 		var markerOptions = {
-				position: position.destinationPoint(0, 0),
+				position: lsCompany.destinationPoint(0, 0),
 				map: map,
 				icon: {
 					url: HOME_PATH +'/img/favicon/favicon_32.png',
@@ -590,6 +615,13 @@
 					anchor: new naver.maps.Point(16, 16),
 				}
 		};
+
+		$("#to-ls").on("click", function(e) {
+			e.preventDefault();
+
+			map.setCenter(lsCompany);
+		});
+
 
 		var marker = new naver.maps.Marker(markerOptions);
 	</script>

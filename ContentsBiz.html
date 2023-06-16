@@ -100,8 +100,8 @@
 					<span class="fontMint">신선함</span>을 말하다
 				</h2>
 				<h2 class="secTitle title2">
-					<span class="fontMint">남다른</span>스토리를<br>
-					담는 <span class="fontMint">콘텐츠 마케팅</span>
+					<span class="fontMint">남다른</span>&nbsp;스토리를<br>
+					담는&nbsp;<span class="fontMint">콘텐츠 마케팅</span>
 				</h2>
 				<div class="subTitle">
 					<p class="title1"><span class="fontMint">Another+</span>남다른 아이디어와 퀄리티 있는 콘텐츠를 만들어내다</p>
@@ -112,7 +112,7 @@
 		</section>
 		<!-- //Section1 영역 -->
 
-		<!-- section2 영역-->
+		<!-- section2 영역 -->
 		<section id="section2" class="section wheelSection">
 			<div class="innerWrap">
 				<h2 class="secTitle">
@@ -362,17 +362,11 @@
 					<span>특별한 촬영 콘텐츠</span>
 					<div class="logoPbb"></div>
 				</h2>
-				<div class="subTitleBox">
-					<p class="subTitle">포토뱅뱅으로 나만의 360도 영상을 휴대폰에 저장 해보세요!</p>
-					<p class="subTitle">영화와 같은 아크 쇼트에서 착안한 발상으로, 일상에서 볼 수 없던 나의 새로운 모습 레디 ~ 액션🎬</p>
-				</div>
-				<p class="subTitle fontRedPink">특별한 콘텐츠를 원하신다면 문의해주세요.</p>
+				<p class="subTitle">포토뱅뱅으로 나만의 360도 영상을 휴대폰에 저장 해보세요!</p>
+				<p class="subTitle">영화와 같은 아크 쇼트에서 착안한 발상으로, 일상에서 볼 수 없던 나의 새로운 모습 레디 ~ 액션🎬</p>
+				<p class="subTitle"><span class="fontRed">특별한 콘텐츠를 원하신다면 문의해주세요.</span></p>
 				<div class="VideoWrap">
-					<div class="videoContainer">
-						<div class="video">
-							<iframe width="820" height="460" src="https://www.youtube.com/embed/DMoVbgq3Ah0" frameborder="0" allowfullscreen></iframe>
-						</div>
-					</div>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/DMoVbgq3Ah0" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 		</section>
@@ -464,38 +458,11 @@
 			</button>
 		</div>
 
-		<div id="popupMarketingPortfolio" class="popupFrame popup characterDesignModal">
-			<div class="flexWrap">
-				<div class="leftBox">
-					<figure>
-						<img src="img/img_subDesignDev_character1_profile.png" alt="">
-						<figcaption>
-							<h3 class="charNm">트레브</h3>
-							<h4 class="charEngNm">Trev</h4>
-						</figcaption>
-					</figure>
-				</div>
+		<div id="popupMarketingPortfolioModal" class="popupFrame popup marketingPortfolioModal">
+			<div class="contWrap">
 
-				<div class="rightBox">
-					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">똥꼬발랄, 여행을 좋아하는 천방지축 여우</p>
-					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">제주 여행을 좋아하는 아기여우.
-						호기심이 많아서 여기저기 안 가본 곳이 없어요.
-						여우라서 똑똑하고 영리해보이지만 아직은 어려서
-						어설픈 면도 많은 아기 여우랍니다.</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn5">
-							<span class="btnNm">투어패스 바로가기</span>
-						</button>
-						<button type="button" class="btn btn5">
-							<span class="btnNm">계정 바로가기</span>
-						</button>
-					</div>
-				</div>
 			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterDesign1')">
+			<button type="button" class="closePopupBtn" onclick="closePopup('MarketingPortfolioModal')">
 				<span class="hide">닫기</span>
 			</button>
 		</div>
@@ -504,6 +471,7 @@
 
 	<script>
 		$(function(){
+
 			// Section4, Section5, Section6 슬라이드
 			$('#contentBizSwiper1, #contentBizSwiper2, #contentBizSwiper3').slick({
 				arrows: false,
@@ -515,7 +483,25 @@
 				autoplaySpeed: 2000,
 				touchMove: false,
 			});
-		})
+
+			// Section4 상세페이지 클릭시 팝업
+			$('#contentsBiz .slide .slideItem').on('click', function(){
+				let btnId = $(this).attr('data-id'),
+						imgId = btnId.substring(17),
+						imgUrl = 'img_ContentsBiz_portfolio' + imgId + '.jpg';
+						// imgAlt = $(this).find('img').attr('alt');
+
+				$("#popupMarketingPortfolioModal .contWrap")
+				.html(
+					"<img src='img/" 
+					+imgUrl 
+					// +"' alt='"
+					// +imgAlt 
+					+ "'>");				
+				openPopup('MarketingPortfolioModal');
+			});
+
+		});
 	</script>
 </body>
 </html>
