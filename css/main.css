@@ -66,6 +66,7 @@
 	  color: #282828;
 		opacity: 0;
   }
+
   #section1 .slideWrap .slideItem .icon{
 	width: 5rem;
 	height: 5rem;
@@ -85,7 +86,6 @@
 
 
 	@media screen and (max-width: 1279px) {
-
 
 		#section1 .slideWrap .slideItem {
 			padding-top: calc(15vh - 1.8rem);
@@ -558,6 +558,15 @@
 		color: #E50A84;
 	}
 
+	#mapIcon{
+		width: 4rem;
+		height: 4rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url(../img/favicon/favicon_32.png) center center / contain no-repeat;
+	}
+
 	@media screen and (max-width: 1279px) {
 		
 		#section6 .secTitle{
@@ -579,3 +588,4 @@
 			word-break: keep-all;
 		}
 	}
+	
