@@ -151,6 +151,7 @@ ul.paging li a{display: block; font-size: 18px; color: #121212; cursor: pointer;
 .flexWrap.spaceBetween{justify-content: space-between;}
 .flexWrap.center{justify-content: center;}
 .flexWrap.alignCenter{align-items: center}
+.flexWrap.alignStart{align-items: flex-start;}
 .flexWrap.row{flex-flow: row wrap;}
 .flexWrap.row.right{justify-content: end;}
 .flexWrap.row.left{justify-content: start;}

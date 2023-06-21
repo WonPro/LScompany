@@ -27,6 +27,7 @@ body{
 ***************************************/
 	.btn{
 		font-size: 1.6rem;
+		overflow: hidden;
 	}
 	.btn .btnNm{
 		position: relative;
@@ -210,6 +211,58 @@ body{
 	.btn6:hover:before,
 	.btn6.active:before{
 		left: 0;
+	}
+
+	.btn-submit,.btn-cancel{
+		width: 10rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		position: relative;
+		background-color: #fff;
+		border: 1px solid #282828;
+		border-radius: 0.5rem;
+		font-size: 1.6rem;
+		color: #282828;
+	}
+
+	.btn-submit:hover::before,
+	.btn-cancel:hover::before{
+		left: 0;
+	}
+
+	.btn-submit:hover{
+		color: #fff;
+	}
+
+	.btn-submit::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		background-color: #282828;
+		transition: left .3s;
+	}
+
+	.btn-cancel{
+		background-color: #282828;
+		color: #fff;
+	}
+
+	.btn-cancel:hover{
+		/* color: #282828; */
+	}
+
+	.btn-cancel::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		background-color: #ff4343;
+		transition: left .3s;
 	}
 	
 	.main .secTitle{
@@ -727,25 +780,80 @@ body{
 	color: #fff;
 }
 
-#popupWrap .popupFrame .popupHeader{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+#popupWrap #popupPartnershipInquiry{
+	width: 60rem;
+	height: auto;
 }
 
-#popupWrap .popupFrame .popupHeader .icon{
-	width: 8rem;
-	height: 8rem;
-	display: block;
-	background: url(../img/icon_exclamation.svg) no-repeat center center / cover transparent;
-}
-
-#popupWrap .popupFrame .popupContent{
-	margin-top: 2rem;
-	display: flex;
-	justify-content: center;
-}
-
-#popupWrap .popupFrame .popupContent .popupTitle{
+#popupPartnershipInquiry .popupTitle{
 	font-size: 2rem;
+	text-align: center;
+}
+
+#popupPartnershipInquiry .popupContent{
+	margin-top: 5rem;
+}
+
+#popupPartnershipInquiry .inputWrap{
+	margin-bottom: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+#popupPartnershipInquiry .inputWrap.alignStart{
+	align-items: flex-start;
+}
+
+#popupPartnershipInquiry .label{
+	width: 6rem;
+	padding-bottom: 0.5rem;
+	font-size: 1.6rem;
+	line-height: 1;
+}
+
+#popupPartnershipInquiry .input{
+	width: calc(100% - 6rem);
+	height: 3rem;
+	padding-left: 0.5rem;
+	border: none;
+	border-bottom: 1px solid #282828;
+	border-radius: 0;
+	font-size: 1.6rem;
+	line-height: 1;
+}
+
+#popupPartnershipInquiry .userInquiryLabel{
+	padding-bottom: 0;
+}
+
+#popupPartnershipInquiry .userInquiry{
+	height: 10rem;
+	padding-top: 0;
+	font-size: 1.6rem;
+	line-height: 1.4;
+}
+
+#popupPartnershipInquiry .input::placeholder{
+	color: #fff;
+}
+
+#popupPartnershipInquiry .btn-submit{
+	width: 20rem;
+	display: block;
+	margin: 5rem auto 0;
+}
+
+#popupPartnershipInquiry .btn-submit .btnNm{
+	font-size: 2rem;
+}
+
+#popupPartnershipInquiry .textWrap{
+	padding: 0.5rem;
+	height: 6rem;
+	overflow-y: auto;
+	font-size: 1.2rem;
+	border-radius: 0;
+	border-width: 1px;
+	line-height: 1.2;
 }
