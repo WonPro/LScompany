@@ -74,7 +74,7 @@
 					<li><a href="TourpassPln.html">투어패스기획</a></li>
 					<li><a href="ContentsBiz.html">콘텐츠사업</a></li>
 					<li><a href="Mobility.html">모빌리티</a></li>
-					<li class="mobileShow"><a href="">제휴문의</a></li>
+					<li class="mobileShow"><a href="#" onclick="openPopup('PartnershipInquiry')">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
@@ -280,19 +280,19 @@
 				</div>
 		
 				<div class="flexWrap center alignCenter">
-					<button type="button" class="characterBrandBtn" onclick="openPopup('CharacterBrand1')">
+					<button type="button" class="characterBrandBtn" data-charnm="orange" >
 						<img src="img/img_brandPln_character1.png" alt="오렌지 캐릭터">
 					</button>
-					<button type="button" class="characterBrandBtn" onclick="openPopup('CharacterBrand2')">
+					<button type="button" class="characterBrandBtn" data-charnm="dolharubang">
 						<img src="img/img_brandPln_character2.png" alt="돌하르방 캐릭터">
 					</button>
-					<button type="button" class="characterBrandBtn" onclick="openPopup('CharacterBrand3')">
+					<button type="button" class="characterBrandBtn" data-charnm="hallabong">
 						<img src="img/img_brandPln_character3.png" alt="한라봉 캐릭터">
 					</button>
-					<button type="button" class="characterBrandBtn" onclick="openPopup('CharacterBrand4')">
+					<button type="button" class="characterBrandBtn" data-charnm="chunhyehyang">
 						<img src="img/img_brandPln_character4.png" alt="천혜향 캐릭터">
 					</button>
-					<button type="button" class="characterBrandBtn" onclick="openPopup('CharacterBrand5')">
+					<button type="button" class="characterBrandBtn" data-charnm="redhyang">
 						<img src="img/img_brandPln_character5.png" alt="레드향 캐릭터">
 					</button>
 				</div>
@@ -359,7 +359,7 @@
 					<div class="companyInfo">
 						<p>대표이사 <span>강대철</span></p>
 						<p>사업자 등록번호<span>153-85-01713</span></p>
-						<p>고객센터<span>1588-1588</span></p>
+						<p>고객센터<span>070-4263-7790</span></p>
 						<p>주소<span>제주특별자치도 제주시 청사로 11 제주투어패스</span></p>
 					</div>
 					<ul class="private">
@@ -437,168 +437,36 @@
 			</button>
 		</div>
 
-		<div id="popupCharacterBrand1" class="popupFrame popup characterBrandModal">
+		<div id="popupCharacterBrand" class="popupFrame popup characterBrandModal">
 			<div class="flexWrap">
 				<div class="leftBox">
 					<figure>
-						<img src="img/img_brandPln_character_profile1.png" alt="오렌지 캐릭터">
-						<figcaption>
-							<h3 class="charNm">오렌디</h3>
-							<h4 class="charEngNm">오렌지</h4>
-						</figcaption>
+						<div id="imgUrl" class="imgBox">
+							<span class="hide"></span>
+						</div>
+						<figcaption id="name" class="charNm"></figcaption>
 					</figure>
 				</div>
 
 				<div class="rightBox">
 					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">사교계의 황제, 아버지</p>
+					<p id="personality" class="charDescription"></p>
 					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">오랜 외국 생활로 개방적이며, 뛰어난 친화력으로 어딜 가든 분위기 메이커 오렌디!</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn6">
-							<span class="btnNm">MBTI : <b>ESFJ</b></span>
-						</button>
-						<button type="button" class="btn btn6">
-							<span class="btnNm">신조어 : <b>인싸그잡채</b></span>
-						</button>
+					<p id="story" class="charDescription"></p>
+					
+					<div class="infoWrap">
+						<div class="charInfo">
+							<span class="infoTitle">MBTI :&nbsp;</span>
+							<span id="mbti" class="infoDesc"></span>
+						</div>
+						<div class="charInfo">
+							<span class="infoTitle">신조어 :&nbsp;</span>
+							<span id="neologism" class="infoDesc"></span>
+						</div>
 					</div>
 				</div>
 			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterBrand1')">
-				<span class="hide">닫기</span>
-			</button>
-		</div>
-
-		<div id="popupCharacterBrand2" class="popupFrame popup characterBrandModal">
-			<div class="flexWrap">
-				<div class="leftBox">
-					<figure>
-						<img src="img/img_brandPln_character_profile2.png" alt="돌하르방 캐릭터">
-						<figcaption>
-							<h3 class="charNm">오르방</h3>
-							<h4 class="charEngNm">돌하르방</h4>
-						</figcaption>
-					</figure>
-				</div>
-
-				<div class="rightBox">
-					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">용감한 수호자, 삼춘</p>
-					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">따뜻한 세상을 바라며, 항상 소중한 사람을 먼저 생각하며 챙기는 로맨티스트
-						</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn6">
-							<span class="btnNm">MBTI : <b>ISFJ</b></span>
-						</button>
-						<button type="button" class="btn btn6">
-							<span class="btnNm">신조어 : <b>엄근진</b></span>
-						</button>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterBrand2')">
-				<span class="hide">닫기</span>
-			</button>
-		</div>
-
-		<div id="popupCharacterBrand3" class="popupFrame popup characterBrandModal">
-			<div class="flexWrap">
-				<div class="leftBox">
-					<figure>
-						<img src="img/img_brandPln_character_profile3.png" alt="한라봉 캐릭터">
-						<figcaption>
-							<h3 class="charNm">오라봉</h3>
-							<h4 class="charEngNm">한라봉</h4>
-						</figcaption>
-					</figure>
-				</div>
-
-				<div class="rightBox">
-					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">만능재주꾼, 첫째</p>
-					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">논리적이며, 뛰어난 적응력으로 어디가도 굶지 않을 상황 적응력 만렙, 오라봉!</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn6">
-							<span class="btnNm">MBTI : <b>ISTP</b></span>
-						</button>
-						<button type="button" class="btn btn6">
-							<span class="btnNm">신조어 : <b>알잘딱깔센</b></span>
-						</button>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterBrand3')">
-				<span class="hide">닫기</span>
-			</button>
-		</div>
-
-		<div id="popupCharacterBrand4" class="popupFrame popup characterBrandModal">
-			<div class="flexWrap">
-				<div class="leftBox">
-					<figure>
-						<img src="img/img_brandPln_character_profile4.png" alt="천혜향 캐릭터">
-						<figcaption>
-							<h3 class="charNm">오혜향</h3>
-							<h4 class="charEngNm">천혜향</h4>
-						</figcaption>
-					</figure>
-				</div>
-
-				<div class="rightBox">
-					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">소심한 관종, 둘째</p>
-					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">누구에게나 상냥하며, 따뜻한 감성을  가지고 있는 만감류 골드 리트리버, 오혜향!</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn6">
-							<span class="btnNm">MBTI : <b>INFP</b></span>
-						</button>
-						<button type="button" class="btn btn6">
-							<span class="btnNm">신조어 : <b>내적호들</b></span>
-						</button>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterBrand4')">
-				<span class="hide">닫기</span>
-			</button>
-		</div>
-
-		<div id="popupCharacterBrand5" class="popupFrame popup characterBrandModal">
-			<div class="flexWrap">
-				<div class="leftBox">
-					<figure>
-						<img src="img/img_brandPln_character_profile5.png" alt="레드향 캐릭터">
-						<figcaption>
-							<h3 class="charNm">오레드</h3>
-							<h4 class="charEngNm">레드향</h4>
-						</figcaption>
-					</figure>
-				</div>
-
-				<div class="rightBox">
-					<h3 class="charDescTitle">성격</h3>
-					<p class="charDescription">하이텐션러, 막내</p>
-					<h3 class="charDescTitle">스토리</h3>
-					<p class="charDescription">엉뚱하고 참신한 생각으로 가득 차 있는 오레드! 노는 것을 좋아하고 매사에 열정적인 성격의 소유자</p>
-
-					<div class="btnWrap">
-						<button type="button" class="btn btn6">
-							<span class="btnNm">MBTI : <b>ENFP</b></span>
-						</button>
-						<button type="button" class="btn btn6">
-							<span class="btnNm">신조어 : <b>쉽살재빙</b></span>
-						</button>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterBrand5')">
+			<button type="button" class="closePopupBtn" onclick="closePopup('CharacterBrand')">
 				<span class="hide">닫기</span>
 			</button>
 		</div>
@@ -693,6 +561,88 @@
 					// settings: "unslick"
 					// instead of a settings object
 				]
+			});
+
+			/* Section5 Popup */
+			const characterList = [
+				{
+					id: 'orange',
+					name: '오렌디',
+					imgUrl: 'img_brandPln_character1',
+					alt: '오렌지 캐릭터',
+					personality: '사교계의 황제, 아버지',
+					story: '오랜 외국 생활로 개방적이며, 뛰어난 친화력으로 어딜 가든 분위기 메이커 오렌디!',
+					mbti: 'ESFJ',
+					neologism: '인싸그잡채',
+				},{
+					id: 'dolharubang',
+					name: '오르방',
+					imgUrl: 'img_brandPln_character2',
+					alt: '돌하르방 캐릭터',
+					personality: '용감한 수호자, 삼춘',
+					story: '따뜻한 세상을 바라며, 항상 소중한 사람을 먼저 생각하며 챙기는 로맨티스트',
+					mbti: 'ISFJ',
+					neologism: '엄근진',
+				},{
+					id: 'hallabong',
+					name: '오라봉',
+					imgUrl: 'img_brandPln_character3',
+					alt: '한라봉 캐릭터',
+					personality: '만능재주꾼, 첫째',
+					story: '논리적이며, 뛰어난 적응력으로 어디가도 굶지 않을 상황 적응력 만렙, 오라봉!',
+					mbti: 'ISTP',
+					neologism: '알잘딱깔센',
+				},{
+					id: 'chunhyehyang',
+					name: '오혜향',
+					imgUrl: 'img_brandPln_character4',
+					alt: '천혜향 캐릭터',
+					personality: '소심한 관종, 둘째',
+					story: '누구에게나 상냥하며, 따뜻한 감성을  가지고 있는 만감류 골드 리트리버, 오혜향!',
+					mbti: 'INFP',
+					neologism: '내적호들',
+				},{
+					id: 'redhyang',
+					name: '오레드',
+					imgUrl: 'img_brandPln_character5',
+					alt: '레드향 캐릭터',
+					personality: '하이텐션러, 막내',
+					story: '엉뚱하고 참신한 생각으로 가득 차 있는 오레드! 노는 것을 좋아하고 매사에 열정적인 성격의 소유자',
+					mbti: 'ENFP',
+					neologism: '쉽살재빙',
+				}
+			];
+
+			$('#brandPln #section5 .characterBrandBtn').on('click', function(){
+				// 클릭한 버튼이 가지고있는 data-charnm 추출
+				let characterId = $(this).data('charnm');
+
+				// characterId와 characterList의 id를 매칭시켜 원하는 데이터만 배열로 넣음
+				let character = characterList.filter(function(characters) {
+					return characters.id === characterId;
+				})[0];
+
+				// 이미지
+				$('#imgUrl').css('background-image', `url(img/${character.imgUrl}.png)`);
+				$('#imgUrl .hide').text(character.alt);
+
+				// 캐릭터 이름
+				$('#name').text(character.name);
+
+				// 성격
+				$('#personality').text(character.personality);
+
+				// 스토리
+				$('#story').text(character.story);
+
+				// MBTI
+				$('#mbti').text(character.mbti);
+
+				// 신조어
+				$('#neologism').text(character.neologism);
+
+				// 팝업 열기
+				openPopup('CharacterBrand');
 			});
 			
 			/*  Section6 굿즈 슬라이드 */

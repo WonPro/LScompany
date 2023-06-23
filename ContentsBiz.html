@@ -74,7 +74,7 @@
 					<li><a href="TourpassPln.html">투어패스기획</a></li>
 					<li class="active"><a href="ContentsBiz.html">콘텐츠사업</a></li>
 					<li><a href="Mobility.html">모빌리티</a></li>
-					<li class="mobileShow"><a href="">제휴문의</a></li>
+					<li class="mobileShow"><a href="#" onclick="openPopup('PartnershipInquiry')">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
@@ -148,10 +148,10 @@
 				</div>
 				<div class="storyWrap">
 					<h3 class="contTitle">우리의 이야기를 좀 더 알고 싶다면?</h3>
-					<button type="button" class="btn btn6 btnTeamStroy">
+					<button type="button" class="btn btn6 btnTeamStroy" onclick="window.open('https://lsmk.lscompany2014.com/')">
 						<span class="btnNm">
-							<i class="fa-brands fa-instagram"></i>
-							TEAM STORY
+							<i class="icon"></i>
+							TEAM SITE
 						</span>
 					</button>
 				</div>
@@ -206,6 +206,17 @@
 		<section id="section4" class="section wheelSection">
 			<div class="innerWrap">
 				<div class="wrapper">
+					<div class="btnWrap">
+						<button class="btn btn6 btnToSec4 active">
+							<span class="btnNm">마케팅</span>
+						</button>
+						<button class="btn btn6 btnToSec5">
+							<span class="btnNm">촬영&영상</span>
+						</button>
+						<button class="btn btn6 btnToSec6">
+							<span class="btnNm">라이브커머스</span>
+						</button>
+					</div>
 					<h2 class="secTitle">
 						<div>트렌드 당일 배송</div>
 						<div class="fontMint">마케팅 Portfolio</div>
@@ -215,7 +226,7 @@
 						<div>발 빠른 트렌드 캐치로 효율적인 마케팅을 제안합니다.</div>
 					</div>
 					<ul id="contentBizSwiper1" class="slide">
-						<li data-id="contentBizloadBtn01" class="slideItem item1" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn01" class="slideItem item1" onclick="window.open('https://www.instagram.com/junglemedia_park/')">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">정글의법칙</h3>
@@ -224,7 +235,7 @@
 								</button>
 							</div>
 						</li>
-						<li data-id="contentBizloadBtn02" class="slideItem item2" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn02" class="slideItem item2" onclick="window.open('https://www.instagram.com/jejusanghyowon/')">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">상효원수목원<br>봄튤립축제</h3>
@@ -233,7 +244,7 @@
 								</button>
 							</div>
 						</li>
-						<li data-id="contentBizloadBtn03" class="slideItem item3" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn03" class="slideItem item3" onclick="window.open('https://www.instagram.com/tourpass_official/')">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">여행지총정리</h3>
@@ -257,6 +268,17 @@
 		<section id="section5" class="section wheelSection">
 			<div class="innerWrap">
 				<div class="wrapper">
+					<div class="btnWrap">
+						<button class="btn btn6 btnToSec4">
+							<span class="btnNm">마케팅</span>
+						</button>
+						<button class="btn btn6 btnToSec5 active">
+							<span class="btnNm">촬영&영상</span>
+						</button>
+						<button class="btn btn6 btnToSec6">
+							<span class="btnNm">라이브커머스</span>
+						</button>
+					</div>
 					<h2 class="secTitle">
 						<div>도전적인 컨셉 전문</div>
 						<div class="fontMint">촬영 & 영상 Portfolio</div>
@@ -266,7 +288,7 @@
 						<div>뻔하지 않은 맞춤형 고퀄리티 사진, 영상을 제작합니다.</div>
 					</div>
 					<ul id="contentBizSwiper2" class="slide">
-						<li data-id="contentBizloadBtn04" class="slideItem item1" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn04" class="slideItem item1">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">정글의법칙</h3>
@@ -275,7 +297,7 @@
 								</button>
 							</div>
 						</li>
-						<li data-id="contentBizloadBtn05" class="slideItem item2" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn05" class="slideItem item2">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">상효원수목원<br>봄튤립축제</h3>
@@ -284,7 +306,7 @@
 								</button>
 							</div>
 						</li>
-						<li data-id="contentBizloadBtn06" class="slideItem item3" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn06" class="slideItem item3">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">여행지총정리</h3>
@@ -308,16 +330,27 @@
 		<section id="section6" class="section wheelSection">
 			<div class="innerWrap">
 				<div class="wrapper">
+					<div class="btnWrap">
+						<button class="btn btn6 btnToSec4">
+							<span class="btnNm">마케팅</span>
+						</button>
+						<button class="btn btn6 btnToSec5">
+							<span class="btnNm">촬영&영상</span>
+						</button>
+						<button class="btn btn6 btnToSec6 active">
+							<span class="btnNm">라이브커머스</span>
+						</button>
+					</div>
 					<h2 class="secTitle">
-						<div>산지직송급 현장감</div>
-						<div class="fontMint">라이브커머스 Portfolio</div>
+						산지직송급 현장감<br>
+						<span class="fontMint">라이브커머스 Portfolio</span>
 					</h2>
 					<div class="subTitle">
 						<div>일반적인 스튜디오형 라이브커머스의 넥스트 레벨,</div>
 						<div>자체 쇼호스트가 직접 체험하고 즐기면서 진행합니다.</div>
 					</div>
 					<ul id="contentBizSwiper3" class="slide">
-						<li data-id="contentBizloadBtn07" class="slideItem item1" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn07" class="slideItem item1" onclick="window.open('https://view.shoppinglive.naver.com/replays/884358?fm=shoppinglive&sn=home')">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">정글의법칙</h3>
@@ -326,7 +359,7 @@
 								</button>
 							</div>
 						</li>
-						<li data-id="contentBizloadBtn08" class="slideItem item2" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn08" class="slideItem item2" onclick="window.open('https://view.shoppinglive.naver.com/replays/732263?fm=shoppinglive&sn=home')">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">상효원수목원<br>봄튤립축제</h3>
@@ -335,7 +368,7 @@
 								</button>
 							</div>
 						</li>
-						<li data-id="contentBizloadBtn09" class="slideItem item3" onclick="openPopup('MarketingPortfolioModal')">
+						<li data-id="contentBizloadBtn09" class="slideItem item3" onclick="window.open('https://view.shoppinglive.naver.com/replays/742759?fm=shoppinglive&sn=home')">
 							<div class="imgBox"></div>
 							<div class="hoverLink">
 								<h3 class="itemTitle">여행지총정리</h3>
@@ -380,7 +413,7 @@
 					<div class="companyInfo">
 						<p>대표이사 <span>강대철</span></p>
 						<p>사업자 등록번호<span>153-85-01713</span></p>
-						<p>고객센터<span>1588-1588</span></p>
+						<p>고객센터<span>070-4263-7790</span></p>
 						<p>주소<span>제주특별자치도 제주시 청사로 11 제주투어패스</span></p>
 					</div>
 					<ul class="private">
@@ -484,20 +517,22 @@
 				touchMove: false,
 			});
 
-			// Section4 상세페이지 클릭시 팝업
-			$('#contentsBiz .slide .slideItem').on('click', function(){
+			// Section4, Section5, Section6 무브먼트 버튼
+			$('.btnToSec4, .btnToSec5, .btnToSec6').click(function() {
+				let targetIndex = parseInt($(this).attr('class').substr(-1));
+				let targetSection = '#section' + targetIndex;
+				$('html, body').animate({ scrollTop: $(targetSection).offset().top }, 600);
+			});
+
+
+			// Section5 상세페이지 클릭시 팝업
+			$('#contentsBiz #section5 .slide .slideItem').on('click', function(){
 				let btnId = $(this).attr('data-id'),
 						imgId = btnId.substring(17),
 						imgUrl = 'img_ContentsBiz_portfolio' + imgId + '.jpg';
 						// imgAlt = $(this).find('img').attr('alt');
 
-				$("#popupMarketingPortfolioModal .contWrap")
-				.html(
-					"<img src='img/" 
-					+imgUrl 
-					// +"' alt='"
-					// +imgAlt 
-					+ "'>");				
+				$("#popupMarketingPortfolioModal .contWrap").html("<img src='img/" + imgUrl +  "'>");				
 				openPopup('MarketingPortfolioModal');
 			});
 

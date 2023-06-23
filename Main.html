@@ -217,9 +217,12 @@
 						<p>바코드 하나로 펼쳐지는</p>
 						<p>새로운 여행의 시작</p>
 					</h2>
-					<button type="button" class="btn btn2" onclick="location.href='https://smartstore.naver.com/carpick'" formtarget="_blank">
+					<a class="btn btn2" href="https://smartstore.naver.com/carpick" target="_blank">
 						<span class="btnNm">투어패스 바로가기</span>
-					</button>
+					</a>
+					<!-- <button type="button" class="btn btn2" onclick="window.open('https://smartstore.naver.com/carpick')">
+						<span class="btnNm">투어패스 바로가기</span>
+					</button> -->
 				</div>
 				<ul id="swiper" class="swiperWrapper">
 					<li class="swiperItem item1"><span class="hide">제주투어패스</span></li>
@@ -300,13 +303,13 @@
 				<div class="companyInfo">
 					<p>대표이사 <span>강대철</span></p>
 					<p>사업자 등록번호<span>153-85-01713</span></p>
-					<p>고객센터<span>1588-1588</span></p>
+					<p>고객센터<span>070-4263-7790</span></p>
 					<p>주소<span>제주특별자치도 제주시 청사로 11 제주투어패스</span></p>
 				</div>
 				<ul class="private">
-					<li><a href="#">이용약관</a></li>
-					<li><a href="#">개인정보처리방침</a></li>
-					<li><a href="#">제휴문의</a></li>
+					<li><a href="https://www.xn--9t4b19cu7p32a.com/52">이용약관</a></li>
+					<li><a href="https://www.xn--9t4b19cu7p32a.com/54">개인정보처리방침</a></li>
+					<li><a href="#" onclick="openPopup('PartnershipInquiry')">제휴문의</a></li>
 					<li><a href="#">고객지원센터</a></li>
 				</ul>
 				<small class="copyright">&copy; 2023 LSCOMPANY Corp. All rights reserved.</small>
@@ -350,9 +353,9 @@
 				<div class="siteWrap">
 					<button type="button" class="familySiteBtn">Family Site</button>
 					<ul class="siteList">
-						<li><a href="https://www.xn--9t4b19cu7p32a.com/43" target="_blank">통합마케팅솔루션</a></li>
-						<li><a href="#" target="_blank">Website2</a></li>
-						<li><a href="#" target="_blank">Website3</a></li>
+						<li><a href="https://lsmk.lscompany2014.com/" target="_blank">통합마케팅솔루션</a></li>
+						<li><a href="https://smartstore.naver.com/carpick/products/5434391165" target="_blank">제주투어패스</a></li>
+						<li><a href="https://tourpasscar.co.kr/" target="_blank">제주투어패스 렌트카</a></li>
 					</ul>
 				</div>
 			</div>
@@ -367,12 +370,10 @@
 			</div>
 			<div class="popupContent">
 				<form action="">
-					<div class="inputWrap">
+					<div class="inputWrap col_2">
 						<label for="userNm" class="label">이름</label>
 						<input type="text" name="" id="userNm" class="input" placeholder="이름" required>
-					</div>
-					<div class="inputWrap">
-						<label for="userTel" class="label">연락처</label>
+						<label for="userTel" class="label pl10">연락처</label>
 						<input type="number" name="" id="userTel" class="input" placeholder="연락처" required>
 					</div>
 					<div class="inputWrap">
@@ -383,9 +384,10 @@
 						<label for="inquiry" class="label userInquiryLabel">문의내용</label>
 						<textarea name="" id="inquiry" class="input userInquiry" placeholder="문의내용" required></textarea>
 					</div>
-					<div class="inputWrap">
+					<div class="inputWrap alignStart">
 						<span class="label">개인정보 수집 및 이용동의</span>
-						<div class="input textWrap">회사명(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.<br>
+						<div class="input textWrap">
+							(주)엘에스컴퍼니(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.<br>
 							<br>
 							<strong>제1조 (개인정보의 처리목적)</strong><br>
 							회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.<br>
@@ -539,20 +541,28 @@
 							<br>
 							<!-- 사이트 오픈일에 맞게 수정 필요 --><br>
 							<strong>제13조(개인정보 처리방침 시행 및 변경)</strong><br>
-							이 개인정보 처리방침은 20XX. X. X부터 적용됩니다.</div>
+							이 개인정보 처리방침은 20XX. X. X부터 적용됩니다.
+						</div>
 					</div>
 					<div class="inputWrap alignStart">
-						<span class="label">개인정보 제3자 제공 동의</span>
+						<p class="label">개인정보 제3자 제공 동의</p>
 						<div class="input textWrap">다음과 같이 개인정보를 제3자에게 제공하고 있습니다.<br>
 							<br>
-							<strong>1. 개인정보를 제공받는 자 : 예) ㅇㅇㅇ카드</strong><br>
-							<strong>2. 제공받는 자의 개인정보 이용목적 : 예) 이벤트 공동개최 등 업무제휴 및 제휴카드 발급</strong><br>
-							<strong>3. 제공하는 개인정보 항목 : 예) 성명, 주소, 휴대폰번호, 이메일</strong><br>
-							<strong>4. 제공받는 자의 보유 및 이용기간 : 예) 회원탈퇴 시 또는 개인정보 제3자 제공 철회 시까지</strong></div>
+							1. 개인정보를 제공받는 자 : 예) ㅇㅇㅇ카드<br>
+							2. 제공받는 자의 개인정보 이용목적 : 예) 이벤트 공동개최 등 업무제휴 및 제휴카드 발급<br>
+							3. 제공하는 개인정보 항목 : 예) 성명, 주소, 휴대폰번호, 이메일<br>
+							4. 제공받는 자의 보유 및 이용기간 : 예) 회원탈퇴 시 또는 개인정보 제3자 제공 철회 시까지
+						</div>
+					</div>
+					<div class="flexWrap center agreeWrap">
+						<input type="checkbox" name="" id="agreement" required>
+						<label for="agreement" class="agreeLabel">개인정보 수집 및 이용, 개인정보 제3자 제공에 동의합니다.</label>
 					</div>
 					<button type="submit" class="btn btn-submit">
 						<span class="btnNm">전송</span>
 					</button>
+
+					<!-- 전송 시 alert로 전송완료 / 실패 띄워주세요! -->
 				</form>
 			</div>
 			<button type="button" class="closePopupBtn" onclick="closePopup('PartnershipInquiry')">

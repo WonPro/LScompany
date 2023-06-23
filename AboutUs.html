@@ -74,7 +74,7 @@
 					<li><a href="TourpassPln.html">투어패스기획</a></li>
 					<li><a href="ContentsBiz.html">콘텐츠사업</a></li>
 					<li><a href="Mobility.html">모빌리티</a></li>
-					<li class="mobileShow"><a href="">제휴문의</a></li>
+					<li class="mobileShow"><a href="#" onclick="openPopup('PartnershipInquiry')">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
@@ -402,7 +402,7 @@
 					<div class="companyInfo">
 						<p>대표이사 <span>강대철</span></p>
 						<p>사업자 등록번호<span>153-85-01713</span></p>
-						<p>고객센터<span>1588-1588</span></p>
+						<p>고객센터<span>070-4263-7790</span></p>
 						<p>주소<span>제주특별자치도 제주시 청사로 11 제주투어패스</span></p>
 					</div>
 					<ul class="private">
@@ -609,10 +609,10 @@
 				position: lsCompany.destinationPoint(0, 0),
 				map: map,
 				icon: {
-					content: '<div id="mapIcon"></div>',
+					content: '<div id="mapInfo"><i class="icon"></i><p class="address">(주)엘에스컴퍼니<br>제주특별지치도 제주시 청사로 11</p></div>',
 					size: new naver.maps.Size(32, 32),
 					origin: new naver.maps.Point(0, 0),
-					anchor: new naver.maps.Point(16, 16),
+					anchor: new naver.maps.Point(85, 42),
 				}
 		};
 

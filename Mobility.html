@@ -74,7 +74,7 @@
 					<li><a href="TourpassPln.html">투어패스기획</a></li>
 					<li><a href="ContentsBiz.html">콘텐츠사업</a></li>
 					<li class="active"><a href="Mobility.html">모빌리티</a></li>
-					<li class="mobileShow"><a href="">제휴문의</a></li>
+					<li class="mobileShow"><a href="#" onclick="openPopup('PartnershipInquiry')">제휴문의</a></li>
 				</ul>
 			</nav>
 			<!-- // gnb 영역 -->
@@ -155,7 +155,7 @@
 						<div>핫플 여행지부터 카페음료까지</div>
 						<div>모든 것을 포함한 새로운 스타일의 제주여행 서비스입니다.</div>
 					</div>
-					<button type="button" class="btn btn4" style="padding: 2.3rem;">
+					<button type="button" class="btn btn4 notReady" style="padding: 2.3rem;">
 						<span class="btnNm">버스플러스&#43; 바로가기</span>
 					</button>
 				</div>
@@ -217,7 +217,7 @@
 					<div class="companyInfo">
 						<p>대표이사 <span>강대철</span></p>
 						<p>사업자 등록번호<span>153-85-01713</span></p>
-						<p>고객센터<span>1588-1588</span></p>
+						<p>고객센터<span>070-4263-7790</span></p>
 						<p>주소<span>제주특별자치도 제주시 청사로 11 제주투어패스</span></p>
 					</div>
 					<ul class="private">
@@ -332,5 +332,19 @@
 		</div>
 	</div>
 	<!-- // Modal Popup 영역 -->
+
+	<script>
+		$(function(){
+			$('.notReady').on('mouseenter touchstart', function() {
+        $(this).addClass('disabled');
+        $(this).find('.btnNm').text('준비중입니다');
+      });
+
+      $('.notReady').on('mouseleave touchend', function() {
+        $(this).removeClass('disabled');
+        $(this).find('.btnNm').text('버스플러스+ 바로가기');
+      });
+		})
+	</script>
 </body>
 </html>

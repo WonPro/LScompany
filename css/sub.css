@@ -720,6 +720,33 @@
     padding: 5px;
 }
 
+#aboutUs #section6 #mapInfo{
+	width: 22rem;
+	padding: 0.5rem 2rem 0.5rem 0.5rem;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 2.1rem;
+}
+
+
+#aboutUs #section6 #mapInfo .icon{
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	background: #fff url(../img/favicon/favicon_32.png) center center / 2rem no-repeat;
+	border: 1px solid #e50a84;
+	border-radius: 50%;
+}
+
+#aboutUs #section6 #mapInfo .address{
+	font-size: 1.2rem;
+	line-height: 1.2;
+}
+
 @media screen and (max-width: 1279px) {
 	#aboutUs #section6{
 		height: 100vh;
@@ -1958,6 +1985,12 @@
 
 	#contentsBiz #section2{
 		background-color: #f8f8f8;
+		padding-bottom: 0;
+	}
+
+	#contentsBiz #section2 .secTitle,
+	#contentsBiz #section2 .subTitle{
+		text-align: center;
 	}
 
 	#contentsBiz #section2 .flexWrap.grid{
@@ -2024,12 +2057,19 @@
 		font-size: 2rem;
 		color: #000;
 	}
-
+	
 	#contentsBiz #section2 .storyWrap .btnTeamStroy .btnNm{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		gap: 10px;
+	}
+	
+	#contentsBiz #section2 .storyWrap .btnTeamStroy .btnNm .icon{
+		width: 3.2rem;
+		height: 3.2rem;
+		background: #00AFC3 url(../img/icon_subContentsBiz_planet.svg) center center / 3.3rem no-repeat;
+		border-radius: 50%;
 	}
 
 	#contentsBiz #section2 .storyWrap .btnTeamStroy .btnNm .fa-instagram{
@@ -2309,27 +2349,28 @@
 		align-items: center;
 	}
 
-	#contentsBiz .innerWrap .wrapper{
+	#contentsBiz #section4 .innerWrap .wrapper,
+	#contentsBiz #section5 .innerWrap .wrapper,
+	#contentsBiz #section6 .innerWrap .wrapper{
 		width: 50%;
 	}
-
-	#contentsBiz .secTitle div,
-	#contentsBiz .subTitle div{
-		font-size: inherit;
+	#contentsBiz #section4 .innerWrap .wrapper .btnWrap,
+	#contentsBiz #section5 .innerWrap .wrapper .btnWrap,
+	#contentsBiz #section6 .innerWrap .wrapper .btnWrap{
+		display: flex;
+		gap: 1rem;
 	}
 
-	#contentsBiz .secTitle div{
-		margin-bottom: 1rem;
+	#contentsBiz #section4 .secTitle,
+	#contentsBiz #section5 .secTitle,
+	#contentsBiz #section6 .secTitle{
+		margin-top: 3rem;
 	}
 
-	#contentsBiz .subTitle div{
-		margin-bottom: 0.6rem;
-	}
-
-	#contentsBiz .slide{
-		margin-top: 8rem;
-		margin-left: -1rem;
-		margin-bottom: 0;
+	#contentsBiz #section4 .slide,
+	#contentsBiz #section5 .slide,
+	#contentsBiz #section6 .slide{
+		margin-top: 5rem;
 	}
 
 	#contentsBiz .slide .slideItem{
@@ -2769,6 +2810,10 @@
 			padding-top: 10rem;
 			padding-bottom: 10rem;
 		}	
+
+		#mobillity #section2 .subTitle div{
+			display: inline;
+		}
 		
 		#mobillity #section2 video {
 			width: 100%;
@@ -2776,15 +2821,23 @@
 
 		#mobillity #section2 .rentcarWrap{
 			width: 100%;
+			background-color: transparent;
+			border: none;
 		}
 
 		#mobillity #section2 .rentcarWrap .contTitle{
-			width: 12.2rem;
+			/* width: 12.2rem;
 			padding-left: 2rem;
 			font-size: 1.4rem;
 			text-align: center;
 			line-height: 1.4;
-			word-break: keep-all;
+			word-break: keep-all; */
+			display: none;
+		}
+
+		#mobillity #section2 .rentcarWrap .btnTeamStroy{
+			display: block;
+			margin: 0 auto; 
 		}
 	}
 	/********* //Section2 *********/
@@ -2821,7 +2874,12 @@
 
 	#mobillity #section3 .btn{
 		margin-top: 6rem;
+		width: 20rem;
 	}
+
+	#mobillity #section3 .notReady:hover {
+    cursor: not-allowed;
+  }
 
 	#mobillity #section3 .busWrap{
 		width: 72rem;
@@ -3568,7 +3626,7 @@
 			width: 30rem;
 			height: 53.2rem;	
 			padding: 49px 39px 0 39px ;
-			margin-top: 7rem;
+			margin: 7rem auto 0;
 		}
 		#systemDev #section4 .innerWrap .swiperWrapper .swiperItem{
 			width: 100%;
@@ -4738,21 +4796,20 @@
 	.characterBrandModal .leftBox figure{
 		text-align: center;
 	}
-	.characterBrandModal .leftBox img{
+	.characterBrandModal .leftBox .imgBox{
 		width: 30rem;
 		height: 30rem;
+    background-color: #fff;
+    background-position: center 2rem;
+    background-size: 30rem;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 	}
 
 	.characterBrandModal .leftBox .charNm{
 		margin-top: 2rem;
 		font-size: 3.6rem;
 		font-weight: 600;
-		color: #fff;
-	}
-
-	.characterBrandModal .leftBox .charEngNm{
-		margin-top: 1rem;
-		font-size: 2.8rem;
 		color: #fff;
 	}
 
@@ -4784,19 +4841,22 @@
 		overflow-y: auto;
 	}
 
-	.characterBrandModal .rightBox .btnWrap{
+	.characterBrandModal .rightBox .infoWrap{
 		margin-top: 4rem;
 		display: flex;
 		justify-content: flex-start;
 		gap: 1rem;
 	}
-	.characterBrandModal .rightBox .btnWrap{
-		margin-top: 4rem;
-		display: flex;
-		justify-content: flex-start;
-		gap: 1rem;
+
+	.characterBrandModal .rightBox .infoWrap .charInfo{
+		padding: 1rem 2rem;
+		border: 1px solid #00AFC3;
+		border-radius: 2rem;
+		font-size: 1.6rem;
+		color: #00AFC3;
 	}
-	.characterBrandModal .rightBox .btnWrap .btn .btnNm b{
+
+	.characterBrandModal .rightBox .infoWrap .infoDesc{
 		font-size: inherit;
 	}
 
